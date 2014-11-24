@@ -99,3 +99,12 @@ Responsive grid
   }
 }
 ```
+
+
+Atomic classes
+-------
+
+```scss
+@include grid-class-generator(12, 1em, 'grid-');
+// Generate .grid-row, .grid-cell-1 to .grid-cell-12 atomic classes
+```

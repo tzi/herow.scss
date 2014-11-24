@@ -69,6 +69,20 @@ $grid-default-gutter-width: 20px !default;
   }
 }
 
+@mixin grid-cell-push(
+  $column-offset: 1,
+  $column-count: $grid-default-column-count
+) {
+  margin-left: get-cell-width($column-offset, $column-count);
+}
+
+@mixin grid-cell-pull(
+  $column-offset: 1,
+  $column-count: $grid-default-column-count
+) {
+  margin-right: get-cell-width($column-offset, $column-count);
+}
+
 @mixin grid-cell(
   $column-span: 1,
   $column-count: $grid-default-column-count,
@@ -78,4 +92,39 @@ $grid-default-gutter-width: 20px !default;
   @include grid-cell-flow($cell-flow);
   @include grid-cell-width($column-span, $column-count);
   @include grid-cell-gutter($gutter-width);
+}
+
+
+// Grid Generator Mixins
+// ----------------------------------
+@mixin grid-class-generator(
+  $column-count: $grid-default-column-count,
+  $gutter-width: $grid-default-gutter-width,
+  $class-prefix: "",
+  $class-suffix: ""
+) {
+  @for $counter from 1 through $column-count {
+    .#{$class-prefix}col-#{$counter}#{$class-suffix} {
+      @include grid-cell($counter, $column-count, $gutter-width);
+    }
+    .#{$class-prefix}pull-#{$counter}#{$class-suffix} {
+      @include grid-cell-pull($counter-1, $column-count);
+    }
+    .#{$class-prefix}push-#{$counter}#{$class-suffix} {
+      @include grid-cell-push($counter-1, $column-count);
+    }
+  }
+
+  .#{$class-prefix}row#{$class-suffix} {
+    @include grid-container($gutter-width);
+  }
+  .#{$class-prefix}col-right#{$class-suffix} {
+    @include grid-cell-flow('right');
+  }
+  .#{$class-prefix}col-left#{$class-suffix} {
+    @include grid-cell-flow('left');
+  }
+  .#{$class-prefix}col-inline#{$class-suffix} {
+    @include grid-cell-flow('inline');
+  }
 }
