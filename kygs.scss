@@ -1,0 +1,80 @@
+
+
+// Attributes
+// ----------------------------------
+$grid-default-column-count: 12 !default;
+$grid-default-gutter-width: 20px !default;
+
+
+// Utils
+// ----------------------------------
+@mixin clearFix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@function get-cell-width($column-span, $column-count) {
+  @return $column-span * 100% / $column-count;
+}
+
+
+// Grid Container Mixins
+// ----------------------------------
+@mixin grid-container-gutter(
+  $gutter-width: $grid-default-gutter-width
+) {
+  margin: (-0.5 * $gutter-width);
+}
+
+@mixin grid-container(
+  $gutter-width: $grid-default-gutter-width
+) {
+  display: block;
+  @include grid-container-gutter($gutter-width);
+  @include clearFix();
+}
+
+
+// Grid Cell Mixins
+// ----------------------------------
+@mixin grid-cell-width(
+  $column-span: 1,
+  $column-count: $grid-default-column-count
+) {
+  width: get-cell-width($column-span, $column-count);
+}
+
+@mixin grid-cell-gutter(
+  $gutter-width: $grid-default-gutter-width
+) {
+  padding: (0.5 * $gutter-width);
+}
+
+@mixin grid-cell-flow(
+  $cell-flow: 'inline'
+) {
+  @if $cell-flow == 'left' {
+    float: left;
+    margin-right: 0;
+  } @else if $cell-flow == 'right' {
+    float: right;
+    margin-right: 0;
+  } @else {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -0.25em;
+  }
+}
+
+@mixin grid-cell(
+  $column-span: 1,
+  $column-count: $grid-default-column-count,
+  $gutter-width: $grid-default-gutter-width
+){
+  @include grid-cell-flow();
+  @include grid-cell-width($column-span, $column-count);
+  @include grid-cell-gutter($gutter-width);
+}
