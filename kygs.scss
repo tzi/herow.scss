@@ -72,9 +72,10 @@ $grid-default-gutter-width: 20px !default;
 @mixin grid-cell(
   $column-span: 1,
   $column-count: $grid-default-column-count,
-  $gutter-width: $grid-default-gutter-width
+  $gutter-width: $grid-default-gutter-width,
+  $cell-flow: 'inline'
 ){
-  @include grid-cell-flow();
+  @include grid-cell-flow($cell-flow);
   @include grid-cell-width($column-span, $column-count);
   @include grid-cell-gutter($gutter-width);
 }
