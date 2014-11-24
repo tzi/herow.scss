@@ -30,7 +30,6 @@ Custom grid size
 
 ```scss
 $grid-default-column-count: 16;
-
 .content {
   // Create a 8 spans cell on 16 columns
   @include .grid-cell(8);
@@ -54,7 +53,6 @@ Custom gutter width
 
 ```scss
 $grid-default-gutter-width: 1em;
-
 .main {
   // Create a grid container with a 1em gutter
   @include .grid-container();
