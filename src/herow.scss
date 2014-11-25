@@ -1,0 +1,264 @@
+/**
+ * Herow, the saving time grid in Sass
+ *
+ * @group API
+ * @author Thomas ZILLIOX
+ **/
+
+
+// Attributes
+// ----------------------------------
+
+/**
+ * Defines the default number of column.
+ *
+ * @type Integer
+ */
+$Herow-default-column-count: 12 !default;
+
+/**
+ * Defines the default gutter.
+ *
+ * @type Length
+ */
+$Herow-default-gutter-width: 20px !default;
+
+
+
+// Helpers
+// ----------------------------------
+
+/**
+ * Include a micro clearfix
+ *
+ * @access private
+ * @group helpers
+ */
+@mixin Herow-clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/**
+ * Get a column width in percent
+ *
+ * @param {Integer} $column-span - The span length of the column
+ * @param {Integer} $column-count - The number of available columns
+ *
+ * @access private
+ * @group helpers
+ */
+@function Herow-get-cell-width($column-span, $column-count) {
+  @return $column-span * 100% / $column-count;
+}
+
+
+
+// Row Mixins
+// ----------------------------------
+
+/**
+ * Change the gutter size of the row 
+ *
+ * @param {Length} $gutter-width (20px) - The size of the grid gutter
+ *
+ * @access public
+ * @group atomic-mixins
+ */
+@mixin Herow-row-gutter(
+  $gutter-width: $Herow-default-gutter-width
+) {
+  margin: (-0.5 * $gutter-width);
+}
+
+/**
+ * Include the styles of a row 
+ *
+ * @param {Length} $gutter-width (20px) - The size of the grid gutter
+ *
+ * @access public
+ * @group main-mixins
+ */
+@mixin Herow-row(
+  $gutter-width: $Herow-default-gutter-width
+) {
+  display: block;
+  @include Herow-row-gutter($gutter-width);
+  @include Herow-clearfix();
+}
+
+
+// Col Mixins
+// ----------------------------------
+
+/**
+ * Change the size of the column 
+ *
+ * @param {Integer} $column-span (1) - The span length of the column
+ * @param {Integer} $column-count (12) - The number of columns of the grid
+ *
+ * @access public
+ * @group atomic-mixins
+ */
+@mixin Herow-column-width(
+  $column-span: 1,
+  $column-count: $Herow-default-column-count
+) {
+  width: Herow-get-cell-width($column-span, $column-count);
+}
+
+/**
+ * Change the gutter of the column 
+ *
+ * @param {Length} $gutter-width (20px) - The gutter size of the grid 
+ *
+ * @access public
+ * @group atomic-mixins
+ */
+@mixin Herow-column-gutter(
+  $gutter-width: $Herow-default-gutter-width
+) {
+  padding: (0.5 * $gutter-width);
+}
+
+/**
+ * Change the flow of the column 
+ *
+ * @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
+ *
+ * @access public
+ * @group atomic-mixins
+ */
+@mixin Herow-column-flow(
+  $column-flow: 'inline'
+) {
+  @if $column-flow == 'left' {
+    float: left;
+    margin-right: 0;
+  } @else if $column-flow == 'right' {
+    float: right;
+    margin-right: 0;
+  } @else {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -0.25em;
+  }
+}
+
+/**
+ * Change the left offset of the column 
+ *
+ * @param {Integer} $column-offset-left (0) - The span length for the left offset of the column
+ * @param {Integer} $column-count (12) - The number of columns of the grid
+ *
+ * @access public
+ * @group atomic-mixins
+ */
+@mixin Herow-column-offset-left(
+  $column-offset: 1,
+  $column-count: $Herow-default-column-count
+) {
+  margin-left: Herow-get-cell-width($column-offset, $column-count);
+}
+
+/**
+ * Change the right offset of the column 
+ *
+ * @param {Integer} $column-offset-right (0) - The span length for the right offset of the column
+ * @param {Integer} $column-count (12) - The number of columns of the grid
+ *
+ * @access public
+ * @group atomic-mixins
+ */
+@mixin Herow-column-offset-right(
+  $column-offset-right: 1,
+  $column-count: $Herow-default-column-count
+) {
+  margin-right: Herow-get-cell-width($column-offset-right, $column-count);
+}
+
+/**
+ * Change the offset of the column 
+ *
+ * @param {Integer} $column-offset-left (0) - The span length for the left offset of the column
+ * @param {Integer} $column-offset-right (0) - The span length for the right offset of the column
+ * @param {Integer} $column-count (12) - The number of columns of the grid
+ *
+ * @access public
+ * @group atomic-mixins
+ */
+@mixin Herow-column-offset(
+  $column-offset-left: 1,
+  $column-offset-right: 1,
+  $column-count: $Herow-default-column-count
+) {
+  @include Herow-column-offset-left($column-offset-left, $column-count);
+  @include Herow-column-offset-right($column-offset-right, $column-count);
+}
+
+/**
+ * Include the styles of a column 
+ *
+ * @param {Integer} $column-span (1) - The span length of the column
+ * @param {Integer} $column-count (12) - The number of columns of the grid
+ * @param {Length} $gutter-width (20px) - The gutter size of the grid 
+ * @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
+ * @param {Integer} $column-offset-left (0) - The span length for the left offset of the column
+ * @param {Integer} $column-offset-right (0) - The span length for the right offset of the column
+ *
+ * @access public
+ * @group main-mixins
+ */
+@mixin Herow-column(
+  $column-span: 1,
+  $column-count: $Herow-default-column-count,
+  $gutter-width: $Herow-default-gutter-width,
+  $column-flow: 'inline',
+  $column-offset-left: 0,
+  $column-offset-right: 0
+){
+  @include Herow-column-flow($column-flow);
+  @include Herow-column-width($column-span, $column-count);
+  @include Herow-column-gutter($gutter-width);
+  @include Herow-column-offset($column-offset-left, $column-offset-right, $column-count);
+}
+
+
+
+// Grid Generator Mixins
+// ----------------------------------
+@mixin Herow-class-generator(
+  $column-count: $Herow-default-column-count,
+  $gutter-width: $Herow-default-gutter-width,
+  $class-prefix: "hrw-",
+  $class-suffix: ""
+) {
+  .#{$class-prefix}Row#{$class-suffix} {
+    @include Herow-row($gutter-width);
+  }
+  .#{$class-prefix}Col#{$class-suffix} {
+    @include Herow-column(1, $column-count, $gutter-width);
+  }
+  @for $counter from 1 through $column-count {
+    .#{$class-prefix}Col-#{$counter}#{$class-suffix} {
+      @include Herow-column-width($counter, $column-count);
+    }
+  }
+  .#{$class-prefix}Col-right#{$class-suffix} {
+    @include Herow-column-flow('right');
+  }
+  .#{$class-prefix}Col-left#{$class-suffix} {
+    @include Herow-column-flow('left');
+  }
+  .#{$class-prefix}Col-inline#{$class-suffix} {
+    @include Herow-column-flow('inline');
+  }
+  @for $counter from 1 through $column-count {
+    .#{$class-prefix}Col-offset-#{$counter - 1}#{$class-suffix} {
+      @include Herow-column-offset-left($counter - 1, $column-count);
+    }
+  }
+}
