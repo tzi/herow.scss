@@ -1,0 +1,8 @@
+{
+  "package": {
+    "title": "Herow",
+    "name": "herow",
+    "homepage": "https://github.com/tzi/Herow",
+    "description": "Herow, the saving time grid in Sass"
+  }
+}
