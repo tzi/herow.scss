@@ -1,0 +1,140 @@
+
+
+// Attributes
+// ----------------------------------
+$Herow-default-column-count: 12 !default;
+$Herow-default-gutter-width: 20px !default;
+
+
+// Utils
+// ----------------------------------
+@mixin Herow-clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@function Herow-get-cell-width($column-span, $column-count) {
+  @return $column-span * 100% / $column-count;
+}
+
+
+// Grid Container Mixins
+// ----------------------------------
+@mixin Herow-row-gutter(
+  $gutter-width: $Herow-default-gutter-width
+) {
+  margin: (-0.5 * $gutter-width);
+}
+
+@mixin Herow-row(
+  $gutter-width: $Herow-default-gutter-width
+) {
+  display: block;
+  @include Herow-row-gutter($gutter-width);
+  @include Herow-clearfix();
+}
+
+
+// Grid Cell Mixins
+// ----------------------------------
+@mixin Herow-column-width(
+  $column-span: 1,
+  $column-count: $Herow-default-column-count
+) {
+  width: Herow-get-cell-width($column-span, $column-count);
+}
+
+@mixin Herow-column-gutter(
+  $gutter-width: $Herow-default-gutter-width
+) {
+  padding: (0.5 * $gutter-width);
+}
+
+@mixin Herow-column-flow(
+  $cell-flow: 'inline'
+) {
+  @if $cell-flow == 'left' {
+    float: left;
+    margin-right: 0;
+  } @else if $cell-flow == 'right' {
+    float: right;
+    margin-right: 0;
+  } @else {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -0.25em;
+  }
+}
+
+@mixin Herow-column-offset-left(
+  $column-offset: 1,
+  $column-count: $Herow-default-column-count
+) {
+  margin-left: Herow-get-cell-width($column-offset, $column-count);
+}
+
+@mixin Herow-column-offset-right(
+  $column-offset: 1,
+  $column-count: $Herow-default-column-count
+) {
+  margin-right: Herow-get-cell-width($column-offset, $column-count);
+}
+
+@mixin Herow-column-offset(
+  $column-offset-left: 1,
+  $column-offset-right: 1,
+  $column-count: $Herow-default-column-count
+) {
+  @include Herow-column-offset-left($column-offset-left, $column-count);
+  @include Herow-column-offset-right($column-offset-right, $column-count);
+}
+
+@mixin Herow-column(
+  $column-span: 1,
+  $column-count: $Herow-default-column-count,
+  $gutter-width: $Herow-default-gutter-width,
+  $cell-flow: 'inline'
+){
+  @include Herow-column-flow($cell-flow);
+  @include Herow-column-width($column-span, $column-count);
+  @include Herow-column-gutter($gutter-width);
+}
+
+
+// Grid Generator Mixins
+// ----------------------------------
+@mixin Herow-class-generator(
+  $column-count: $Herow-default-column-count,
+  $gutter-width: $Herow-default-gutter-width,
+  $class-prefix: "hrw-",
+  $class-suffix: ""
+) {
+  .#{$class-prefix}Row#{$class-suffix} {
+    @include Herow-row($gutter-width);
+  }
+  .#{$class-prefix}Col#{$class-suffix} {
+    @include Herow-column(1, $column-count, $gutter-width);
+  }
+  @for $counter from 1 through $column-count {
+    .#{$class-prefix}Col-#{$counter}#{$class-suffix} {
+      @include Herow-column-width($counter, $column-count);
+    }
+  }
+  .#{$class-prefix}Col-right#{$class-suffix} {
+    @include Herow-column-flow('right');
+  }
+  .#{$class-prefix}Col-left#{$class-suffix} {
+    @include Herow-column-flow('left');
+  }
+  .#{$class-prefix}Col-inline#{$class-suffix} {
+    @include Herow-column-flow('inline');
+  }
+  @for $counter from 1 through $column-count {
+    .#{$class-prefix}Col-offset-#{$counter - 1}#{$class-suffix} {
+      @include Herow-column-offset-left($counter - 1, $column-count);
+    }
+  }
+}

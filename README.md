@@ -1,7 +1,7 @@
-KYGS
+Herow
 =======
 
-Keep Your Grid Simple
+Herow, the saving time grid in Sass
 
 
 Simple use
@@ -9,16 +9,16 @@ Simple use
 
 ```scss
 .main {
-  // Create a grid container with a 20px gutter
-  @include .grid-container();
+  // A row, with a 20px gutter
+  @include Herow-row();
 }
 .content {
-  // Create a 8 spans cell on 12 columns
-  @include .grid-cell(8);
+  // A column, that spans 8 columns of 12
+  @include Herow-column(8);
 }
 .sidebar {
-  // Create a 4 spans cell on 12 columns
-  @include .grid-cell(4);
+  // A column, that spans 4 columns of 12
+  @include Herow-column(4);
 }
 ```
 
@@ -29,10 +29,10 @@ Custom grid size
 ### Override default values
 
 ```scss
-$grid-default-column-count: 16;
+$Herow-default-column-count: 16;
 .content {
-  // Create a 8 spans cell on 16 columns
-  @include .grid-cell(8);
+  // A column, that spans 8 columns of 16
+  @include Herow-column(8);
 }
 ```
 
@@ -40,8 +40,8 @@ $grid-default-column-count: 16;
 
 ```scss
 .content {
-  // Create a 3 spans cell on 4 columns
-  @include .grid-cell(3, 4);
+  // A column, that spans 3 columns of 4
+  @include Herow-column(3, 4);
 }
 ```
 
@@ -52,10 +52,10 @@ Custom gutter width
 ### Override default values
 
 ```scss
-$grid-default-gutter-width: 1em;
+$Herow-default-gutter-width: 1em;
 .main {
-  // Create a grid container with a 1em gutter
-  @include .grid-container();
+  // A row, with a 1em gutter
+  @include Herow-row();
 }
 ```
 
@@ -63,12 +63,12 @@ $grid-default-gutter-width: 1em;
 
 ```scss
 .main {
-  // Create a grid container with a 1em gutter
-  @include .grid-container(1em);
+  // A row, with a 1em gutter
+  @include Herow-row(1em);
 }
 .content {
-  // Create a 3 spans cell on 4 columns, with 1em gutter width
-  @include .grid-cell(3, 4, 1em);
+  // A column, that spans 3 columns of 4, with a 1em gutter
+  @include Herow-column(3, 4, 1em);
 }
 ```
 
@@ -76,26 +76,28 @@ $grid-default-gutter-width: 1em;
 Responsive grid
 -------
 
+You can change the column size according to the viewport
+
 ```scss
 .main {
-  @include .grid-container();
+  @include Herow-row();
 }
 .content {
-  @include .grid-cell(8);
+  @include Herow-column(8);
   @media (max-width: 799px) {
-    @include .grid-cell-width(9);
+    @include Herow-column-width(9);
   }
   @media (max-width: 599px) {
-    @include .grid-cell-width(12);
+    @include Herow-column-width(12);
   }
 }
 .sidebar {
-  @include .grid-cell(4);
+  @include Herow-column(4);
   @media (max-width: 799px) {
-    @include .grid-cell-width(3);
+    @include Herow-column-width(3);
   }
   @media (max-width: 599px) {
-    @include .grid-cell-width(12);
+    @include Herow-column-width(12);
   }
 }
 ```
@@ -105,6 +107,6 @@ Atomic classes
 -------
 
 ```scss
-@include grid-class-generator(12, 1em, 'grid-');
-// Generate .grid-row, .grid-cell-1 to .grid-cell-12 atomic classes
+// Generate atomic classes: .hrw-Row, .hrw-Col, .hrw-Col-1 to .hrw-Col-12, etc.
+@include Herow-class-generator(12, 1em); 
 ```
