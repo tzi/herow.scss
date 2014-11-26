@@ -1,0 +1,21 @@
+{
+  "display": {
+    "access": ["public"],
+    "alias": true,
+    "watermark": true
+  },
+  "package": {
+    "title": "Herow",
+    "name": "herow",
+    "version": "0.0.0",
+    "license": "MIT",
+    "homepage": "https://github.com/tzi/Herow",
+    "description": "Herow, the saving time grid in Sass"
+  },
+  "groups": {
+    "api": "API",
+    "atomic-api": "Atomic API"
+  },
+  "theme": "default",
+  "basePath": "https://github.com/tzi/Herow"
+}
