@@ -1,7 +1,6 @@
 /**
  * Herow, the saving time grid in Sass
  *
- * @group API
  * @author Thomas ZILLIOX
  **/
 
@@ -13,6 +12,7 @@
  * Defines the default number of column.
  *
  * @type Integer
+ * @group configuration
  */
 $Herow-default-column-count: 12 !default;
 
@@ -20,6 +20,7 @@ $Herow-default-column-count: 12 !default;
  * Defines the default gutter.
  *
  * @type Length
+ * @group configuration
  */
 $Herow-default-gutter-width: 20px !default;
 
@@ -32,7 +33,6 @@ $Herow-default-gutter-width: 20px !default;
  * Include a micro clearfix
  *
  * @access private
- * @group helpers
  */
 @mixin Herow-clearfix() {
   &:after {
@@ -49,7 +49,6 @@ $Herow-default-gutter-width: 20px !default;
  * @param {Integer} $column-count - The number of available columns
  *
  * @access private
- * @group helpers
  */
 @function Herow-get-cell-width($column-span, $column-count) {
   @return $column-span * 100% / $column-count;
