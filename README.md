@@ -3,8 +3,8 @@ Herow
 
 Herow, the saving time grid in Sass.
  
-Herow provides mixins that are [simple to use](#simple-to-use) and [easy to customize](#easy-to-customize) for semantic grids.
-It also provides [atomic mixins](#atomic-mixins), that are ideal to deal with responsive problematic.
+Herow provides mixins that are [simple to use](#simple-to-use) and [easy to customize](#easy-to-customize) for semantic grids.<br>
+It also provides [atomic mixins](#atomic-mixins), that are ideal to deal with responsive problematic.<br>
 Last, but not least, you can generate [atomic classes](#atomic-classes) to play with it directly in CSS.
 
 
@@ -30,9 +30,9 @@ Simple to use
 Easy to customize
 -------
 
-### Want a different grid size
+### Grid size
 
-You can set the grid size on `Herow-column()` mixin
+You can set a grid size as a parameter of the `Herow-column()` mixin.
 
 ```scss
 .content {
@@ -41,9 +41,9 @@ You can set the grid size on `Herow-column()` mixin
 }
 ```
 
-or set your grid size globally
+or you can set your grid size globally.
 
-```
+```scss
 $Herow-default-column-count: 16;
 .content {
   // A column, that spans 8 columns of 16
@@ -51,9 +51,9 @@ $Herow-default-column-count: 16;
 }
 ```
 
-### Want a different gutter width
+### Gutter width
 
-You can set the gutter width on `Herow-row()` and `Herow-column()` mixins
+You can set a gutter width as a parameter of the `Herow-row()` and `Herow-column()` mixins.
 
 ```scss
 .main {
@@ -66,9 +66,9 @@ You can set the gutter width on `Herow-row()` and `Herow-column()` mixins
 }
 ```
 
-or set your gutter size globally
+or you can set your gutter width globally.
 
-```
+```scss
 $Herow-default-gutter-width: 1em;
 .main {
   // A row, with a 1em gutter
@@ -76,7 +76,7 @@ $Herow-default-gutter-width: 1em;
 }
 ```
 
-See the [main API documentation](http://tzi.github.io/Herow/api/#api) and the [configuration documentation](http://tzi.github.io/Herow/api/#configuration-variable).
+See the [main API documentation](http://tzi.github.io/Herow/api/#api-mixin) and the [configuration documentation](http://tzi.github.io/Herow/api/#configuration-variable).
 
 
 Atomic mixins
@@ -99,10 +99,10 @@ When designing responsive grid, the atomic mixins allow you to update the grid b
 }
 ```
 
-See the [Atomic mixins API documentation](http://tzi.github.io/Herow/api/#atomic-api).
+See the [Atomic mixins API documentation](http://tzi.github.io/Herow/api/#atomic-api-mixin).
 
 
-Atomic classes generator
+Atomic classes
 -------
 
 With the `Herow-class-generator()`, you can generate atomic classes, like `.row`, `.col`, `.col-1` to `.col-12`, etc.
@@ -112,7 +112,7 @@ With the `Herow-class-generator()`, you can generate atomic classes, like `.row`
 @include Herow-class-generator(12, 1em); 
 ```
 
-You can also play with the class prefix & suffix to genrate `.my-row` or `.row-md`.
+You can also play with the class prefix & suffix to genrate classes like `.my-row` or `.row-md`.
 For example:
 
 
