@@ -66,7 +66,7 @@ $Herow-default-gutter-width: 20px !default;
  * @param {Length} $gutter-width (20px) - The size of the grid gutter
  *
  * @access public
- * @group atomic-mixins
+ * @group atomic-api
  */
 @mixin Herow-row-gutter(
   $gutter-width: $Herow-default-gutter-width
@@ -80,7 +80,7 @@ $Herow-default-gutter-width: 20px !default;
  * @param {Length} $gutter-width (20px) - The size of the grid gutter
  *
  * @access public
- * @group main-mixins
+ * @group api
  */
 @mixin Herow-row(
   $gutter-width: $Herow-default-gutter-width
@@ -101,7 +101,7 @@ $Herow-default-gutter-width: 20px !default;
  * @param {Integer} $column-count (12) - The number of columns of the grid
  *
  * @access public
- * @group atomic-mixins
+ * @group atomic-api
  */
 @mixin Herow-column-width(
   $column-span: 1,
@@ -116,7 +116,7 @@ $Herow-default-gutter-width: 20px !default;
  * @param {Length} $gutter-width (20px) - The gutter size of the grid 
  *
  * @access public
- * @group atomic-mixins
+ * @group atomic-api
  */
 @mixin Herow-column-gutter(
   $gutter-width: $Herow-default-gutter-width
@@ -130,7 +130,7 @@ $Herow-default-gutter-width: 20px !default;
  * @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
  *
  * @access public
- * @group atomic-mixins
+ * @group atomic-api
  */
 @mixin Herow-column-flow(
   $column-flow: 'inline'
@@ -155,7 +155,7 @@ $Herow-default-gutter-width: 20px !default;
  * @param {Integer} $column-count (12) - The number of columns of the grid
  *
  * @access public
- * @group atomic-mixins
+ * @group atomic-api
  */
 @mixin Herow-column-offset-left(
   $column-offset: 1,
@@ -171,7 +171,7 @@ $Herow-default-gutter-width: 20px !default;
  * @param {Integer} $column-count (12) - The number of columns of the grid
  *
  * @access public
- * @group atomic-mixins
+ * @group atomic-api
  */
 @mixin Herow-column-offset-right(
   $column-offset-right: 1,
@@ -188,7 +188,7 @@ $Herow-default-gutter-width: 20px !default;
  * @param {Integer} $column-count (12) - The number of columns of the grid
  *
  * @access public
- * @group atomic-mixins
+ * @group atomic-api
  */
 @mixin Herow-column-offset(
   $column-offset-left: 1,
@@ -210,7 +210,7 @@ $Herow-default-gutter-width: 20px !default;
  * @param {Integer} $column-offset-right (0) - The span length for the right offset of the column
  *
  * @access public
- * @group main-mixins
+ * @group api
  */
 @mixin Herow-column(
   $column-span: 1,
