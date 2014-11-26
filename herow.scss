@@ -25,6 +25,22 @@ $Herow-default-column-count: 12 !default;
  */
 $Herow-default-gutter-width: 20px !default;
 
+/**
+ * Defines the default generated class names.
+ *
+ * @type Map
+ * @group configuration
+ */
+$Herow-generator-class-map: (
+  row: 'Row',
+  col: 'Col',
+  col-span: 'Col--',
+  col-flow-left: 'Col--left',
+  col-flow-right: 'Col--right',
+  col-flow-inline: 'Col--inline',
+  col-offset-left: 'Col--offset-'
+) !default;
+
 
 
 // Helpers
@@ -230,34 +246,67 @@ $Herow-default-gutter-width: 20px !default;
 
 // Grid Generator Mixins
 // ----------------------------------
+
+/**
+ * Get a column width in percent
+ *
+ * @param {String} $class-key - The key of the $Herow-generator-class-map for the core of the generated class name
+ * @param {String} $class-prefix - The prefix of the generated class name
+ * @param {String} $class-suffix - The suffix of the generated class name
+ * @param {String} $class-counter ('') - The counter suffix of the generated class name
+ *
+ * @access private
+ */
+@mixin Herow-class-selector(
+  $class-key,
+  $class-prefix,
+  $class-suffix,
+  $class-counter: ''
+) {
+  .#{$class-prefix}#{map-get($Herow-generator-class-map, $class-key)}#{$class-counter}#{$class-suffix} {
+    @content;
+  }
+}
+
+/**
+ * Generate atomic classes to use Herow grid directly in CSS
+ *
+ * @param {Integer} $column-count (12) - The number of columns of the grid
+ * @param {Length} $gutter-width (20px) - The gutter size of the grid 
+ * @param {String} $class-prefix ('hrw-') - The prefix of the generated class names
+ * @param {String} $class-suffix ('') - The suffix of the generated class names
+ *
+ * @access public
+ * @group api
+ */
 @mixin Herow-class-generator(
   $column-count: $Herow-default-column-count,
   $gutter-width: $Herow-default-gutter-width,
   $class-prefix: "hrw-",
   $class-suffix: ""
 ) {
-  .#{$class-prefix}Row#{$class-suffix} {
+  @include Herow-class-selector(row, $class-prefix, $class-suffix) {
     @include Herow-row($gutter-width);
   }
-  .#{$class-prefix}Col#{$class-suffix} {
+  @include Herow-class-selector(col, $class-prefix, $class-suffix) {
     @include Herow-column(1, $column-count, $gutter-width);
   }
   @for $counter from 1 through $column-count {
-    .#{$class-prefix}Col-#{$counter}#{$class-suffix} {
+    @include Herow-class-selector(col-span, $class-prefix, $class-suffix, $counter) {
       @include Herow-column-width($counter, $column-count);
     }
   }
-  .#{$class-prefix}Col-right#{$class-suffix} {
-    @include Herow-column-flow('right');
-  }
-  .#{$class-prefix}Col-left#{$class-suffix} {
+  @include Herow-class-selector(col-flow-left, $class-prefix, $class-suffix) {
     @include Herow-column-flow('left');
   }
-  .#{$class-prefix}Col-inline#{$class-suffix} {
+  @include Herow-class-selector(col-flow-right, $class-prefix, $class-suffix) {
+    @include Herow-column-flow('right');
+  }
+  @include Herow-class-selector(col-flow-inline, $class-prefix, $class-suffix) {
     @include Herow-column-flow('inline');
   }
   @for $counter from 1 through $column-count {
-    .#{$class-prefix}Col-offset-#{$counter - 1}#{$class-suffix} {
+    @include Herow-class-selector(col-offset-left, $class-prefix, $class-suffix, $counter - 1) {
       @include Herow-column-offset-left($counter - 1, $column-count);
     }
   }
