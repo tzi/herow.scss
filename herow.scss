@@ -31,13 +31,13 @@ $Herow-default-gutter-width: 20px !default;
 /// @group configuration
 /// 
 $Herow-generator-class-map: (
-  row: 'Row',
-  col: 'Col',
-  col-span: 'Col--',
-  col-flow-left: 'Col--left',
-  col-flow-right: 'Col--right',
-  col-flow-inline: 'Col--inline',
-  col-offset-left: 'Col--offset-'
+  row: 'row',
+  col: 'col',
+  col-span: 'col-',
+  col-flow-left: 'col-left',
+  col-flow-right: 'col-right',
+  col-flow-inline: 'col-inline',
+  col-offset-left: 'col-offset-'
 ) !default;
 
 
@@ -269,7 +269,7 @@ $Herow-generator-class-map: (
 @mixin Herow-class-generator(
   $column-count: $Herow-default-column-count,
   $gutter-width: $Herow-default-gutter-width,
-  $class-prefix: "hrw-",
+  $class-prefix: "",
   $class-suffix: ""
 ) {
   @include Herow-class-selector(row, $class-prefix, $class-suffix) {
