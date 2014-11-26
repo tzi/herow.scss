@@ -1,36 +1,35 @@
-/**
- * Herow, the saving time grid in Sass
- *
- * @group api
- * @author Thomas ZILLIOX
- **/
+/// 
+/// Herow, the saving time grid in Sass
+/// 
+/// @group api
+/// @author Thomas ZILLIOX
+/// 
+
 
 
 // Attributes
 // ----------------------------------
 
-/**
- * Defines the default number of column.
- *
- * @type Integer
- * @group configuration
- */
+/// Defines the default number of column.
+/// 
+/// @type Integer
+/// @group configuration
+/// 
 $Herow-default-column-count: 12 !default;
 
-/**
- * Defines the default gutter.
- *
- * @type Length
- * @group configuration
- */
+/// Defines the default gutter.
+/// 
+/// @type Length
+/// @group configuration
+/// 
 $Herow-default-gutter-width: 20px !default;
 
-/**
- * Defines the default generated class names.
- *
- * @type Map
- * @group configuration
- */
+/// 
+/// Defines the default generated class names.
+/// 
+/// @type Map
+/// @group configuration
+/// 
 $Herow-generator-class-map: (
   row: 'Row',
   col: 'Col',
@@ -46,11 +45,10 @@ $Herow-generator-class-map: (
 // Helpers
 // ----------------------------------
 
-/**
- * Include a micro clearfix
- *
- * @access private
- */
+/// Include a micro clearfix
+/// 
+/// @access private
+/// 
 @mixin Herow-clearfix() {
   &:after {
     content: "";
@@ -59,14 +57,13 @@ $Herow-generator-class-map: (
   }
 }
 
-/**
- * Get a column width in percent
- *
- * @param {Integer} $column-span - The span length of the column
- * @param {Integer} $column-count - The number of available columns
- *
- * @access private
- */
+/// Get a column width in percent
+/// 
+/// @param {Integer} $column-span - The span length of the column
+/// @param {Integer} $column-count - The number of available columns
+/// 
+/// @access private
+/// 
 @function Herow-get-cell-width($column-span, $column-count) {
   @return $column-span * 100% / $column-count;
 }
@@ -76,28 +73,26 @@ $Herow-generator-class-map: (
 // Row Mixins
 // ----------------------------------
 
-/**
- * Change the gutter size of the row 
- *
- * @param {Length} $gutter-width (20px) - The size of the grid gutter
- *
- * @access public
- * @group atomic-api
- */
+/// Change the gutter size of the row 
+/// 
+/// @param {Length} $gutter-width (20px) - The size of the grid gutter
+/// 
+/// @access public
+/// @group atomic-api
+/// 
 @mixin Herow-row-gutter(
   $gutter-width: $Herow-default-gutter-width
 ) {
   margin: (-0.5 * $gutter-width);
 }
 
-/**
- * Include the styles of a row 
- *
- * @param {Length} $gutter-width (20px) - The size of the grid gutter
- *
- * @access public
- * @group api
- */
+/// Include the styles of a row 
+/// 
+/// @param {Length} $gutter-width (20px) - The size of the grid gutter
+/// 
+/// @access public
+/// @group api
+/// 
 @mixin Herow-row(
   $gutter-width: $Herow-default-gutter-width
 ) {
@@ -107,18 +102,18 @@ $Herow-generator-class-map: (
 }
 
 
-// Col Mixins
+
+// Column Mixins
 // ----------------------------------
 
-/**
- * Change the size of the column 
- *
- * @param {Integer} $column-span (1) - The span length of the column
- * @param {Integer} $column-count (12) - The number of columns of the grid
- *
- * @access public
- * @group atomic-api
- */
+/// Change the size of the column 
+/// 
+/// @param {Integer} $column-span (1) - The span length of the column
+/// @param {Integer} $column-count (12) - The number of columns of the grid
+/// 
+/// @access public
+/// @group atomic-api
+/// 
 @mixin Herow-column-width(
   $column-span: 1,
   $column-count: $Herow-default-column-count
@@ -126,28 +121,26 @@ $Herow-generator-class-map: (
   width: Herow-get-cell-width($column-span, $column-count);
 }
 
-/**
- * Change the gutter of the column 
- *
- * @param {Length} $gutter-width (20px) - The gutter size of the grid 
- *
- * @access public
- * @group atomic-api
- */
+/// Change the gutter of the column 
+/// 
+/// @param {Length} $gutter-width (20px) - The gutter size of the grid 
+/// 
+/// @access public
+/// @group atomic-api
+/// 
 @mixin Herow-column-gutter(
   $gutter-width: $Herow-default-gutter-width
 ) {
   padding: (0.5 * $gutter-width);
 }
 
-/**
- * Change the flow of the column 
- *
- * @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
- *
- * @access public
- * @group atomic-api
- */
+/// Change the flow of the column 
+/// 
+/// @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
+/// 
+/// @access public
+/// @group atomic-api
+/// 
 @mixin Herow-column-flow(
   $column-flow: 'inline'
 ) {
@@ -164,15 +157,14 @@ $Herow-generator-class-map: (
   }
 }
 
-/**
- * Change the left offset of the column 
- *
- * @param {Integer} $column-offset-left (0) - The span length for the left offset of the column
- * @param {Integer} $column-count (12) - The number of columns of the grid
- *
- * @access public
- * @group atomic-api
- */
+/// Change the left offset of the column 
+/// 
+/// @param {Integer} $column-offset-left (0) - The span length for the left offset of the column
+/// @param {Integer} $column-count (12) - The number of columns of the grid
+/// 
+/// @access public
+/// @group atomic-api
+/// 
 @mixin Herow-column-offset-left(
   $column-offset: 1,
   $column-count: $Herow-default-column-count
@@ -180,15 +172,14 @@ $Herow-generator-class-map: (
   margin-left: Herow-get-cell-width($column-offset, $column-count);
 }
 
-/**
- * Change the right offset of the column 
- *
- * @param {Integer} $column-offset-right (0) - The span length for the right offset of the column
- * @param {Integer} $column-count (12) - The number of columns of the grid
- *
- * @access public
- * @group atomic-api
- */
+/// Change the right offset of the column 
+/// 
+/// @param {Integer} $column-offset-right (0) - The span length for the right offset of the column
+/// @param {Integer} $column-count (12) - The number of columns of the grid
+/// 
+/// @access public
+/// @group atomic-api
+/// 
 @mixin Herow-column-offset-right(
   $column-offset-right: 1,
   $column-count: $Herow-default-column-count
@@ -196,16 +187,15 @@ $Herow-generator-class-map: (
   margin-right: Herow-get-cell-width($column-offset-right, $column-count);
 }
 
-/**
- * Change the offset of the column 
- *
- * @param {Integer} $column-offset-left (0) - The span length for the left offset of the column
- * @param {Integer} $column-offset-right (0) - The span length for the right offset of the column
- * @param {Integer} $column-count (12) - The number of columns of the grid
- *
- * @access public
- * @group atomic-api
- */
+/// Change the offset of the column 
+/// 
+/// @param {Integer} $column-offset-left (0) - The span length for the left offset of the column
+/// @param {Integer} $column-offset-right (0) - The span length for the right offset of the column
+/// @param {Integer} $column-count (12) - The number of columns of the grid
+/// 
+/// @access public
+/// @group atomic-api
+/// 
 @mixin Herow-column-offset(
   $column-offset-left: 1,
   $column-offset-right: 1,
@@ -215,19 +205,18 @@ $Herow-generator-class-map: (
   @include Herow-column-offset-right($column-offset-right, $column-count);
 }
 
-/**
- * Include the styles of a column 
- *
- * @param {Integer} $column-span (1) - The span length of the column
- * @param {Integer} $column-count (12) - The number of columns of the grid
- * @param {Length} $gutter-width (20px) - The gutter size of the grid 
- * @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
- * @param {Integer} $column-offset-left (0) - The span length for the left offset of the column
- * @param {Integer} $column-offset-right (0) - The span length for the right offset of the column
- *
- * @access public
- * @group api
- */
+/// Include the styles of a column 
+/// 
+/// @param {Integer} $column-span (1) - The span length of the column
+/// @param {Integer} $column-count (12) - The number of columns of the grid
+/// @param {Length} $gutter-width (20px) - The gutter size of the grid 
+/// @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
+/// @param {Integer} $column-offset-left (0) - The span length for the left offset of the column
+/// @param {Integer} $column-offset-right (0) - The span length for the right offset of the column
+/// 
+/// @access public
+/// @group api
+/// 
 @mixin Herow-column(
   $column-span: 1,
   $column-count: $Herow-default-column-count,
@@ -247,16 +236,15 @@ $Herow-generator-class-map: (
 // Grid Generator Mixins
 // ----------------------------------
 
-/**
- * Get a column width in percent
- *
- * @param {String} $class-key - The key of the $Herow-generator-class-map for the core of the generated class name
- * @param {String} $class-prefix - The prefix of the generated class name
- * @param {String} $class-suffix - The suffix of the generated class name
- * @param {String} $class-counter ('') - The counter suffix of the generated class name
- *
- * @access private
- */
+/// Get a column width in percent
+/// 
+/// @param {String} $class-key - The key of the $Herow-generator-class-map for the core of the generated class name
+/// @param {String} $class-prefix - The prefix of the generated class name
+/// @param {String} $class-suffix - The suffix of the generated class name
+/// @param {String} $class-counter ('') - The counter suffix of the generated class name
+/// 
+/// @access private
+/// 
 @mixin Herow-class-selector(
   $class-key,
   $class-prefix,
@@ -268,17 +256,16 @@ $Herow-generator-class-map: (
   }
 }
 
-/**
- * Generate atomic classes to use Herow grid directly in CSS
- *
- * @param {Integer} $column-count (12) - The number of columns of the grid
- * @param {Length} $gutter-width (20px) - The gutter size of the grid 
- * @param {String} $class-prefix ('hrw-') - The prefix of the generated class names
- * @param {String} $class-suffix ('') - The suffix of the generated class names
- *
- * @access public
- * @group api
- */
+/// Generate atomic classes to use Herow grid directly in CSS
+/// 
+/// @param {Integer} $column-count (12) - The number of columns of the grid
+/// @param {Length} $gutter-width (20px) - The gutter size of the grid 
+/// @param {String} $class-prefix ('hrw-') - The prefix of the generated class names
+/// @param {String} $class-suffix ('') - The suffix of the generated class names
+/// 
+/// @access public
+/// @group api
+/// 
 @mixin Herow-class-generator(
   $column-count: $Herow-default-column-count,
   $gutter-width: $Herow-default-gutter-width,
