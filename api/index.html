@@ -78,6 +78,15 @@
               
               </a>
             </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-class-generator" data-type="mixin">
+              <a href="#mixin-Herow-class-generator">Herow-class-generator
+              
+              
+              </a>
+            </li>
             </ul>
           
         
@@ -199,6 +208,15 @@
               
               </a>
             </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-generator-class-map" data-type="variable">
+              <a href="#variable-Herow-generator-class-map">Herow-generator-class-map
+              
+              
+              </a>
+            </li>
             </ul>
           
         
@@ -313,7 +331,7 @@
     data-collapsed="@mixin Herow-row($gutter-width: 20px) { ... }"><code>@mixin Herow-row($gutter-width: 20px) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L85-L91" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L96-L102" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -417,6 +435,21 @@
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
@@ -563,7 +596,7 @@
     data-collapsed="@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset-left: 0, $column-offset-right: 0) { ... }"><code>@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset-left: 0, $column-offset-right: 0) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L215-L227" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L220-L232" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -782,6 +815,418 @@
 
 
 
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-class-generator">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-class-generator">Herow-class-generator</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-class-generator($column-count: 12, $gutter-width: 20px, $class-prefix: &#39;hrw-&#39;, $class-suffix: &#39;&#39;) { 
+  @include Herow-class-selector(row, $class-prefix, $class-suffix) {
+    @include Herow-row($gutter-width);
+  }
+  @include Herow-class-selector(col, $class-prefix, $class-suffix) {
+    @include Herow-column(1, $column-count, $gutter-width);
+  }
+  @for $counter from 1 through $column-count {
+    @include Herow-class-selector(col-span, $class-prefix, $class-suffix, $counter) {
+      @include Herow-column-width($counter, $column-count);
+    }
+  }
+  @include Herow-class-selector(col-flow-left, $class-prefix, $class-suffix) {
+    @include Herow-column-flow(&#39;left&#39;);
+  }
+  @include Herow-class-selector(col-flow-right, $class-prefix, $class-suffix) {
+    @include Herow-column-flow(&#39;right&#39;);
+  }
+  @include Herow-class-selector(col-flow-inline, $class-prefix, $class-suffix) {
+    @include Herow-column-flow(&#39;inline&#39;);
+  }
+  @for $counter from 1 through $column-count {
+    @include Herow-class-selector(col-offset-left, $class-prefix, $class-suffix, $counter - 1) {
+      @include Herow-column-offset-left($counter - 1, $column-count);
+    }
+  }
+ }"
+    data-collapsed="@mixin Herow-class-generator($column-count: 12, $gutter-width: 20px, $class-prefix: &#39;hrw-&#39;, $class-suffix: &#39;&#39;) { ... }"><code>@mixin Herow-class-generator($column-count: 12, $gutter-width: 20px, $class-prefix: &#39;hrw-&#39;, $class-suffix: &#39;&#39;) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L269-L300" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Generate atomic classes to use Herow grid directly in CSS</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-count</code></th>
+          <td data-label="desc"><p>The number of columns of the grid</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>12</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$gutter-width</code></th>
+          <td data-label="desc"><p>The gutter size of the grid</p>
+</td>
+          <td data-label="type">
+          
+            Length
+          
+          </td>
+          <td data-label="default">
+          
+            <code>20px</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$class-prefix</code></th>
+          <td data-label="desc"><p>The prefix of the generated class names</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>&#39;hrw-&#39;</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$class-suffix</code></th>
+          <td data-label="desc"><p>The suffix of the generated class names</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>&#39;&#39;</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-row"><code>Herow-row</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column"><code>Herow-column</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-width"><code>Herow-column-width</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-flow"><code>Herow-column-flow</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-flow"><code>Herow-column-flow</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-flow"><code>Herow-column-flow</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-offset-left"><code>Herow-column-offset-left</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
 
 
   
@@ -887,7 +1332,7 @@
     data-collapsed="@mixin Herow-row-gutter($gutter-width: 20px) { ... }"><code>@mixin Herow-row-gutter($gutter-width: 20px) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L71-L75" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L83-L87" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1078,7 +1523,7 @@
     data-collapsed="@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }"><code>@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L106-L111" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L117-L122" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1192,6 +1637,15 @@
 
 
 
+  
+
+    
+
+    <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
+  
+
+
+
 
 </ul>
 
@@ -1277,7 +1731,7 @@
     data-collapsed="@mixin Herow-column-gutter($gutter-width: 20px) { ... }"><code>@mixin Herow-column-gutter($gutter-width: 20px) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L121-L125" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L131-L135" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1466,7 +1920,7 @@
     data-collapsed="@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }"><code>@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L135-L149" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L144-L158" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1556,6 +2010,33 @@
     
 
     <li><a href="#mixin-Herow-column"><code>Herow-column</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
   
 
 
@@ -1657,7 +2138,7 @@
     data-collapsed="@mixin Herow-column-offset-left($column-offset-left: 0, $column-count: 12) { ... }"><code>@mixin Herow-column-offset-left($column-offset-left: 0, $column-count: 12) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L160-L165" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L168-L173" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1771,6 +2252,15 @@
 
 
 
+  
+
+    
+
+    <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
+  
+
+
+
 
 </ul>
 
@@ -1868,7 +2358,7 @@
     data-collapsed="@mixin Herow-column-offset-right($column-offset-right: 0, $column-count: 12) { ... }"><code>@mixin Herow-column-offset-right($column-offset-right: 0, $column-count: 12) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L176-L181" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L183-L188" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2092,7 +2582,7 @@
     data-collapsed="@mixin Herow-column-offset($column-offset-left: 0, $column-offset-right: 0, $column-count: 12) { ... }"><code>@mixin Herow-column-offset($column-offset-left: 0, $column-offset-right: 0, $column-count: 12) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L193-L200" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L199-L206" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2451,7 +2941,7 @@
   <pre class="item__code  language-scss"><code>$Herow-default-gutter-width: 20px !default;</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L26-L26" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L25-L25" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2499,6 +2989,132 @@
   
     
     
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-Herow-generator-class-map">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-Herow-generator-class-map">Herow-generator-class-map</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$Herow-generator-class-map: (
+  row: &#39;row&#39;,
+  col: &#39;col&#39;,
+  col-span: &#39;col-&#39;,
+  col-flow-left: &#39;col-left&#39;,
+  col-flow-right: &#39;col-right&#39;,
+  col-flow-inline: &#39;col-inline&#39;,
+  col-offset-left: &#39;col-offset-&#39;
+) !default;</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L33-L41" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Defines the default generated class names.</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Map</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
 
 
 
