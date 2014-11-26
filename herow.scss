@@ -97,6 +97,7 @@ $Herow-generator-class-map: (
   $gutter-width: $Herow-default-gutter-width
 ) {
   display: block;
+  box-sizing: border-box;
   @include Herow-row-gutter($gutter-width);
   @include Herow-clearfix();
 }
