@@ -38,7 +38,7 @@
 
     
     
-      <p class="sidebar__item  sidebar__item--heading" data-slug="atomic-api"><a href="#atomic-api">Atomic API</a></p>
+      <p class="sidebar__item  sidebar__item--heading" data-slug="api"><a href="#api">API</a></p>
 
       
       
@@ -52,6 +52,44 @@
         
       
         
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="api-mixin"><a href="#api-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-row" data-type="mixin">
+              <a href="#mixin-Herow-row">Herow-row
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-column" data-type="mixin">
+              <a href="#mixin-Herow-column">Herow-column
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="atomic-api"><a href="#atomic-api">Atomic API</a></p>
+
+      
+      
+        <div>
 
         
         
@@ -119,44 +157,6 @@
             
             <li class="sidebar__item  sassdoc__item" data-name="Herow-column-offset" data-type="mixin">
               <a href="#mixin-Herow-column-offset">Herow-column-offset
-              
-              
-              </a>
-            </li>
-            </ul>
-          
-        
-        </div>
-      
-
-    
-      <p class="sidebar__item  sidebar__item--heading" data-slug="api"><a href="#api">API</a></p>
-
-      
-      
-        <div>
-
-        
-        
-
-        
-        
-          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="api-mixin"><a href="#api-mixin">mixins</a></p>
-
-          
-          
-            <ul class="list-unstyled">
-            <li class="sidebar__item  sassdoc__item" data-name="Herow-row" data-type="mixin">
-              <a href="#mixin-Herow-row">Herow-row
-              
-              
-              </a>
-            </li>
-            
-          
-            
-            <li class="sidebar__item  sassdoc__item" data-name="Herow-column" data-type="mixin">
-              <a href="#mixin-Herow-column">Herow-column
               
               
               </a>
@@ -245,1486 +245,16 @@
     
     
       <section class="main__section">
-        <h1 class="main__heading" id="atomic-api">Atomic API</h1>
-
-        
-        
-
-          
-          
-
-          
-          
-        
-
-          
-          
-
-          
-          
-            <section class="main__sub-section" id="atomic-api-mixin">
-              <h2 class="main__heading--secondary">mixins</h2>
-
-              
-              
-                <section class="main__item  item" id="mixin-Herow-row-gutter">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-Herow-row-gutter">Herow-row-gutter</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@mixin Herow-row-gutter($gutter-width: 20px) { 
-  margin: (-0.5 * $gutter-width);
- }"
-    data-collapsed="@mixin Herow-row-gutter($gutter-width: 20px) { ... }"><code>@mixin Herow-row-gutter($gutter-width: 20px) { ... }</code></pre>
-
-  
-    <a href="https://github.com/tzi/Herow/herow.scss#L70-L74" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Change the gutter size of the row </p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$gutter-width</code></th>
-          <td data-label="desc"><p>The size of the grid gutter</p>
-</td>
-          <td data-label="type">
-          
-            Length
-          
-          </td>
-          <td data-label="default">
-          
-            <code>20px</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#mixin-Herow-row"><code>Herow-row</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Thomas ZILLIOX</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="mixin-Herow-column-width">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-Herow-column-width">Herow-column-width</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@mixin Herow-column-width($column-span: 1, $column-count: 12) { 
-  width: Herow-get-cell-width($column-span, $column-count);
- }"
-    data-collapsed="@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }"><code>@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }</code></pre>
-
-  
-    <a href="https://github.com/tzi/Herow/herow.scss#L104-L109" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Change the size of the column </p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-span</code></th>
-          <td data-label="desc"><p>The span length of the column</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>1</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-count</code></th>
-          <td data-label="desc"><p>The number of columns of the grid</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>12</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-  
-
-
-
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#mixin-Herow-column"><code>Herow-column</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Thomas ZILLIOX</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="mixin-Herow-column-gutter">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-Herow-column-gutter">Herow-column-gutter</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@mixin Herow-column-gutter($gutter-width: 20px) { 
-  padding: (0.5 * $gutter-width);
- }"
-    data-collapsed="@mixin Herow-column-gutter($gutter-width: 20px) { ... }"><code>@mixin Herow-column-gutter($gutter-width: 20px) { ... }</code></pre>
-
-  
-    <a href="https://github.com/tzi/Herow/herow.scss#L118-L122" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Change the gutter of the column </p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$gutter-width</code></th>
-          <td data-label="desc"><p>The gutter size of the grid </p>
-</td>
-          <td data-label="type">
-          
-            Length
-          
-          </td>
-          <td data-label="default">
-          
-            <code>20px</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#mixin-Herow-column"><code>Herow-column</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Thomas ZILLIOX</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="mixin-Herow-column-flow">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-Herow-column-flow">Herow-column-flow</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { 
-  @if $column-flow == &#39;left&#39; {
-    float: left;
-    margin-right: 0;
-  } @else if $column-flow == &#39;right&#39; {
-    float: right;
-    margin-right: 0;
-  } @else {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: -0.25em;
-  }
- }"
-    data-collapsed="@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }"><code>@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }</code></pre>
-
-  
-    <a href="https://github.com/tzi/Herow/herow.scss#L131-L145" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Change the flow of the column </p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-flow</code></th>
-          <td data-label="desc"><p>The flow of the column</p>
-</td>
-          <td data-label="type">
-          
-            &#39;inline&#39;, &#39;left&#39;, &#39;right&#39;
-          
-          </td>
-          <td data-label="default">
-          
-            <code>&#39;inline&#39;</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#mixin-Herow-column"><code>Herow-column</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Thomas ZILLIOX</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="mixin-Herow-column-offset-left">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-Herow-column-offset-left">Herow-column-offset-left</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@mixin Herow-column-offset-left($column-offset-left: 0, $column-count: 12) { 
-  margin-left: Herow-get-cell-width($column-offset, $column-count);
- }"
-    data-collapsed="@mixin Herow-column-offset-left($column-offset-left: 0, $column-count: 12) { ... }"><code>@mixin Herow-column-offset-left($column-offset-left: 0, $column-count: 12) { ... }</code></pre>
-
-  
-    <a href="https://github.com/tzi/Herow/herow.scss#L155-L160" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Change the left offset of the column </p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-offset-left</code></th>
-          <td data-label="desc"><p>The span length for the left offset of the column</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>0</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-count</code></th>
-          <td data-label="desc"><p>The number of columns of the grid</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>12</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-  
-
-
-
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#mixin-Herow-column-offset"><code>Herow-column-offset</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Thomas ZILLIOX</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="mixin-Herow-column-offset-right">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-Herow-column-offset-right">Herow-column-offset-right</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@mixin Herow-column-offset-right($column-offset-right: 0, $column-count: 12) { 
-  margin-right: Herow-get-cell-width($column-offset-right, $column-count);
- }"
-    data-collapsed="@mixin Herow-column-offset-right($column-offset-right: 0, $column-count: 12) { ... }"><code>@mixin Herow-column-offset-right($column-offset-right: 0, $column-count: 12) { ... }</code></pre>
-
-  
-    <a href="https://github.com/tzi/Herow/herow.scss#L170-L175" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Change the right offset of the column </p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-offset-right</code></th>
-          <td data-label="desc"><p>The span length for the right offset of the column</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>0</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-count</code></th>
-          <td data-label="desc"><p>The number of columns of the grid</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>12</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-  
-
-
-
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#mixin-Herow-column-offset"><code>Herow-column-offset</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Thomas ZILLIOX</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="mixin-Herow-column-offset">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-Herow-column-offset">Herow-column-offset</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@mixin Herow-column-offset($column-offset-left: 0, $column-offset-right: 0, $column-count: 12) { 
-  @include Herow-column-offset-left($column-offset-left, $column-count);
-  @include Herow-column-offset-right($column-offset-right, $column-count);
- }"
-    data-collapsed="@mixin Herow-column-offset($column-offset-left: 0, $column-offset-right: 0, $column-count: 12) { ... }"><code>@mixin Herow-column-offset($column-offset-left: 0, $column-offset-right: 0, $column-count: 12) { ... }</code></pre>
-
-  
-    <a href="https://github.com/tzi/Herow/herow.scss#L186-L193" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Change the offset of the column </p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-offset-left</code></th>
-          <td data-label="desc"><p>The span length for the left offset of the column</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>0</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-offset-right</code></th>
-          <td data-label="desc"><p>The span length for the right offset of the column</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>0</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-count</code></th>
-          <td data-label="desc"><p>The number of columns of the grid</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>12</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-  
-    
-      
-      <h3 class="item__sub-heading">Requires</h3>
-      <ul class="list-unstyled">
-    
-
-    
-      <li>
-        <a href="#mixin-Herow-column-offset-left"><code>Herow-column-offset-left</code></a>
-        
-      </li>
-    
-  
-
-
-
-  
-    
-
-    
-      <li>
-        <a href="#mixin-Herow-column-offset-right"><code>Herow-column-offset-right</code></a>
-        
-      </li>
-    
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#mixin-Herow-column"><code>Herow-column</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Thomas ZILLIOX</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
-            </section>
-          
-        
-
-      </section>
-    
-      <section class="main__section">
         <h1 class="main__heading" id="api">API</h1>
 
         
+        
+
+          
+          
+
+          
+          
         
 
           
@@ -1783,7 +313,7 @@
     data-collapsed="@mixin Herow-row($gutter-width: 20px) { ... }"><code>@mixin Herow-row($gutter-width: 20px) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/herow.scss#L84-L90" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/herow.scss#L85-L91" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2033,7 +563,7 @@
     data-collapsed="@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset-left: 0, $column-offset-right: 0) { ... }"><code>@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset-left: 0, $column-offset-right: 0) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/herow.scss#L208-L220" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/herow.scss#L215-L227" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2252,6 +782,1476 @@
 
 
 
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="atomic-api">Atomic API</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="atomic-api-mixin">
+              <h2 class="main__heading--secondary">mixins</h2>
+
+              
+              
+                <section class="main__item  item" id="mixin-Herow-row-gutter">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-row-gutter">Herow-row-gutter</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-row-gutter($gutter-width: 20px) { 
+  margin: (-0.5 * $gutter-width);
+ }"
+    data-collapsed="@mixin Herow-row-gutter($gutter-width: 20px) { ... }"><code>@mixin Herow-row-gutter($gutter-width: 20px) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/herow.scss#L71-L75" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Change the gutter size of the row </p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$gutter-width</code></th>
+          <td data-label="desc"><p>The size of the grid gutter</p>
+</td>
+          <td data-label="type">
+          
+            Length
+          
+          </td>
+          <td data-label="default">
+          
+            <code>20px</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-row"><code>Herow-row</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-column-width">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-column-width">Herow-column-width</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-column-width($column-span: 1, $column-count: 12) { 
+  width: Herow-get-cell-width($column-span, $column-count);
+ }"
+    data-collapsed="@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }"><code>@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/herow.scss#L106-L111" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Change the size of the column </p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-span</code></th>
+          <td data-label="desc"><p>The span length of the column</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-count</code></th>
+          <td data-label="desc"><p>The number of columns of the grid</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>12</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-column"><code>Herow-column</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-column-gutter">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-column-gutter">Herow-column-gutter</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-column-gutter($gutter-width: 20px) { 
+  padding: (0.5 * $gutter-width);
+ }"
+    data-collapsed="@mixin Herow-column-gutter($gutter-width: 20px) { ... }"><code>@mixin Herow-column-gutter($gutter-width: 20px) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/herow.scss#L121-L125" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Change the gutter of the column </p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$gutter-width</code></th>
+          <td data-label="desc"><p>The gutter size of the grid </p>
+</td>
+          <td data-label="type">
+          
+            Length
+          
+          </td>
+          <td data-label="default">
+          
+            <code>20px</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-column"><code>Herow-column</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-column-flow">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-column-flow">Herow-column-flow</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { 
+  @if $column-flow == &#39;left&#39; {
+    float: left;
+    margin-right: 0;
+  } @else if $column-flow == &#39;right&#39; {
+    float: right;
+    margin-right: 0;
+  } @else {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -0.25em;
+  }
+ }"
+    data-collapsed="@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }"><code>@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/herow.scss#L135-L149" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Change the flow of the column </p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-flow</code></th>
+          <td data-label="desc"><p>The flow of the column</p>
+</td>
+          <td data-label="type">
+          
+            &#39;inline&#39;, &#39;left&#39;, &#39;right&#39;
+          
+          </td>
+          <td data-label="default">
+          
+            <code>&#39;inline&#39;</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-column"><code>Herow-column</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-column-offset-left">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-column-offset-left">Herow-column-offset-left</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-column-offset-left($column-offset-left: 0, $column-count: 12) { 
+  margin-left: Herow-get-cell-width($column-offset, $column-count);
+ }"
+    data-collapsed="@mixin Herow-column-offset-left($column-offset-left: 0, $column-count: 12) { ... }"><code>@mixin Herow-column-offset-left($column-offset-left: 0, $column-count: 12) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/herow.scss#L160-L165" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Change the left offset of the column </p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-offset-left</code></th>
+          <td data-label="desc"><p>The span length for the left offset of the column</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-count</code></th>
+          <td data-label="desc"><p>The number of columns of the grid</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>12</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-column-offset"><code>Herow-column-offset</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-column-offset-right">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-column-offset-right">Herow-column-offset-right</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-column-offset-right($column-offset-right: 0, $column-count: 12) { 
+  margin-right: Herow-get-cell-width($column-offset-right, $column-count);
+ }"
+    data-collapsed="@mixin Herow-column-offset-right($column-offset-right: 0, $column-count: 12) { ... }"><code>@mixin Herow-column-offset-right($column-offset-right: 0, $column-count: 12) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/herow.scss#L176-L181" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Change the right offset of the column </p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-offset-right</code></th>
+          <td data-label="desc"><p>The span length for the right offset of the column</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-count</code></th>
+          <td data-label="desc"><p>The number of columns of the grid</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>12</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-column-offset"><code>Herow-column-offset</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-column-offset">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-column-offset">Herow-column-offset</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-column-offset($column-offset-left: 0, $column-offset-right: 0, $column-count: 12) { 
+  @include Herow-column-offset-left($column-offset-left, $column-count);
+  @include Herow-column-offset-right($column-offset-right, $column-count);
+ }"
+    data-collapsed="@mixin Herow-column-offset($column-offset-left: 0, $column-offset-right: 0, $column-count: 12) { ... }"><code>@mixin Herow-column-offset($column-offset-left: 0, $column-offset-right: 0, $column-count: 12) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/herow.scss#L193-L200" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Change the offset of the column </p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-offset-left</code></th>
+          <td data-label="desc"><p>The span length for the left offset of the column</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-offset-right</code></th>
+          <td data-label="desc"><p>The span length for the right offset of the column</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-count</code></th>
+          <td data-label="desc"><p>The number of columns of the grid</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>12</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-offset-left"><code>Herow-column-offset-left</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-offset-right"><code>Herow-column-offset-right</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-column"><code>Herow-column</code></a></li>
+  
+
+
+
+
+</ul>
 
 
   
