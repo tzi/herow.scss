@@ -64,17 +64,6 @@ $Herow-generator-class-map: (
   }
 }
 
-/// Get a column width in percent
-///
-/// @param {Integer} $column-span - The span length of the column
-/// @param {Integer} $column-count - The number of available columns
-///
-/// @access private
-///
-@function Herow-get-cell-width($column-span, $column-count) {
-  @return percentage($column-span / $column-count);
-}
-
 
 
 // Row Mixins
@@ -133,7 +122,7 @@ $Herow-generator-class-map: (
   $column-span: 1,
   $column-count: $Herow-default-column-count
 ) {
-  width: Herow-get-cell-width($column-span, $column-count);
+  width: percentage($column-span / $column-count);
 }
 
 /// Change the gutter of the column
@@ -184,7 +173,7 @@ $Herow-generator-class-map: (
   $column-offset: 1,
   $column-count: $Herow-default-column-count
 ) {
-  margin-left: Herow-get-cell-width($column-offset, $column-count);
+  margin-left: percentage($column-offset / $column-count);
 }
 
 /// Include the styles of a column
