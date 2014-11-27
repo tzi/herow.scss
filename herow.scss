@@ -83,29 +83,37 @@ $Herow-generator-class-map: (
 /// Change the gutter size of the row
 ///
 /// @param {Length} $gutter-width (20px) - The size of the grid gutter
+/// @param {Boolean} $external-pad (false) - Set if an external padding is displayed on the grid
 ///
 /// @access public
 /// @group atomic-api
 ///
 @mixin Herow-row-gutter(
-  $gutter-width: $Herow-default-gutter-width
+  $gutter-width: $Herow-default-gutter-width,
+  $external-pad: false
 ) {
-  margin: (-0.5 * $gutter-width);
+  @if $external-pad {
+    padding: (0.5 * $gutter-width);
+  } @else {
+    margin: (-0.5 * $gutter-width);
+  }
 }
 
 /// Include the styles of a row
 ///
 /// @param {Length} $gutter-width (20px) - The size of the grid gutter
+/// @param {Boolean} $external-pad (false) - Set if an external padding is displayed on the grid
 ///
 /// @access public
 /// @group api
 ///
 @mixin Herow-row(
-  $gutter-width: $Herow-default-gutter-width
+  $gutter-width: $Herow-default-gutter-width,
+  $external-pad: false
 ) {
   display: block;
   box-sizing: border-box;
-  @include Herow-row-gutter($gutter-width);
+  @include Herow-row-gutter($gutter-width, $external-pad);
   @include Herow-clearfix();
 }
 
