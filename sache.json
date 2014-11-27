@@ -1,5 +1,5 @@
 {
   "name": "Herow",
   "description": "Herow, the saving time grid in Sass.",
-  "tags": ["grid", "atomic"]
+  "tags": ["grid", "modular", "row", "columns", "semantic", "layout"]
 }
