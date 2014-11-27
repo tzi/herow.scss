@@ -112,7 +112,6 @@ $Herow-generator-class-map: (
   $external-pad: false
 ) {
   display: block;
-  box-sizing: border-box;
   @include Herow-row-gutter($gutter-width, $external-pad);
   @include Herow-clearfix();
 }
@@ -206,6 +205,7 @@ $Herow-generator-class-map: (
   $column-flow: $Herow-default-column-flow,
   $column-offset: 0
 ){
+  box-sizing: border-box;
   @include Herow-column-flow($column-flow);
   @include Herow-column-width($column-span, $column-count);
   @include Herow-column-gutter($gutter-width);
