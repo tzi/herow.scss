@@ -72,7 +72,7 @@ $Herow-generator-class-map: (
 /// @access private
 ///
 @function Herow-get-cell-width($column-span, $column-count) {
-  @return $column-span * 100% / $column-count;
+  @return percentage($column-span / $column-count);
 }
 
 
