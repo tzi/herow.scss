@@ -1,7 +1,7 @@
 Herow
 =======
 
-Herow, the saving time grid in Sass.
+Herow, a time-saving Sass grid system.
  
 Herow provides mixins that are [simple to use](#simple-to-use) and [easy to customize](#easy-to-customize) for semantic grids.<br>
 It also provides [atomic mixins](#atomic-mixins), that are ideal to deal with responsive problematic.<br>
