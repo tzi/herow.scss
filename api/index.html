@@ -8,7 +8,7 @@
   
   <meta charset="utf-8" />
 
-<title>Herow - v1.1.0</title>
+<title>Herow - v1.1.1</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width">
@@ -26,7 +26,7 @@
   <div class="sidebar__header">
   <h1 class="sidebar__title">
     
-      <a href="https://github.com/tzi/Herow">Herow - v1.1.0</a>
+      <a href="https://github.com/tzi/Herow">Herow - v1.1.1</a>
     
   </h1>
 </div>
@@ -43,15 +43,6 @@
       
       
         <div>
-
-        
-        
-
-        
-        
-        
-      
-        
 
         
         
@@ -264,13 +255,6 @@
 
           
           
-        
-
-          
-          
-
-          
-          
             <section class="main__sub-section" id="api-mixin">
               <h2 class="main__heading--secondary">mixins</h2>
 
@@ -334,7 +318,7 @@
     data-collapsed="@mixin Herow-row($gutter-width: 20px, $external-pad: false) { ... }"><code>@mixin Herow-row($gutter-width: 20px, $external-pad: false) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L110-L117" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L99-L106" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -604,7 +588,7 @@
     data-collapsed="@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset: 0) { ... }"><code>@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset: 0) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L201-L213" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L190-L202" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -965,7 +949,7 @@
     data-collapsed="@mixin Herow-class-generator($column-count: 12, $gutter-width: 20px, $class-prefix: &#39;&#39;, $class-suffix: &#39;&#39;) { ... }"><code>@mixin Herow-class-generator($column-count: 12, $gutter-width: 20px, $class-prefix: &#39;&#39;, $class-suffix: &#39;&#39;) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L250-L281" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L239-L270" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1340,7 +1324,7 @@
     data-collapsed="@mixin Herow-row-gutter($gutter-width: 20px, $external-pad: false) { ... }"><code>@mixin Herow-row-gutter($gutter-width: 20px, $external-pad: false) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L91-L100" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L80-L89" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1542,12 +1526,12 @@
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@mixin Herow-column-width($column-span: 1, $column-count: 12) { 
-  width: Herow-get-cell-width($column-span, $column-count);
+  width: percentage($column-span / $column-count);
  }"
     data-collapsed="@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }"><code>@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L132-L137" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L121-L126" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1634,10 +1618,6 @@
   
     
     
-
-
-  
-
 
 
 
@@ -1755,7 +1735,7 @@
     data-collapsed="@mixin Herow-column-gutter($gutter-width: 20px) { ... }"><code>@mixin Herow-column-gutter($gutter-width: 20px) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L146-L150" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L135-L139" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1938,13 +1918,13 @@
   } @else {
     display: inline-block;
     vertical-align: top;
-    margin-right: -0.25em;
+    margin-right: -0.31em;
   }
  }"
     data-collapsed="@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }"><code>@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L159-L173" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L148-L162" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2157,12 +2137,12 @@
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@mixin Herow-column-offset($column-offset: 1, $column-count: 12) { 
-  margin-left: Herow-get-cell-width($column-offset, $column-count);
+  margin-left: percentage($column-offset / $column-count);
  }"
     data-collapsed="@mixin Herow-column-offset($column-offset: 1, $column-count: 12) { ... }"><code>@mixin Herow-column-offset($column-offset: 1, $column-count: 12) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L183-L188" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L172-L177" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2249,10 +2229,6 @@
   
     
     
-
-
-  
-
 
 
 
@@ -2840,7 +2816,7 @@
           
 
           <!-- Version -->
-          <span class="project-info__version"> - v1.1.0</span>
+          <span class="project-info__version"> - v1.1.1</span>
 
           <!-- License -->
           
