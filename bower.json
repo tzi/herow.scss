@@ -4,7 +4,7 @@
   "keywords": ["grid", "modular", "row", "columns", "semantic", "layout"],
   "main": "herow.scss",
   "author": "Thomas ZILLIOX",
-  "ignore": ["**/.*", "sache.json"],
+  "ignore": ["**/.*", "test", "sache.json"],
   "licenses": [
     {
       "type": "MIT",
