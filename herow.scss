@@ -160,50 +160,17 @@ $Herow-generator-class-map: (
 
 /// Change the left offset of the column
 ///
-/// @param {Integer} $column-offset-left (0) - The span length for the left offset of the column
-/// @param {Integer} $column-count (12) - The number of columns of the grid
-///
-/// @access public
-/// @group atomic-api
-///
-@mixin Herow-column-offset-left(
-  $column-offset: 1,
-  $column-count: $Herow-default-column-count
-) {
-  margin-left: Herow-get-cell-width($column-offset, $column-count);
-}
-
-/// Change the right offset of the column
-///
-/// @param {Integer} $column-offset-right (0) - The span length for the right offset of the column
-/// @param {Integer} $column-count (12) - The number of columns of the grid
-///
-/// @access public
-/// @group atomic-api
-///
-@mixin Herow-column-offset-right(
-  $column-offset-right: 1,
-  $column-count: $Herow-default-column-count
-) {
-  margin-right: Herow-get-cell-width($column-offset-right, $column-count);
-}
-
-/// Change the offset of the column
-///
-/// @param {Integer} $column-offset-left (0) - The span length for the left offset of the column
-/// @param {Integer} $column-offset-right (0) - The span length for the right offset of the column
+/// @param {Integer} $column-offset (1) - The span length for the left offset of the column
 /// @param {Integer} $column-count (12) - The number of columns of the grid
 ///
 /// @access public
 /// @group atomic-api
 ///
 @mixin Herow-column-offset(
-  $column-offset-left: 1,
-  $column-offset-right: 1,
+  $column-offset: 1,
   $column-count: $Herow-default-column-count
 ) {
-  @include Herow-column-offset-left($column-offset-left, $column-count);
-  @include Herow-column-offset-right($column-offset-right, $column-count);
+  margin-left: Herow-get-cell-width($column-offset, $column-count);
 }
 
 /// Include the styles of a column
@@ -212,8 +179,7 @@ $Herow-generator-class-map: (
 /// @param {Integer} $column-count (12) - The number of columns of the grid
 /// @param {Length} $gutter-width (20px) - The gutter size of the grid
 /// @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
-/// @param {Integer} $column-offset-left (0) - The span length for the left offset of the column
-/// @param {Integer} $column-offset-right (0) - The span length for the right offset of the column
+/// @param {Integer} $column-offset (0) - The span length for the left offset of the column
 ///
 /// @access public
 /// @group api
@@ -223,13 +189,12 @@ $Herow-generator-class-map: (
   $column-count: $Herow-default-column-count,
   $gutter-width: $Herow-default-gutter-width,
   $column-flow: 'inline',
-  $column-offset-left: 0,
-  $column-offset-right: 0
+  $column-offset: 0
 ){
   @include Herow-column-flow($column-flow);
   @include Herow-column-width($column-span, $column-count);
   @include Herow-column-gutter($gutter-width);
-  @include Herow-column-offset($column-offset-left, $column-offset-right, $column-count);
+  @include Herow-column-offset($column-offset, $column-count);
 }
 
 
@@ -295,7 +260,7 @@ $Herow-generator-class-map: (
   }
   @for $counter from 1 through $column-count {
     @include Herow-class-selector(col-offset-left, $class-prefix, $class-suffix, $counter - 1) {
-      @include Herow-column-offset-left($counter - 1, $column-count);
+      @include Herow-column-offset($counter - 1, $column-count);
     }
   }
 }
