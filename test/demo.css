@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+}
+
+.demo {
+    display: block;
+    background: #FF4412;
+    color: white;
+}
