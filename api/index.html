@@ -8,7 +8,7 @@
   
   <meta charset="utf-8" />
 
-<title>Herow - v1.0.0</title>
+<title>Herow - v1.1.0</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width">
@@ -26,7 +26,7 @@
   <div class="sidebar__header">
   <h1 class="sidebar__title">
     
-      <a href="https://github.com/tzi/Herow">Herow - v1.0.0</a>
+      <a href="https://github.com/tzi/Herow">Herow - v1.1.0</a>
     
   </h1>
 </div>
@@ -146,24 +146,6 @@
             
           
             
-            <li class="sidebar__item  sassdoc__item" data-name="Herow-column-offset-left" data-type="mixin">
-              <a href="#mixin-Herow-column-offset-left">Herow-column-offset-left
-              
-              
-              </a>
-            </li>
-            
-          
-            
-            <li class="sidebar__item  sassdoc__item" data-name="Herow-column-offset-right" data-type="mixin">
-              <a href="#mixin-Herow-column-offset-right">Herow-column-offset-right
-              
-              
-              </a>
-            </li>
-            
-          
-            
             <li class="sidebar__item  sassdoc__item" data-name="Herow-column-offset" data-type="mixin">
               <a href="#mixin-Herow-column-offset">Herow-column-offset
               
@@ -195,6 +177,15 @@
             <ul class="list-unstyled">
             <li class="sidebar__item  sassdoc__item" data-name="Herow-default-column-count" data-type="variable">
               <a href="#variable-Herow-default-column-count">Herow-default-column-count
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-default-column-flow" data-type="variable">
+              <a href="#variable-Herow-default-column-flow">Herow-default-column-flow
               
               
               </a>
@@ -319,19 +310,31 @@
     
   
 
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@mixin Herow-row($gutter-width: 20px) { 
+    data-expanded="@mixin Herow-row($gutter-width: 20px, $external-pad: false) { 
   display: block;
-  @include Herow-row-gutter($gutter-width);
+  @include Herow-row-gutter($gutter-width, $external-pad);
   @include Herow-clearfix();
  }"
-    data-collapsed="@mixin Herow-row($gutter-width: 20px) { ... }"><code>@mixin Herow-row($gutter-width: 20px) { ... }</code></pre>
+    data-collapsed="@mixin Herow-row($gutter-width: 20px, $external-pad: false) { ... }"><code>@mixin Herow-row($gutter-width: 20px, $external-pad: false) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L96-L102" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L110-L117" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -345,7 +348,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Include the styles of a row </p>
+  <div class="item__description"><p>Include the styles of a row</p>
 </div>
 
 
@@ -378,6 +381,22 @@
           <td data-label="default">
           
             <code>20px</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$external-pad</code></th>
+          <td data-label="desc"><p>Set if an external padding is displayed on the grid</p>
+</td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
           
           </td>
         </tr>
@@ -571,32 +590,21 @@
     
   
 
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset-left: 0, $column-offset-right: 0) { 
+    data-expanded="@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset: 0) { 
+  box-sizing: border-box;
   @include Herow-column-flow($column-flow);
   @include Herow-column-width($column-span, $column-count);
   @include Herow-column-gutter($gutter-width);
-  @include Herow-column-offset($column-offset-left, $column-offset-right, $column-count);
+  @include Herow-column-offset($column-offset, $column-count);
  }"
-    data-collapsed="@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset-left: 0, $column-offset-right: 0) { ... }"><code>@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset-left: 0, $column-offset-right: 0) { ... }</code></pre>
+    data-collapsed="@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset: 0) { ... }"><code>@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset: 0) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L220-L232" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L201-L213" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -610,7 +618,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Include the styles of a column </p>
+  <div class="item__description"><p>Include the styles of a column</p>
 </div>
 
 
@@ -696,24 +704,8 @@
         </tr>
       
         <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-offset-left</code></th>
+          <th scope="row" data-label="name"><code>$column-offset</code></th>
           <td data-label="desc"><p>The span length for the left offset of the column</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>0</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-offset-right</code></th>
-          <td data-label="desc"><p>The span length for the right offset of the column</p>
 </td>
           <td data-label="type">
           
@@ -966,14 +958,14 @@
   }
   @for $counter from 1 through $column-count {
     @include Herow-class-selector(col-offset-left, $class-prefix, $class-suffix, $counter - 1) {
-      @include Herow-column-offset-left($counter - 1, $column-count);
+      @include Herow-column-offset($counter - 1, $column-count);
     }
   }
  }"
     data-collapsed="@mixin Herow-class-generator($column-count: 12, $gutter-width: 20px, $class-prefix: &#39;&#39;, $class-suffix: &#39;&#39;) { ... }"><code>@mixin Herow-class-generator($column-count: 12, $gutter-width: 20px, $class-prefix: &#39;&#39;, $class-suffix: &#39;&#39;) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L269-L300" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L250-L281" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1209,7 +1201,7 @@
 
     
       <li>
-        <a href="#mixin-Herow-column-offset-left"><code>Herow-column-offset-left</code></a>
+        <a href="#mixin-Herow-column-offset"><code>Herow-column-offset</code></a>
         
       </li>
     
@@ -1322,17 +1314,33 @@
     
   
 
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@mixin Herow-row-gutter($gutter-width: 20px) { 
-  margin: (-0.5 * $gutter-width);
+    data-expanded="@mixin Herow-row-gutter($gutter-width: 20px, $external-pad: false) { 
+  @if $external-pad {
+    padding: (0.5 * $gutter-width);
+  } @else {
+    margin: (-0.5 * $gutter-width);
+  }
  }"
-    data-collapsed="@mixin Herow-row-gutter($gutter-width: 20px) { ... }"><code>@mixin Herow-row-gutter($gutter-width: 20px) { ... }</code></pre>
+    data-collapsed="@mixin Herow-row-gutter($gutter-width: 20px, $external-pad: false) { ... }"><code>@mixin Herow-row-gutter($gutter-width: 20px, $external-pad: false) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L83-L87" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L91-L100" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1346,7 +1354,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Change the gutter size of the row </p>
+  <div class="item__description"><p>Change the gutter size of the row</p>
 </div>
 
 
@@ -1379,6 +1387,22 @@
           <td data-label="default">
           
             <code>20px</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$external-pad</code></th>
+          <td data-label="desc"><p>Set if an external padding is displayed on the grid</p>
+</td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
           
           </td>
         </tr>
@@ -1523,7 +1547,7 @@
     data-collapsed="@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }"><code>@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L117-L122" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L132-L137" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1537,7 +1561,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Change the size of the column </p>
+  <div class="item__description"><p>Change the size of the column</p>
 </div>
 
 
@@ -1731,7 +1755,7 @@
     data-collapsed="@mixin Herow-column-gutter($gutter-width: 20px) { ... }"><code>@mixin Herow-column-gutter($gutter-width: 20px) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L131-L135" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L146-L150" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1745,7 +1769,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Change the gutter of the column </p>
+  <div class="item__description"><p>Change the gutter of the column</p>
 </div>
 
 
@@ -1768,7 +1792,7 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$gutter-width</code></th>
-          <td data-label="desc"><p>The gutter size of the grid </p>
+          <td data-label="desc"><p>The gutter size of the grid</p>
 </td>
           <td data-label="type">
           
@@ -1920,7 +1944,7 @@
     data-collapsed="@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }"><code>@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L144-L158" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L159-L173" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1934,7 +1958,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Change the flow of the column </p>
+  <div class="item__description"><p>Change the flow of the column</p>
 </div>
 
 
@@ -2082,437 +2106,6 @@
 
 </section>
               
-                <section class="main__item  item" id="mixin-Herow-column-offset-left">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-Herow-column-offset-left">Herow-column-offset-left</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@mixin Herow-column-offset-left($column-offset-left: 0, $column-count: 12) { 
-  margin-left: Herow-get-cell-width($column-offset, $column-count);
- }"
-    data-collapsed="@mixin Herow-column-offset-left($column-offset-left: 0, $column-count: 12) { ... }"><code>@mixin Herow-column-offset-left($column-offset-left: 0, $column-count: 12) { ... }</code></pre>
-
-  
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L168-L173" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Change the left offset of the column </p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-offset-left</code></th>
-          <td data-label="desc"><p>The span length for the left offset of the column</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>0</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-count</code></th>
-          <td data-label="desc"><p>The number of columns of the grid</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>12</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-  
-
-
-
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#mixin-Herow-column-offset"><code>Herow-column-offset</code></a></li>
-  
-
-
-
-  
-
-    
-
-    <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Thomas ZILLIOX</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="mixin-Herow-column-offset-right">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-Herow-column-offset-right">Herow-column-offset-right</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@mixin Herow-column-offset-right($column-offset-right: 0, $column-count: 12) { 
-  margin-right: Herow-get-cell-width($column-offset-right, $column-count);
- }"
-    data-collapsed="@mixin Herow-column-offset-right($column-offset-right: 0, $column-count: 12) { ... }"><code>@mixin Herow-column-offset-right($column-offset-right: 0, $column-count: 12) { ... }</code></pre>
-
-  
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L183-L188" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Change the right offset of the column </p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-offset-right</code></th>
-          <td data-label="desc"><p>The span length for the right offset of the column</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>0</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-count</code></th>
-          <td data-label="desc"><p>The number of columns of the grid</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>12</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-  
-
-
-
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#mixin-Herow-column-offset"><code>Herow-column-offset</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Thomas ZILLIOX</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
-              
                 <section class="main__item  item" id="mixin-Herow-column-offset">
 
 <h3 class="item__heading">
@@ -2559,30 +2152,17 @@
     
   
 
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@mixin Herow-column-offset($column-offset-left: 0, $column-offset-right: 0, $column-count: 12) { 
-  @include Herow-column-offset-left($column-offset-left, $column-count);
-  @include Herow-column-offset-right($column-offset-right, $column-count);
+    data-expanded="@mixin Herow-column-offset($column-offset: 1, $column-count: 12) { 
+  margin-left: Herow-get-cell-width($column-offset, $column-count);
  }"
-    data-collapsed="@mixin Herow-column-offset($column-offset-left: 0, $column-offset-right: 0, $column-count: 12) { ... }"><code>@mixin Herow-column-offset($column-offset-left: 0, $column-offset-right: 0, $column-count: 12) { ... }</code></pre>
+    data-collapsed="@mixin Herow-column-offset($column-offset: 1, $column-count: 12) { ... }"><code>@mixin Herow-column-offset($column-offset: 1, $column-count: 12) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L199-L206" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L183-L188" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2596,7 +2176,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Change the offset of the column </p>
+  <div class="item__description"><p>Change the left offset of the column</p>
 </div>
 
 
@@ -2618,7 +2198,7 @@
     <tbody>
       
         <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-offset-left</code></th>
+          <th scope="row" data-label="name"><code>$column-offset</code></th>
           <td data-label="desc"><p>The span length for the left offset of the column</p>
 </td>
           <td data-label="type">
@@ -2628,23 +2208,7 @@
           </td>
           <td data-label="default">
           
-            <code>0</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$column-offset-right</code></th>
-          <td data-label="desc"><p>The span length for the right offset of the column</p>
-</td>
-          <td data-label="type">
-          
-            Integer
-          
-          </td>
-          <td data-label="default">
-          
-            <code>0</code>
+            <code>1</code>
           
           </td>
         </tr>
@@ -2688,37 +2252,9 @@
 
 
   
-    
-      
-      <h3 class="item__sub-heading">Requires</h3>
-      <ul class="list-unstyled">
-    
-
-    
-      <li>
-        <a href="#mixin-Herow-column-offset-left"><code>Herow-column-offset-left</code></a>
-        
-      </li>
-    
-  
 
 
 
-  
-    
-
-    
-      <li>
-        <a href="#mixin-Herow-column-offset-right"><code>Herow-column-offset-right</code></a>
-        
-      </li>
-    
-  
-
-
-
-
-</ul>
 
 
   
@@ -2736,6 +2272,15 @@
     
 
     <li><a href="#mixin-Herow-column"><code>Herow-column</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
   
 
 
@@ -2917,6 +2462,120 @@
 
 </section>
               
+                <section class="main__item  item" id="variable-Herow-default-column-flow">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-Herow-default-column-flow">Herow-default-column-flow</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$Herow-default-column-flow: &#39;inline&#39; !default;</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L25-L25" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Defines the default column flow.</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>'inline'</code>, <code>'left'</code>, <code>'right'</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
                 <section class="main__item  item" id="variable-Herow-default-gutter-width">
 
 <h3 class="item__heading">
@@ -2941,7 +2600,7 @@
   <pre class="item__code  language-scss"><code>$Herow-default-gutter-width: 20px !default;</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L25-L25" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L32-L32" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -3063,7 +2722,7 @@
 ) !default;</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L33-L41" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L40-L48" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -3181,7 +2840,7 @@
           
 
           <!-- Version -->
-          <span class="project-info__version"> - v1.0.0</span>
+          <span class="project-info__version"> - v1.1.0</span>
 
           <!-- License -->
           
