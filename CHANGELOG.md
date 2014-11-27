@@ -1,6 +1,9 @@
 Changelog
 =======
 
+ * `v1.2.0`:
+     * Change gutter distribution to prevent grid to grid margin collapsing  
+
  * `v1.1.1`:
      * Change the inline-block negative margin to `-0.31em` 
 

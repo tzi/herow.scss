@@ -82,9 +82,11 @@ $Herow-generator-class-map: (
   $external-pad: false
 ) {
   @if $external-pad {
-    padding: (0.5 * $gutter-width);
+    padding-bottom: $gutter-width;
+    padding-right: $gutter-width;
   } @else {
-    margin: (-0.5 * $gutter-width);
+    margin-top: - $gutter-width;
+    margin-left: - $gutter-width;
   }
 }
 
@@ -135,7 +137,8 @@ $Herow-generator-class-map: (
 @mixin Herow-column-gutter(
   $gutter-width: $Herow-default-gutter-width
 ) {
-  padding: (0.5 * $gutter-width);
+  padding-top: $gutter-width;
+  padding-left: $gutter-width;
 }
 
 /// Change the flow of the column
