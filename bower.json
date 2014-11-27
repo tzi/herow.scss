@@ -1,0 +1,18 @@
+{
+  "name": "Herow",
+  "description": "Herow, the saving time grid in Sass.",
+  "keywords": ["grid", "modular", "row", "columns", "semantic", "layout"],
+  "main": "herow.scss",
+  "author": "Thomas ZILLIOX",
+  "ignore": ["**/.*", "sache.json"],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tzi/Herow"
+  }
+}
