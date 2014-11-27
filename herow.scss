@@ -17,6 +17,13 @@
 ///
 $Herow-default-column-count: 12 !default;
 
+/// Defines the default column flow.
+///
+/// @type 'inline' | 'left' | 'right'
+/// @group configuration
+///
+$Herow-default-column-flow: 'inline' !default;
+
 /// Defines the default gutter.
 ///
 /// @type Length
@@ -143,7 +150,7 @@ $Herow-generator-class-map: (
 /// @group atomic-api
 ///
 @mixin Herow-column-flow(
-  $column-flow: 'inline'
+  $column-flow: $Herow-default-column-flow
 ) {
   @if $column-flow == 'left' {
     float: left;
@@ -188,7 +195,7 @@ $Herow-generator-class-map: (
   $column-span: 1,
   $column-count: $Herow-default-column-count,
   $gutter-width: $Herow-default-gutter-width,
-  $column-flow: 'inline',
+  $column-flow: $Herow-default-column-flow,
   $column-offset: 0
 ){
   @include Herow-column-flow($column-flow);
