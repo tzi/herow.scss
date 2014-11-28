@@ -8,7 +8,7 @@
   
   <meta charset="utf-8" />
 
-<title>Herow - v1.1.1</title>
+<title>Herow - v1.2.0</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width">
@@ -26,7 +26,7 @@
   <div class="sidebar__header">
   <h1 class="sidebar__title">
     
-      <a href="https://github.com/tzi/Herow">Herow - v1.1.1</a>
+      <a href="https://github.com/tzi/Herow">Herow - v1.2.0</a>
     
   </h1>
 </div>
@@ -318,7 +318,7 @@
     data-collapsed="@mixin Herow-row($gutter-width: 20px, $external-pad: false) { ... }"><code>@mixin Herow-row($gutter-width: 20px, $external-pad: false) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L99-L106" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L101-L108" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -588,7 +588,7 @@
     data-collapsed="@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset: 0) { ... }"><code>@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset: 0) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L190-L202" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L193-L205" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -949,7 +949,7 @@
     data-collapsed="@mixin Herow-class-generator($column-count: 12, $gutter-width: 20px, $class-prefix: &#39;&#39;, $class-suffix: &#39;&#39;) { ... }"><code>@mixin Herow-class-generator($column-count: 12, $gutter-width: 20px, $class-prefix: &#39;&#39;, $class-suffix: &#39;&#39;) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L239-L270" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L242-L273" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1316,15 +1316,17 @@
     data-current-state="collapsed"
     data-expanded="@mixin Herow-row-gutter($gutter-width: 20px, $external-pad: false) { 
   @if $external-pad {
-    padding: (0.5 * $gutter-width);
+    padding-bottom: $gutter-width;
+    padding-right: $gutter-width;
   } @else {
-    margin: (-0.5 * $gutter-width);
+    margin-top: - $gutter-width;
+    margin-left: - $gutter-width;
   }
  }"
     data-collapsed="@mixin Herow-row-gutter($gutter-width: 20px, $external-pad: false) { ... }"><code>@mixin Herow-row-gutter($gutter-width: 20px, $external-pad: false) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L80-L89" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L80-L91" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1531,7 +1533,7 @@
     data-collapsed="@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }"><code>@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L121-L126" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L123-L128" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1730,12 +1732,13 @@
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@mixin Herow-column-gutter($gutter-width: 20px) { 
-  padding: (0.5 * $gutter-width);
+  padding-top: $gutter-width;
+  padding-left: $gutter-width;
  }"
     data-collapsed="@mixin Herow-column-gutter($gutter-width: 20px) { ... }"><code>@mixin Herow-column-gutter($gutter-width: 20px) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L135-L139" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L137-L142" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1924,7 +1927,7 @@
     data-collapsed="@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }"><code>@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L148-L162" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L151-L165" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2142,7 +2145,7 @@
     data-collapsed="@mixin Herow-column-offset($column-offset: 1, $column-count: 12) { ... }"><code>@mixin Herow-column-offset($column-offset: 1, $column-count: 12) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L172-L177" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L175-L180" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2816,7 +2819,7 @@
           
 
           <!-- Version -->
-          <span class="project-info__version"> - v1.1.1</span>
+          <span class="project-info__version"> - v1.2.0</span>
 
           <!-- License -->
           
