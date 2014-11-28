@@ -1,0 +1,67 @@
+@import '../herow.scss';
+
+%container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    &__container {
+        @extend %container;
+        border: 1px black solid;
+    }
+    &__row {
+        @include Herow-row();
+    }
+    &__col {
+        @include Herow-column(1);
+    }
+}
+
+.main {
+    &__container {
+        @extend %container;
+    }
+    &__row {
+        @include Herow-row();
+    }
+}
+
+.content {
+    @include Herow-column(8);
+    &__container {
+        border: 1px black solid;
+    }
+    &__row {
+        @include Herow-row();
+    }
+    &__col {
+        @include Herow-column(1, 8);
+    }
+}
+
+.sidebar {
+    @include Herow-column(4);
+    &__container {
+        border: 1px black solid;
+    }
+    &__row {
+        @include Herow-row();
+    }
+    &__col {
+        @include Herow-column(1, 4);
+    }
+}
+
+.footer {
+    &__container {
+        @extend %container;
+        border: 1px black solid;
+    }
+    &__row {
+        @include Herow-row();
+    }
+    &__col {
+        @include Herow-column(1);
+    }
+}

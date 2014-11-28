@@ -1,0 +1,110 @@
+.header__container, .main__container, .footer__container {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.header__container {
+  border: 1px black solid; }
+.header__row {
+  display: block;
+  margin-top: -20px;
+  margin-left: -20px; }
+  .header__row:after {
+    content: "";
+    display: table;
+    clear: both; }
+.header__col {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -0.31em;
+  width: 8.33333%;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-left: 0%; }
+
+.main__row {
+  display: block;
+  margin-top: -20px;
+  margin-left: -20px; }
+  .main__row:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.content {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -0.31em;
+  width: 66.66667%;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-left: 0%; }
+  .content__container {
+    border: 1px black solid; }
+  .content__row {
+    display: block;
+    margin-top: -20px;
+    margin-left: -20px; }
+    .content__row:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .content__col {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -0.31em;
+    width: 12.5%;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-left: 0%; }
+
+.sidebar {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -0.31em;
+  width: 33.33333%;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-left: 0%; }
+  .sidebar__container {
+    border: 1px black solid; }
+  .sidebar__row {
+    display: block;
+    margin-top: -20px;
+    margin-left: -20px; }
+    .sidebar__row:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .sidebar__col {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -0.31em;
+    width: 25%;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-left: 0%; }
+
+.footer__container {
+  border: 1px black solid; }
+.footer__row {
+  display: block;
+  margin-top: -20px;
+  margin-left: -20px; }
+  .footer__row:after {
+    content: "";
+    display: table;
+    clear: both; }
+.footer__col {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -0.31em;
+  width: 8.33333%;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-left: 0%; }
