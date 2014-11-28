@@ -158,8 +158,7 @@ $Herow-generator-class-map: (
     float: right;
     margin-right: 0;
   } @else {
-    display: inline-block;
-    vertical-align: top;
+    float: none;
     margin-right: -0.31em;
   }
 }
@@ -197,6 +196,8 @@ $Herow-generator-class-map: (
   $column-flow: $Herow-default-column-flow,
   $column-offset: 0
 ){
+  display: inline-block;
+  vertical-align: top;
   box-sizing: border-box;
   @include Herow-column-flow($column-flow);
   @include Herow-column-width($column-span, $column-count);

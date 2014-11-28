@@ -13,9 +13,10 @@
     display: table;
     clear: both; }
 .header__col {
-  box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
+  box-sizing: border-box;
+  float: none;
   margin-right: -0.31em;
   width: 8.33333%;
   padding-top: 20px;
@@ -32,9 +33,10 @@
     clear: both; }
 
 .content {
-  box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
+  box-sizing: border-box;
+  float: none;
   margin-right: -0.31em;
   width: 66.66667%;
   padding-top: 20px;
@@ -51,9 +53,10 @@
       display: table;
       clear: both; }
   .content__col {
-    box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
+    box-sizing: border-box;
+    float: none;
     margin-right: -0.31em;
     width: 12.5%;
     padding-top: 20px;
@@ -61,9 +64,10 @@
     margin-left: 0%; }
 
 .sidebar {
-  box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
+  box-sizing: border-box;
+  float: none;
   margin-right: -0.31em;
   width: 33.33333%;
   padding-top: 20px;
@@ -80,9 +84,10 @@
       display: table;
       clear: both; }
   .sidebar__col {
-    box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
+    box-sizing: border-box;
+    float: none;
     margin-right: -0.31em;
     width: 25%;
     padding-top: 20px;
@@ -100,9 +105,10 @@
     display: table;
     clear: both; }
 .footer__col {
-  box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
+  box-sizing: border-box;
+  float: none;
   margin-right: -0.31em;
   width: 8.33333%;
   padding-top: 20px;

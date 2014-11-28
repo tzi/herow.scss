@@ -8,9 +8,10 @@
     clear: both; }
 
 .col {
-  box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
+  box-sizing: border-box;
+  float: none;
   margin-right: -0.31em;
   width: 8.33333%;
   padding-top: 20px;
@@ -62,8 +63,7 @@
   margin-right: 0; }
 
 .col-inline {
-  display: inline-block;
-  vertical-align: top;
+  float: none;
   margin-right: -0.31em; }
 
 .col-offset-0 {
