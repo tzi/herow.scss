@@ -3,7 +3,7 @@ Herow
 
 Herow, a time-saving Sass grid system.
  
-Herow provides mixins that are [simple to use](#simple-to-use) and [easy to customize](#easy-to-customize) for semantic grids.<br>
+Herow provides mixins that are [simple to use](#simple-to-use) and [easy to customize](#easy-to-customize).<br>
 It also provides [atomic mixins](#atomic-mixins), that are ideal to deal with responsive problematic.<br>
 Last, but not least, you can generate [atomic classes](#atomic-classes) to play with it directly in CSS.
 
