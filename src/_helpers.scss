@@ -1,0 +1,16 @@
+////
+/// @author Thomas ZILLIOX
+///
+
+
+/// Include a micro clearfix
+///
+/// @access private
+///
+@mixin Herow-clearfix() {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

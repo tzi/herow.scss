@@ -1,0 +1,97 @@
+////
+/// @group api
+/// @author Thomas ZILLIOX
+///
+
+/// Change the size of the column
+///
+/// @param {Integer} $column-span (1) - The span length of the column
+/// @param {Integer} $column-count (12) - The number of columns of the grid
+///
+/// @access public
+/// @group atomic-api
+///
+@mixin Herow-column-width(
+    $column-span: 1,
+    $column-count: $Herow-default-column-count
+) {
+    width: percentage($column-span / $column-count);
+}
+
+/// Change the gutter of the column
+///
+/// @param {Length} $gutter-width (20px) - The gutter size of the grid
+///
+/// @access public
+/// @group atomic-api
+///
+@mixin Herow-column-gutter(
+    $gutter-width: $Herow-default-gutter-width
+) {
+    padding-top: $gutter-width;
+    padding-left: $gutter-width;
+}
+
+/// Change the flow of the column
+///
+/// @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
+///
+/// @access public
+/// @group atomic-api
+///
+@mixin Herow-column-flow(
+    $column-flow: $Herow-default-column-flow
+) {
+    @if $column-flow == 'left' {
+        float: left;
+        margin-right: 0;
+    } @else if $column-flow == 'right' {
+        float: right;
+        margin-right: 0;
+    } @else {
+        float: none;
+        margin-right: -0.31em;
+    }
+}
+
+/// Change the left offset of the column
+///
+/// @param {Integer} $column-offset (1) - The span length for the left offset of the column
+/// @param {Integer} $column-count (12) - The number of columns of the grid
+///
+/// @access public
+/// @group atomic-api
+///
+@mixin Herow-column-offset(
+    $column-offset: 1,
+    $column-count: $Herow-default-column-count
+) {
+    margin-left: percentage($column-offset / $column-count);
+}
+
+/// Include the styles of a column
+///
+/// @param {Integer} $column-span (1) - The span length of the column
+/// @param {Integer} $column-count (12) - The number of columns of the grid
+/// @param {Length} $gutter-width (20px) - The gutter size of the grid
+/// @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
+/// @param {Integer} $column-offset (0) - The span length for the left offset of the column
+///
+/// @access public
+/// @group api
+///
+@mixin Herow-column(
+    $column-span: 1,
+    $column-count: $Herow-default-column-count,
+    $gutter-width: $Herow-default-gutter-width,
+    $column-flow: $Herow-default-column-flow,
+    $column-offset: 0
+){
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    @include Herow-column-flow($column-flow);
+    @include Herow-column-width($column-span, $column-count);
+    @include Herow-column-gutter($gutter-width);
+    @include Herow-column-offset($column-offset, $column-count);
+}

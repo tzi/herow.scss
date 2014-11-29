@@ -1,0 +1,42 @@
+////
+/// @group api
+/// @author Thomas ZILLIOX
+///
+
+/// Change the gutter size of the row
+///
+/// @param {Length} $gutter-width (20px) - The size of the grid gutter
+/// @param {Boolean} $external-gutter (false) - Set if an external padding is displayed on the grid
+///
+/// @access public
+/// @group atomic-api
+///
+@mixin Herow-row-gutter(
+    $gutter-width: $Herow-default-gutter-width,
+    $external-gutter: false
+) {
+    @if $external-gutter {
+        padding-bottom: $gutter-width;
+        padding-right: $gutter-width;
+    } @else {
+        margin-top: - $gutter-width;
+        margin-left: - $gutter-width;
+    }
+}
+
+/// Include the styles of a row
+///
+/// @param {Length} $gutter-width (20px) - The size of the grid gutter
+/// @param {Boolean} $external-gutter (false) - Set if an external padding is displayed on the grid
+///
+/// @access public
+/// @group api
+///
+@mixin Herow-row(
+    $gutter-width: $Herow-default-gutter-width,
+    $external-gutter: false
+) {
+    display: block;
+    @include Herow-row-gutter($gutter-width, $external-gutter);
+    @include Herow-clearfix();
+}
