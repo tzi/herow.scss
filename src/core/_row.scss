@@ -13,7 +13,7 @@
 ///
 @mixin Herow-row-gutter(
     $gutter-width: $Herow-default-gutter-width,
-    $external-gutter: false
+    $external-gutter: $Herow-default-external-gutter
 ) {
     @if $external-gutter {
         padding-bottom: $gutter-width;
@@ -34,7 +34,7 @@
 ///
 @mixin Herow-row(
     $gutter-width: $Herow-default-gutter-width,
-    $external-gutter: false
+    $external-gutter: $Herow-default-external-gutter
 ) {
     display: block;
     @include Herow-row-gutter($gutter-width, $external-gutter);

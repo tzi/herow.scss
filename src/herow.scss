@@ -5,8 +5,12 @@
 /// @author Thomas ZILLIOX
 ///
 
-@import "config";
 @import "helpers";
-@import "api/row";
-@import "api/column";
-@import "api/generator";
+
+@import "core/config";
+@import "core/row";
+@import "core/column";
+@import "core/generator";
+
+@import "layout/row";
+@import "layout/column";

@@ -1,0 +1,37 @@
+////
+/// @group configuration
+/// @author Thomas ZILLIOX
+///
+
+///
+/// Defines the layout properties.
+///
+/// @type Map
+///
+$Herow-layout-map: () !default;
+
+///
+/// Defines the default layout name.
+///
+/// @type String
+///
+$Herow-default-layout-name: main !default;
+
+
+///
+/// Add a layout
+///
+/// @param {String} $name (main) - The name of the row layout
+/// @param {Integer} size (12) - The number of columns of the layout
+/// @param {Length} $gutter-width (20px) - The gutter size of the layout
+/// @param {Boolean} $external-gutter (false) - Set if an external padding is displayed on the layout
+///
+@function Herow-add-layout(
+    $name: $Herow-default-layout-name,
+    $size: $Herow-default-column-count,
+    $gutter-width: $Herow-default-gutter-width,
+    $external-gutter: $Herow-default-external-gutter
+) {
+    $new-layout: ($name: $name);
+    @return map-merge($Herow-layout-map, $new-layout);
+}

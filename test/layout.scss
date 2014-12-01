@@ -5,16 +5,24 @@
     margin: 0 auto;
 }
 
+$Herow-layout-map: Herow-add-layout(main, 12, 20px);
+$Herow-layout-map: Herow-add-layout(content, 8);
+$Herow-layout-map: Herow-add-layout(sidebar, 4);
+.test {
+    zoom: 1;
+    filter: map-get($Herow-layout-map, main);
+}
+
 .header {
     &__container {
         @extend %container;
         border: 1px black solid;
     }
     &__row {
-        @include Herow-row();
+        @include Herow-layout-row(main);
     }
     &__col {
-        @include Herow-column(1);
+        @include Herow-layout-column(1, main);
     }
 }
 
@@ -23,33 +31,33 @@
         @extend %container;
     }
     &__row {
-        @include Herow-row();
+        @include Herow-layout-row(main);
     }
 }
 
 .content {
-    @include Herow-column(8);
+    @include Herow-layout-column(content, main);
     &__container {
         border: 1px black solid;
     }
     &__row {
-        @include Herow-row();
+        @include Herow-layout-row(content);
     }
     &__col {
-        @include Herow-column(1, 8);
+        @include Herow-layout-column(1, content);
     }
 }
 
 .sidebar {
-    @include Herow-column(4);
+    @include Herow-layout-column(sidebar, main);
     &__container {
         border: 1px black solid;
     }
     &__row {
-        @include Herow-row();
+        @include Herow-layout-row(sidebar);
     }
     &__col {
-        @include Herow-column(1, 4);
+        @include Herow-layout-column(1, sidebar);
     }
 }
 
@@ -59,9 +67,9 @@
         border: 1px black solid;
     }
     &__row {
-        @include Herow-row();
+        @include Herow-layout-row(main);
     }
     &__col {
-        @include Herow-column(1);
+        @include Herow-layout-column(1, main);
     }
 }

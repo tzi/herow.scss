@@ -21,6 +21,12 @@ $Herow-default-column-flow: 'inline' !default;
 ///
 $Herow-default-gutter-width: 20px !default;
 
+/// Defines the default gutter.
+///
+/// @type Length
+///
+$Herow-default-external-gutter: false !default;
+
 ///
 /// Defines the default generated class names.
 ///

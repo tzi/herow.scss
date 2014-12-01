@@ -2,7 +2,6 @@
 /// @author Thomas ZILLIOX
 ///
 
-
 /// Include a micro clearfix
 ///
 /// @access private
@@ -12,5 +11,16 @@
         content: "";
         display: table;
         clear: both;
+    }
+}
+
+
+/// dump a map
+///
+/// @access private
+///
+@mixin dump($map) {
+    @each $property, $value in $map {
+        #{$property}: $value
     }
 }

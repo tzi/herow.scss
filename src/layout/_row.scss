@@ -1,0 +1,21 @@
+////
+/// @group api
+/// @author Thomas ZILLIOX
+///
+
+/// Include the styles of a row
+///
+/// @param {String} $name (main) - The name of the row layout
+///
+/// @access public
+/// @group api
+///
+@mixin Herow-layout-row(
+    $name: $Herow-default-layout-name
+) {
+    $layout: map-get($Herow-layout-map, $name);
+    @include Herow-row(
+        map-get($layout, gutter-width),
+        map-get($layout, external-gutter)
+    );
+}
