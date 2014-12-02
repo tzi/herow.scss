@@ -5,15 +5,18 @@
 /// Include the styles of a component column
 ///
 /// @param {Integer} $column-span (1) - The span length of the column
-/// @param {List<String>} $component-state-list - A list of component state ('component-name:component-size')
+/// @param {String} $component-name (layout) - The name of the component
+/// @param {List<String>} $component-state-list (false) - A list of component state ('component-name:component-size')
 ///
 /// @access public
 /// @group api
 
 @mixin Herow-component-column-width(
     $column-span: 1,
-    $component-state-list: $Herow-default-component-name
+    $component-name: $Herow-default-component-name,
+    $component-state-list: false
 ) {
+    $component-state-list: Herow-get-formatted-component-state-list($component-state-list, $component-name);
     @for $i from 1 through length($component-state-list) {
         $component-state: nth($component-state-list, $i);
         $column-count: Herow-get-column-count-by-component-state($component-state);
@@ -29,15 +32,18 @@
 /// Change the flow of the component column
 ///
 /// @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
-/// @param {List<String>} $component-state-list - A list of component state ('component-name:component-size')
+/// @param {String} $component-name (layout) - The name of the component
+/// @param {List<String>} $component-state-list (false) - A list of component state ('component-name:component-size')
 ///
 /// @access public
 /// @group atomic-api
 
 @mixin Herow-component-column-flow(
     $column-flow: $Herow-default-column-flow,
-    $component-state-list: $Herow-default-component-name
+    $component-name: $Herow-default-component-name,
+    $component-state-list: false
 ) {
+    $component-state-list: Herow-get-formatted-component-state-list($component-state-list, $component-name);
     @for $i from 1 through length($component-state-list) {
         $component-state: nth($component-state-list, $i);
         @include Herow-on($component-state) {
@@ -49,15 +55,18 @@
 /// Change the left offset of the component column
 ///
 /// @param {Integer} $column-offset (1) - The span length for the left offset of the column
-/// @param {List<String>} $component-state-list - A list of component state ('component-name:component-size')
+/// @param {String} $component-name (layout) - The name of the component
+/// @param {List<String>} $component-state-list (false) - A list of component state ('component-name:component-size')
 ///
 /// @access public
 /// @group atomic-api
 
 @mixin Herow-component-column-offset(
     $column-offset: 1,
-    $component-state-list: $Herow-default-component-name
+    $component-name: $Herow-default-component-name,
+    $component-state-list: false
 ) {
+    $component-state-list: Herow-get-formatted-component-state-list($component-state-list, $component-name);
     @for $i from 1 through length($component-state-list) {
         $component-state: nth($component-state-list, $i);
         $column-count: Herow-get-column-count-by-component-state($component-state);
@@ -74,7 +83,7 @@
 ///
 /// @param {Integer} $column-span (1) - The span length of the column
 /// @param {String} $component-name (layout) - The name of the component
-/// @param {Boolean} $only-default-size (true) - Set if only the default component size should be used
+/// @param {Map} $component-state-list (false) - A list of component state ('component-name:component-size')
 ///
 /// @access public
 /// @group api
@@ -82,7 +91,7 @@
 @mixin Herow-component-column(
     $column-span: 1,
     $component-name: $Herow-default-component-name,
-    $only-default-size: true
+    $component-state-list: false
 ) {
     $component: map_get($Herow-component-map, $component-name);
     $column-count: Herow-get-column-count-by-component-state($component-name);
@@ -91,9 +100,7 @@
         $column-count,
         map-get($component, gutter-width)
     );
-    @if (not $only-default-size) {
-        @each $breakpoint, $size in map_get($component, column-count) {
-            @include Herow-component-column-width($column-span, $component-name+':'+$size)
-        }
+    @if ($component-state-list) {
+        @include Herow-component-column-width($column-span, $component-name, $component-state-list);
     }
 }

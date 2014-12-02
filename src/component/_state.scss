@@ -28,7 +28,7 @@
     @return $component;
 }
 
-/// Get a component by component state
+/// Get column count by component state
 ///
 /// @param {String} $column-state - The state of a component ('component-name:component-size')
 ///
@@ -43,4 +43,45 @@
     $component: map_get($Herow-component-map, $component-name);
     $column-count: map-get($component, column-count);
     @return map-get($column-count, 0);
+}
+
+/// Get a component by component state
+///
+/// @param {String} $component-name (layout) - The name of the component
+///
+/// @access private
+
+@function Herow-get-all-component-state-list-by-component-name(
+    $component-name: $Herow-default-component-name
+) {
+    $component-state-list: ();
+    $component: map_get($Herow-component-map, $component-name);
+    @each $breakpoint, $size in map_get($component, column-count) {
+        $component-state-list: append($component-state-list, $component-name+':'+$size);
+    }
+    @return $component-state-list;
+}
+
+/// Get a formatted component-state-list from possible boolean
+///
+/// @param {Map} $component-state-list (false) - A list of component state ('component-name:component-size')
+/// @param {String} $component-name (layout) - The name of the component
+///
+/// @access private
+
+@function Herow-get-formatted-component-state-list(
+    $component-state-list: false,
+    $component-name: $Herow-default-component-name
+) {
+    $formatted: ();
+    @if ($component-state-list == true) {
+        $formatted: Herow-get-all-component-state-list-by-component-name($component-name);
+    } @else if ($component-state-list == false) {
+        $formatted: append($formatted, $component-name);
+    } @else {
+        @each $component-state in $component-state-list {
+            $formatted: append($formatted, Herow-get-component-state-from-another-component($component-state, $component-name));
+        }
+    }
+    @return $formatted;
 }

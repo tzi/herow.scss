@@ -32,6 +32,21 @@
     @return 0;
 }
 
+/// Get breakpoint length by component state
+///
+/// @param {String} $column-state - The state of a component ('component-name:component-size')
+/// @param {Boolean} $next (false) - Set if you target the next component state
+///
+/// @access private
+
+@function Herow-get-component-state-from-another-component($component-state, $component-name) {
+    $breakpoint: Herow-get-breakpoint-length-by-component-state($component-state);
+    $component: map_get($Herow-component-map, $component-name);
+    $column-count: map-get($component, column-count);
+    $size: map-get($column-count, $breakpoint);
+    @return $component-name+':'+$size;
+}
+
 /// Get breakpoint by component state
 ///
 /// @param {String} $column-state - The state of a component ('component-name:component-size')
@@ -85,12 +100,14 @@
 @function Herow-get-media-query-by-component-state-list($component-state-list) {
     $media-query: '';
     @for $i from 1 through length($component-state-list) {
-        @if ($i != 1) {
-            $media-query: '#{$media-query}, ';
-        }
         $component-state: nth($component-state-list, $i);
-        $media-query-item: Herow-get-media-query-by-component-state($component-state);
-        $media-query: '#{$media-query}#{$media-query-item}'
+        @if (Herow-is-component-state($component-state)) {
+            @if ($media-query != '') {
+                $media-query: '#{$media-query}, ';
+            }
+            $media-query-item: Herow-get-media-query-by-component-state($component-state);
+            $media-query: '#{$media-query}#{$media-query-item}'
+        }
     }
     $media-query: unquote(#{$media-query});
     @return $media-query;
@@ -101,10 +118,7 @@
 /// @param {List<String>} $component-state-list - A list of component state ('component-name:component-size')
 
 @mixin Herow-on($component-state-list) {
-    $media-query: '';
-    @if (Herow-is-component-state($component-state-list)) {
-        $media-query: Herow-get-media-query-by-component-state-list($component-state-list);
-    }
+    $media-query: Herow-get-media-query-by-component-state-list($component-state-list);
     @if ($media-query != '') {
         @media #{$media-query} {
             @content;
