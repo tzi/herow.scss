@@ -5,7 +5,7 @@
     margin: 0 auto;
 }
 
-$Herow-component-map: Herow-add-component(main, 12, 20px);
+$Herow-component-map: Herow-add-component(layout, 4);
 $Herow-component-map: Herow-add-component(content, 8);
 $Herow-component-map: Herow-add-component(sidebar, 4);
 
@@ -15,10 +15,10 @@ $Herow-component-map: Herow-add-component(sidebar, 4);
         border: 1px black solid;
     }
     &__row {
-        @include Herow-component-row(main);
+        @include Herow-component-row(layout);
     }
     &__col {
-        @include Herow-component-column(1, main);
+        @include Herow-component-column(1, layout);
     }
 }
 
@@ -27,12 +27,12 @@ $Herow-component-map: Herow-add-component(sidebar, 4);
         @extend %container;
     }
     &__row {
-        @include Herow-component-row(main);
+        @include Herow-component-row(layout);
     }
 }
 
 .content {
-    @include Herow-component-column(8, main);
+    @include Herow-component-column(8, layout);
     &__container {
         border: 1px black solid;
     }
@@ -45,7 +45,7 @@ $Herow-component-map: Herow-add-component(sidebar, 4);
 }
 
 .sidebar {
-    @include Herow-component-column(4, main);
+    @include Herow-component-column(4, layout);
     &__container {
         border: 1px black solid;
     }
@@ -63,9 +63,9 @@ $Herow-component-map: Herow-add-component(sidebar, 4);
         border: 1px black solid;
     }
     &__row {
-        @include Herow-component-row(main);
+        @include Herow-component-row(layout);
     }
     &__col {
-        @include Herow-component-column(1, main);
+        @include Herow-component-column(1, layout);
     }
 }
