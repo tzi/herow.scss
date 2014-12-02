@@ -1,0 +1,115 @@
+////
+/// @group responsive
+/// @author Thomas ZILLIOX
+
+/// Get breakpoint length by component state
+///
+/// @param {String} $column-state - The state of a component ('component-name:component-size')
+/// @param {Boolean} $next (false) - Set if you target the next component state
+///
+/// @access private
+
+@function Herow-get-breakpoint-length-by-component-state($component-state, $next: false) {
+    $is-next: false;
+    $state-size: Herow-get-column-count-by-component-state($component-state);
+    $component: Herow-get-component-by-component-state($component-state);
+    @each $breakpoint, $size in map_get($component, column-count) {
+        @if $is-next {
+            @return $breakpoint;
+        }
+        @if ($size == $state-size) {
+            @if ($next) {
+                $is-next: true;
+            } @else {
+                @return $breakpoint;
+            }
+        }
+    }
+    @if ($is-next) {
+        @return 0;
+    }
+    @warn "The component state '#{$component-state}' is undefined";
+    @return 0;
+}
+
+/// Get breakpoint by component state
+///
+/// @param {String} $column-state - The state of a component ('component-name:component-size')
+/// @param {Boolean} $is-max-width (false) - Set if you target the next component state
+///
+/// @access private
+
+@function Herow-get-breakpoint-by-component-state($component-state, $is-max-width: false) {
+    $breakpoint: Herow-get-breakpoint-length-by-component-state($component-state, $is-max-width);
+    @if ($breakpoint == 0) {
+        @return '';
+    }
+    $breakpoint: Herow-px2em($breakpoint);
+    @if ($is-max-width) {
+        $breakpoint: $breakpoint - 0.01em;
+        @return '(max-width: #{$breakpoint})';
+    }
+    @return '(min-width: #{$breakpoint})';
+}
+
+/// Get media query by component state
+///
+/// @param {String} $column-state - The state of a component ('component-name:component-size')
+/// @param {Boolean} $is-max-width (false) - Set if you target the next component state
+///
+/// @access private
+
+@function Herow-get-media-query-by-component-state($component-state) {
+    $media-query: '';
+    $min-width: Herow-get-breakpoint-by-component-state($component-state);
+    @if $min-width != '' {
+        $media-query: $min-width;
+    }
+    $max-width: Herow-get-breakpoint-by-component-state($component-state, true);
+    @if $max-width != '' {
+        @if ($media-query != '') {
+            $media-query: '#{$media-query} and ';
+        }
+        $media-query: '#{$media-query}#{$max-width}';
+    }
+    $media-query: unquote(#{$media-query});
+    @return $media-query;
+}
+
+/// Get media-query by component state list
+///
+/// @param {List<String>} $component-state-list - A list of component state ('component-name:component-size')
+///
+/// @access private
+
+@function Herow-get-media-query-by-component-state-list($component-state-list) {
+    $media-query: '';
+    @for $i from 1 through length($component-state-list) {
+        @if ($i != 1) {
+            $media-query: '#{$media-query}, ';
+        }
+        $component-state: nth($component-state-list, $i);
+        $media-query-item: Herow-get-media-query-by-component-state($component-state);
+        $media-query: '#{$media-query}#{$media-query-item}'
+    }
+    $media-query: unquote(#{$media-query});
+    @return $media-query;
+}
+
+/// Create a media-query by component state list
+///
+/// @param {List<String>} $component-state-list - A list of component state ('component-name:component-size')
+
+@mixin Herow-on($component-state-list) {
+    $media-query: '';
+    @if (Herow-is-component-state($component-state-list)) {
+        $media-query: Herow-get-media-query-by-component-state-list($component-state-list);
+    }
+    @if ($media-query != '') {
+        @media #{$media-query} {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}

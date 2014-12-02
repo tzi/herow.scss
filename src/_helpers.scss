@@ -5,7 +5,7 @@
 /// Include a micro clearfix
 ///
 /// @access private
-///
+
 @mixin Herow-clearfix() {
     &:after {
         content: "";
@@ -14,13 +14,46 @@
     }
 }
 
-
-/// dump a map
+/// Convert px values to em
 ///
 /// @access private
+
+@function Herow-px2em($px) {
+    $base-font-size: 16px;
+    @if (unit($px) == em) {
+        @return $px;
+    }
+    @return ($px / $base-font-size) * 1em;
+}
+
+/// Convert a string to a number
 ///
-@mixin dump($map) {
+/// @access private
+
+@function Herow-number($string) {
+    $chars: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
+    $numbers:  0   1   2   3   4   5   6   7   8   9;
+    $result: 0;
+    @for $i from 1 through str-length($string) {
+        $character: str-slice($string, $i, $i);
+        $index: index($chars, $character);
+        @if not $index {
+            @warn "Unknown character `#{$character}`.";
+            @return false;
+        }
+        $number: nth($numbers, $index);
+        $result: $result * 10 + $number;
+    }
+    @return $result;
+}
+
+/// Dump a map
+///
+/// @access private
+
+@mixin Herow-dump($map) {
     @each $property, $value in $map {
         #{$property}: $value
     }
 }
+

@@ -1,13 +1,25 @@
 @import '../src/herow';
 
 %container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-$Herow-component-map: Herow-add-component(layout, 4);
-$Herow-component-map: Herow-add-component(content, 8);
-$Herow-component-map: Herow-add-component(sidebar, 4);
+$Herow-component-map: Herow-add-component(layout, 4, 20px, false, (
+    480px: 6,
+    640px: 8,
+    960px: 12
+));
+$Herow-component-map: Herow-add-component(content, 4, 20px, false, (
+    'layout:6': 6,
+    'layout:8': 5,
+    'layout:12': 8
+));
+$Herow-component-map: Herow-add-component(sidebar, 4, 20px, false, (
+    'layout:6': 6,
+    'layout:8': 3,
+    'layout:12': 4
+));
 
 .header {
     &__container {
@@ -18,7 +30,22 @@ $Herow-component-map: Herow-add-component(sidebar, 4);
         @include Herow-component-row(layout);
     }
     &__col {
-        @include Herow-component-column(1, layout);
+        @include Herow-component-column(1, layout, false);
+        & > *:after {
+            margin-left: 0.31em;
+            @include Herow-on('layout:4') {
+                content: '4';
+            }
+            @include Herow-on('layout:6') {
+                content: '6';
+            }
+            @include Herow-on('layout:8') {
+                content: '8';
+            }
+            @include Herow-on('layout:12') {
+                content: '12';
+            }
+        }
     }
 }
 
@@ -32,7 +59,10 @@ $Herow-component-map: Herow-add-component(sidebar, 4);
 }
 
 .content {
-    @include Herow-component-column(8, layout);
+    @include Herow-component-column(0, layout);
+    @include Herow-component-column-width(0, 'layout:6');
+    @include Herow-component-column-width(-3, 'layout:8');
+    @include Herow-component-column-width(-4, 'layout:12');
     &__container {
         border: 1px black solid;
     }
@@ -40,12 +70,15 @@ $Herow-component-map: Herow-add-component(sidebar, 4);
         @include Herow-component-row(content);
     }
     &__col {
-        @include Herow-component-column(1, content);
+        @include Herow-component-column(1, content, false);
     }
 }
 
 .sidebar {
-    @include Herow-component-column(4, layout);
+    @include Herow-component-column(0, layout);
+    @include Herow-component-column-width(0, 'layout:6');
+    @include Herow-component-column-width(3, 'layout:8');
+    @include Herow-component-column-width(4, 'layout:12');
     &__container {
         border: 1px black solid;
     }
@@ -53,7 +86,7 @@ $Herow-component-map: Herow-add-component(sidebar, 4);
         @include Herow-component-row(sidebar);
     }
     &__col {
-        @include Herow-component-column(1, sidebar);
+        @include Herow-component-column(1, sidebar, false);
     }
 }
 
@@ -66,6 +99,6 @@ $Herow-component-map: Herow-add-component(sidebar, 4);
         @include Herow-component-row(layout);
     }
     &__col {
-        @include Herow-component-column(1, layout);
+        @include Herow-component-column(1, layout, false);
     }
 }

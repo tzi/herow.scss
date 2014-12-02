@@ -5,19 +5,51 @@
 /// Include the styles of a component column
 ///
 /// @param {Integer} $column-span (1) - The span length of the column
-/// @param {String} $name (layout) - The name of the row component
+/// @param {List<String>} $component-state-list - A list of component state ('component-name:component-size')
+///
+/// @access public
+/// @group api
+
+@mixin Herow-component-column-width(
+    $column-span: 1,
+    $component-state-list: $Herow-default-component-name
+) {
+    @for $i from 1 through length($component-state-list) {
+        $component-state: nth($component-state-list, $i);
+        $column-count: Herow-get-column-count-by-component-state($component-state);
+        @include Herow-on($component-state) {
+            @include Herow-column-width(
+                $column-span,
+                $column-count
+            );
+        }
+    }
+}
+
+/// Include the styles of a component column
+///
+/// @param {Integer} $column-span (1) - The span length of the column
+/// @param {String} $component-name (layout) - The name of the component
+/// @param {Boolean} $only-default-size (true) - Set if only the default component size should be used
 ///
 /// @access public
 /// @group api
 
 @mixin Herow-component-column(
     $column-span: 1,
-    $name: $Herow-default-component-name
+    $component-name: $Herow-default-component-name,
+    $only-default-size: true
 ) {
-    $component: map-get($Herow-component-map, $name);
+    $component: map_get($Herow-component-map, $component-name);
+    $column-count: Herow-get-column-count-by-component-state($component-name);
     @include Herow-column(
         $column-span,
-        map-get($component, column-count),
+        $column-count,
         map-get($component, gutter-width)
     );
+    @if (not $only-default-size) {
+        @each $breakpoint, $size in map_get($component, column-count) {
+            @include Herow-component-column-width($column-span, $component-name+':'+$size)
+        }
+    }
 }

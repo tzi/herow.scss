@@ -1,0 +1,46 @@
+////
+/// @group configuration
+/// @author Thomas ZILLIOX
+
+/// Get if a component state is with a specific size
+///
+/// @param {String} $column-state - The state of a component ('component-name:component-size')
+///
+/// @access private
+
+@function Herow-is-component-state($component-state) {
+    @return str-index($component-state, ':');
+}
+
+/// Get a component by component state
+///
+/// @param {String} $column-state - The state of a component ('component-name:component-size')
+///
+/// @access private
+
+@function Herow-get-component-by-component-state($component-state) {
+    $component-name: $component-state;
+    @if (Herow-is-component-state($component-state)) {
+        $index: str-index($component-state, ':');
+        $component-name: str-slice($component-state, 1, $index - 1);
+    }
+    $component: map_get($Herow-component-map, $component-name);
+    @return $component;
+}
+
+/// Get a component by component state
+///
+/// @param {String} $column-state - The state of a component ('component-name:component-size')
+///
+/// @access private
+
+@function Herow-get-column-count-by-component-state($component-state) {
+    @if (Herow-is-component-state($component-state)) {
+        $index: str-index($component-state, ':');
+        @return Herow-number(str-slice($component-state, $index + 1));
+    }
+    $component-name: $component-state;
+    $component: map_get($Herow-component-map, $component-name);
+    $column-count: map-get($component, column-count);
+    @return map-get($column-count, 0);
+}

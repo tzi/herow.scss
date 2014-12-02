@@ -2,6 +2,12 @@
 /// @group configuration
 /// @author Thomas ZILLIOX
 
+/// Set if the debug the output contains debug traces
+///
+/// @type Boolean
+
+$Herow-debug: false !default;
+
 /// Defines the default number of column.
 ///
 /// @type Integer

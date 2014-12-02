@@ -14,13 +14,14 @@
     $column-span: 1,
     $column-count: $Herow-default-column-count
 ) {
-    @if ($column-span == 0) {
-        display: none;
-    } @else if ($column-span < 0) {
-        width: percentage(( $column-count + $column-span ) / $column-count);
-    } @else {
-        width: percentage($column-span / $column-count);
+    @if ($column-span < 1) {
+        $column-span: ($column-count + $column-span);
     }
+    @if ($Herow-debug) {
+        column-span: $column-span;
+        column-count: $column-count;
+    }
+    width: percentage(($column-span / $column-count));
 }
 
 /// Change the gutter of the column

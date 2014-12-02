@@ -4,15 +4,15 @@
 
 /// Include the styles of a component row
 ///
-/// @param {String} $name (layout) - The name of the component
+/// @param {String} $column-state - The state of a component ('component-name:component-size')
 ///
 /// @access public
 /// @group api
 
 @mixin Herow-component-row(
-    $name: $Herow-default-component-name
+    $component-state: $Herow-default-component-name
 ) {
-    $component: map-get($Herow-component-map, $name);
+    $component: Herow-get-component-by-component-state($component-state);
     @include Herow-row(
         map-get($component, gutter-width),
         map-get($component, external-gutter)
