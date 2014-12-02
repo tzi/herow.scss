@@ -168,9 +168,6 @@
     @media (min-width: 40em) and (max-width: 59.99em) {
       .sidebar__col {
         width: 33.33333%; } }
-    @media (max-width: 29.99em) {
-      .sidebar__col {
-        width: 25%; } }
 
 .footer__container {
   border: 1px black solid; }

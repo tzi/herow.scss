@@ -57,7 +57,10 @@
     $component-state-list: ();
     $component: map_get($Herow-component-map, $component-name);
     @each $breakpoint, $size in map_get($component, column-count) {
-        $component-state-list: append($component-state-list, $component-name+':'+$size);
+        $component-state: $component-name+':'+$size;
+        @if (not index($component-state-list, $component-state)) {
+            $component-state-list: append($component-state-list, $component-state);
+        }
     }
     @return $component-state-list;
 }
