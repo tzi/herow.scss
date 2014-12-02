@@ -1,0 +1,40 @@
+////
+/// @group configuration
+/// @author Thomas ZILLIOX
+///
+
+///
+/// Defines the component properties.
+///
+/// @type Map
+///
+$Herow-component-map: () !default;
+
+///
+/// Defines the default component name.
+///
+/// @type String
+///
+$Herow-default-component-name: main !default;
+
+///
+/// Add a component
+///
+/// @param {String} $name (layout) - The name of the component
+/// @param {Integer} $column-count (12) - The number of columns of the component
+/// @param {Length} $gutter-width (20px) - The gutter size of the component
+/// @param {Boolean} $external-gutter (false) - Set if an external padding is displayed on the component
+///
+@function Herow-add-component(
+    $name: $Herow-default-component-name,
+    $column-count: $Herow-default-column-count,
+    $gutter-width: $Herow-default-gutter-width,
+    $external-gutter: $Herow-default-external-gutter
+) {
+    $new-component: ($name: (
+        column-count: $column-count,
+        gutter-width: $gutter-width,
+        external-gutter: $external-gutter
+    ));
+    @return map-merge($Herow-component-map, $new-component);
+}

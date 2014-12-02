@@ -5,13 +5,9 @@
     margin: 0 auto;
 }
 
-$Herow-layout-map: Herow-add-layout(main, 12, 20px);
-$Herow-layout-map: Herow-add-layout(content, 8);
-$Herow-layout-map: Herow-add-layout(sidebar, 4);
-.test {
-    zoom: 1;
-    filter: map-get($Herow-layout-map, main);
-}
+$Herow-component-map: Herow-add-component(main, 12, 20px);
+$Herow-component-map: Herow-add-component(content, 8);
+$Herow-component-map: Herow-add-component(sidebar, 4);
 
 .header {
     &__container {
@@ -19,10 +15,10 @@ $Herow-layout-map: Herow-add-layout(sidebar, 4);
         border: 1px black solid;
     }
     &__row {
-        @include Herow-layout-row(main);
+        @include Herow-component-row(main);
     }
     &__col {
-        @include Herow-layout-column(1, main);
+        @include Herow-component-column(1, main);
     }
 }
 
@@ -31,33 +27,33 @@ $Herow-layout-map: Herow-add-layout(sidebar, 4);
         @extend %container;
     }
     &__row {
-        @include Herow-layout-row(main);
+        @include Herow-component-row(main);
     }
 }
 
 .content {
-    @include Herow-layout-column(content, main);
+    @include Herow-component-column(8, main);
     &__container {
         border: 1px black solid;
     }
     &__row {
-        @include Herow-layout-row(content);
+        @include Herow-component-row(content);
     }
     &__col {
-        @include Herow-layout-column(1, content);
+        @include Herow-component-column(1, content);
     }
 }
 
 .sidebar {
-    @include Herow-layout-column(sidebar, main);
+    @include Herow-component-column(4, main);
     &__container {
         border: 1px black solid;
     }
     &__row {
-        @include Herow-layout-row(sidebar);
+        @include Herow-component-row(sidebar);
     }
     &__col {
-        @include Herow-layout-column(1, sidebar);
+        @include Herow-component-column(1, sidebar);
     }
 }
 
@@ -67,9 +63,9 @@ $Herow-layout-map: Herow-add-layout(sidebar, 4);
         border: 1px black solid;
     }
     &__row {
-        @include Herow-layout-row(main);
+        @include Herow-component-row(main);
     }
     &__col {
-        @include Herow-layout-column(1, main);
+        @include Herow-component-column(1, main);
     }
 }

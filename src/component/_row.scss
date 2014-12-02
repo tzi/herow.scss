@@ -1,0 +1,21 @@
+////
+/// @group api
+/// @author Thomas ZILLIOX
+///
+
+/// Include the styles of a component row
+///
+/// @param {String} $name (layout) - The name of the component
+///
+/// @access public
+/// @group api
+///
+@mixin Herow-component-row(
+    $name: $Herow-default-component-name
+) {
+    $component: map-get($Herow-component-map, $name);
+    @include Herow-row(
+        map-get($component, gutter-width),
+        map-get($component, external-gutter)
+    );
+}

@@ -1,0 +1,24 @@
+////
+/// @group api
+/// @author Thomas ZILLIOX
+///
+
+/// Include the styles of a component column
+///
+/// @param {Integer} $column-span (1) - The span length of the column
+/// @param {String} $name (layout) - The name of the row component
+///
+/// @access public
+/// @group api
+///
+@mixin Herow-component-column(
+    $column-span: 1,
+    $name: $Herow-default-component-name
+) {
+    $component: map-get($Herow-component-map, $name);
+    @include Herow-column(
+        $column-span,
+        map-get($component, column-count),
+        map-get($component, gutter-width)
+    );
+}
