@@ -2,12 +2,6 @@
   max-width: 1000px;
   margin: 0 auto; }
 
-.test {
-  zoom: 1;
-  column-count: 12;
-  gutter-width: 20px;
-  external-gutter: false; }
-
 .header__container {
   border: 1px black solid; }
 .header__row {
