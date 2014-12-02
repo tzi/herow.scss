@@ -128,7 +128,14 @@
       width: 37.5%; } }
   @media (min-width: 60em) {
     .sidebar {
-      width: 33.33333%; } }
+      width: 25%; } }
+  @media (min-width: 40em) and (max-width: 59.99em) {
+    .sidebar {
+      float: left;
+      margin-right: 0; } }
+  @media (min-width: 60em) {
+    .sidebar {
+      margin-left: 8.33333%; } }
   .sidebar__container {
     border: 1px black solid; }
   .sidebar__row {

@@ -77,8 +77,9 @@ $Herow-component-map: Herow-add-component(sidebar, 4, 20px, false, (
 .sidebar {
     @include Herow-component-column(0, layout);
     @include Herow-component-column-width(0, 'layout:6');
-    @include Herow-component-column-width(3, 'layout:8');
-    @include Herow-component-column-width(4, 'layout:12');
+    @include Herow-component-column-width(3, 'layout:8' 'layout:12');
+    @include Herow-component-column-flow('left', 'layout:8');
+    @include Herow-component-column-offset(1, 'layout:12');
     &__container {
         border: 1px black solid;
     }
