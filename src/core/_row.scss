@@ -1,7 +1,6 @@
 ////
 /// @group api
 /// @author Thomas ZILLIOX
-///
 
 /// Change the gutter size of the row
 ///
@@ -10,7 +9,7 @@
 ///
 /// @access public
 /// @group atomic-api
-///
+
 @mixin Herow-row-gutter(
     $gutter-width: $Herow-default-gutter-width,
     $external-gutter: $Herow-default-external-gutter
@@ -31,7 +30,7 @@
 ///
 /// @access public
 /// @group api
-///
+
 @mixin Herow-row(
     $gutter-width: $Herow-default-gutter-width,
     $external-gutter: $Herow-default-external-gutter

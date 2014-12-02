@@ -1,7 +1,6 @@
 ////
 /// @group api
 /// @author Thomas ZILLIOX
-///
 
 /// Include the styles of a component column
 ///
@@ -10,7 +9,7 @@
 ///
 /// @access public
 /// @group api
-///
+
 @mixin Herow-component-column(
     $column-span: 1,
     $name: $Herow-default-component-name

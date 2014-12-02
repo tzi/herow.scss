@@ -1,7 +1,6 @@
 ////
 /// @group api
 /// @author Thomas ZILLIOX
-///
 
 /// Change the size of the column
 ///
@@ -10,7 +9,7 @@
 ///
 /// @access public
 /// @group atomic-api
-///
+
 @mixin Herow-column-width(
     $column-span: 1,
     $column-count: $Herow-default-column-count
@@ -24,7 +23,7 @@
 ///
 /// @access public
 /// @group atomic-api
-///
+
 @mixin Herow-column-gutter(
     $gutter-width: $Herow-default-gutter-width
 ) {
@@ -38,7 +37,7 @@
 ///
 /// @access public
 /// @group atomic-api
-///
+
 @mixin Herow-column-flow(
     $column-flow: $Herow-default-column-flow
 ) {
@@ -61,7 +60,7 @@
 ///
 /// @access public
 /// @group atomic-api
-///
+
 @mixin Herow-column-offset(
     $column-offset: 1,
     $column-count: $Herow-default-column-count
@@ -79,7 +78,7 @@
 ///
 /// @access public
 /// @group api
-///
+
 @mixin Herow-column(
     $column-span: 1,
     $column-count: $Herow-default-column-count,

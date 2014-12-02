@@ -1,7 +1,6 @@
 ////
 /// @group api
 /// @author Thomas ZILLIOX
-///
 
 /// Get a column width in percent
 ///
@@ -11,7 +10,7 @@
 /// @param {String} $class-counter ('') - The counter suffix of the generated class name
 ///
 /// @access private
-///
+
 @mixin Herow-class-selector(
     $class-key,
     $class-prefix,
@@ -32,7 +31,7 @@
 ///
 /// @access public
 /// @group api
-///
+
 @mixin Herow-class-generator(
     $column-count: $Herow-default-column-count,
     $gutter-width: $Herow-default-gutter-width,

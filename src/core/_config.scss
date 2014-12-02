@@ -1,37 +1,35 @@
 ////
 /// @group configuration
 /// @author Thomas ZILLIOX
-///
 
 /// Defines the default number of column.
 ///
 /// @type Integer
-///
+
 $Herow-default-column-count: 12 !default;
 
 /// Defines the default column flow.
 ///
 /// @type 'inline' | 'left' | 'right'
-///
+
 $Herow-default-column-flow: 'inline' !default;
 
 /// Defines the default gutter.
 ///
 /// @type Length
-///
+
 $Herow-default-gutter-width: 20px !default;
 
 /// Defines the default gutter.
 ///
 /// @type Length
-///
+
 $Herow-default-external-gutter: false !default;
 
-///
 /// Defines the default generated class names.
 ///
 /// @type Map
-///
+
 $Herow-generator-class-map: (
     row: 'row',
     col: 'col',
