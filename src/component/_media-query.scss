@@ -134,6 +134,9 @@
 
 @mixin Herow-on($component-state-list) {
     $breakpoint-list: Herow-get-breakpoint-list-by-component-state-list($component-state-list);
+    @if ($Herow-debug) {
+        -herow-breakpoint-list: $breakpoint-list;
+    }
     $media-query: Herow-get-media-query-by-breakpoint-list($breakpoint-list);
     @if ($media-query != '') {
         @media #{$media-query} {

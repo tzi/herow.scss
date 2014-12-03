@@ -18,8 +18,8 @@
         $column-span: ($column-count + $column-span);
     }
     @if ($Herow-debug) {
-        column-span: $column-span;
-        column-count: $column-count;
+        -herow-column-span: $column-span;
+        -herow-column-count: $column-count;
     }
     width: percentage(($column-span / $column-count));
 }
