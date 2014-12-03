@@ -1,0 +1,11 @@
+////
+/// @group api
+/// @author Thomas ZILLIOX
+
+/// Include the styles of a component row
+///
+/// @access public
+
+@mixin Herow-component-row() {
+    @include Herow-clearfix();
+}
