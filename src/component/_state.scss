@@ -12,6 +12,21 @@
     @return str-index($component-state, ':');
 }
 
+/// Get component name by component state
+///
+/// @param {String} $component-state - The state of a component ('component-name:component-size')
+///
+/// @access private
+
+@function Herow-get-component-name-by-component-state($component-state) {
+    $component-name: $component-state;
+    @if (Herow-is-component-state($component-state)) {
+        $index: str-index($component-state, ':');
+        $component-name: str-slice($component-state, 1, $index - 1);
+    }
+    @return $component-name;
+}
+
 /// Get a component by component state
 ///
 /// @param {String} $component-state - The state of a component ('component-name:component-size')
@@ -19,11 +34,7 @@
 /// @access private
 
 @function Herow-get-component-by-component-state($component-state) {
-    $component-name: $component-state;
-    @if (Herow-is-component-state($component-state)) {
-        $index: str-index($component-state, ':');
-        $component-name: str-slice($component-state, 1, $index - 1);
-    }
+    $component-name: Herow-get-component-name-by-component-state($component-state);
     $component: map_get($Herow-component-map, $component-name);
     @return $component;
 }
@@ -53,9 +64,13 @@
 
 @function Herow-get-column-count-list-by-component-state-list($component-state-list) {
     $column-count-list: ();
+    $component-name: Herow-get-component-name-by-component-state(nth($component-state-list, 1));
     @each $component-state in $component-state-list {
         $column-count: Herow-get-column-count-by-component-state($component-state);
-        @if (not index($column-count-list, $component-state)) {
+        $current-component-name: Herow-get-component-name-by-component-state($component-state);
+        @if ($component-name != $current-component-name) {
+            @warn "Try to get column count from several component in the same time: #{$component-name} & #{$current-component-name}";
+        } @else if (not index($column-count-list, $component-state)) {
             $column-count-list: append($column-count-list, $column-count);
         }
     }
