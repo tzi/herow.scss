@@ -92,11 +92,9 @@
 ) {
     $component: Herow-get-component-by-component-name($component-name);
     $column-count: Herow-get-column-count-by-component-state($component-name);
-    @include Herow-column(
-        $column-span,
-        $column-count,
-        map-get($component, gutter-width)
-    );
+    @include Herow-column-core();
+    @include Herow-column-flow('inline');
+    @include Herow-column-width($column-span, $column-count);
     @if ($component-state-list) {
         @include Herow-component-column-width($column-span, $component-name, $component-state-list);
     }

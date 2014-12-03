@@ -75,6 +75,17 @@
     margin-left: percentage($column-offset / $column-count);
 }
 
+/// Include the core styles of a column
+///
+/// @access public
+/// @group api
+
+@mixin Herow-column-core() {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
 /// Include the styles of a column
 ///
 /// @param {Integer} $column-span (1) - The span length of the column
@@ -93,9 +104,7 @@
     $column-flow: $Herow-default-column-flow,
     $column-offset: 0
 ){
-    display: inline-block;
-    vertical-align: top;
-    box-sizing: border-box;
+    @include Herow-column-core();
     @include Herow-column-flow($column-flow);
     @include Herow-column-width($column-span, $column-count);
     @include Herow-column-gutter($gutter-width);

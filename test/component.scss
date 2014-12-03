@@ -5,17 +5,17 @@
     margin: 0 auto;
 }
 
-$Herow-component-map: Herow-add-component(layout, 4, 20px, false, (
+$Herow-component-map: Herow-add-component(layout, 4, $column-count-map: (
     480px: 6,
     640px: 8,
     960px: 12
 ));
-$Herow-component-map: Herow-add-component(content, 4, 20px, false, (
+$Herow-component-map: Herow-add-component(content, 4, $column-count-map: (
     'layout:6': 6,
     'layout:8': 5,
     'layout:12': 8
 ));
-$Herow-component-map: Herow-add-component(sidebar, 4, 20px, false, (
+$Herow-component-map: Herow-add-component(sidebar, 4, $column-count-map: (
     'layout:6': 6,
     'layout:8': 3,
     'layout:12': 4
@@ -26,12 +26,9 @@ $Herow-component-map: Herow-add-component(sidebar, 4, 20px, false, (
         @extend %container;
         border: 1px black solid;
     }
-    &__row {
-        @include Herow-component-row(layout);
-    }
-    &__col {
+    & .demo {
         @include Herow-component-column(1, layout, true);
-        & > *:after {
+        &:after {
             margin-left: 0.31em;
             @include Herow-on('layout:4') {
                 content: '4';
@@ -53,41 +50,32 @@ $Herow-component-map: Herow-add-component(sidebar, 4, 20px, false, (
     &__container {
         @extend %container;
     }
-    &__row {
-        @include Herow-component-row(layout);
-    }
 }
 
 .content {
+    border: 1px black solid;
+
     @include Herow-component-column(0, layout, 'layout:8');
     @include Herow-component-column-width(-3, layout, 'layout:8');
     @include Herow-component-column-width(-4, layout, 'layout:12');
-    &__container {
-        border: 1px black solid;
-    }
-    &__row {
-        @include Herow-component-row(content);
-    }
-    &__col {
+
+    & .demo {
         @include Herow-component-column(1, content, true);
         @include Herow-component-column-width(2, content, 'layout:12');
     }
 }
 
 .sidebar {
+    border: 1px black solid;
+
     @include Herow-component-column(0, layout, 'layout:6');
     @include Herow-component-column-width(3, layout, 'layout:8');
     @include Herow-component-column-width(4, layout, 'layout:12');
     @include Herow-component-column-flow('left', layout, 'layout:8' 'layout:12');
-    &__container {
-        border: 1px black solid;
-    }
-    &__row {
-        @include Herow-component-row(sidebar);
-    }
-    &__col {
+
+    & .demo {
         @include Herow-component-column(1, sidebar, true);
-        & > *:after {
+        &:after {
             margin-left: 0.31em;
             @include Herow-on('sidebar:4') {
                 content: '4';
@@ -101,10 +89,7 @@ $Herow-component-map: Herow-add-component(sidebar, 4, 20px, false, (
         @extend %container;
         border: 1px black solid;
     }
-    &__row {
-        @include Herow-component-row(layout);
-    }
-    &__col {
+    & .demo {
         @include Herow-component-column(1, layout, true);
     }
 }

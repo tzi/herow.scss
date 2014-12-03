@@ -18,15 +18,11 @@ $Herow-default-component-name: layout !default;
 ///
 /// @param {String} $name (layout) - The name of the component
 /// @param {Integer} $default-column-count (12) - The default number of columns of the component
-/// @param {Length} $gutter-width (20px) - The gutter size of the component
-/// @param {Boolean} $external-gutter (false) - Set if an external padding is displayed on the component
 /// @param {Map} $column-count-map (()) - The number of columns of the component at different breakpoints
 
 @function Herow-add-component(
     $name: $Herow-default-component-name,
     $default-column-count: $Herow-default-column-count,
-    $gutter-width: $Herow-default-gutter-width,
-    $external-gutter: $Herow-default-external-gutter,
     $column-count-map: ()
 ) {
     $column-count: ();
@@ -39,8 +35,6 @@ $Herow-default-component-name: layout !default;
         $column-count: map_merge($column-count, ($breakpoint: $size));
     }
     $new-component: ($name: (
-        gutter-width: $gutter-width,
-        external-gutter: $external-gutter,
         column-count: $column-count
     ));
     @return map-merge($Herow-component-map, $new-component);
