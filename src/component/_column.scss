@@ -44,11 +44,8 @@
     $component-state-list: false
 ) {
     $component-state-list: Herow-get-formatted-component-state-list($component-state-list, $component-name);
-    @for $i from 1 through length($component-state-list) {
-        $component-state: nth($component-state-list, $i);
-        @include Herow-on($component-state) {
-            @include Herow-column-flow($column-flow);
-        }
+    @include Herow-on($component-state-list) {
+        @include Herow-column-flow($column-flow);
     }
 }
 

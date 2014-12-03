@@ -131,14 +131,11 @@
       width: 37.5%; } }
   @media (min-width: 60em) {
     .sidebar {
-      width: 25%; } }
+      width: 33.33333%; } }
   @media (min-width: 40em) and (max-width: 59.99em) {
     .sidebar {
       float: left;
       margin-right: 0; } }
-  @media (min-width: 60em) {
-    .sidebar {
-      margin-left: 8.33333%; } }
   .sidebar__container {
     border: 1px black solid; }
   .sidebar__row {
@@ -168,6 +165,11 @@
     @media (min-width: 40em) and (max-width: 59.99em) {
       .sidebar__col {
         width: 33.33333%; } }
+    .sidebar__col > *:after {
+      margin-left: 0.31em; }
+      @media (max-width: 29.99em) {
+        .sidebar__col > *:after {
+          content: '4'; } }
 
 .footer__container {
   border: 1px black solid; }
