@@ -90,7 +90,7 @@
     $component-name: $Herow-default-component-name,
     $component-state-list: false
 ) {
-    $component: map_get($Herow-component-map, $component-name);
+    $component: Herow-get-component-by-component-name($component-name);
     $column-count: Herow-get-column-count-by-component-state($component-name);
     @include Herow-column(
         $column-span,

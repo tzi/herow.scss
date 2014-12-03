@@ -27,6 +27,22 @@
     @return $component-name;
 }
 
+/// Get component by component name
+///
+/// @param {String} $component-name - The name of the component
+///
+/// @access private
+
+@function Herow-get-component-by-component-name($component-name) {
+    $component: null;
+    @if map_has_key($Herow-component-map, $component-name) {
+        $component: map_get($Herow-component-map, $component-name);
+    } @else {
+        @warn 'Unexisting map with the name: "#{$component-name}"';
+    }
+    @return $component;
+}
+
 /// Get a component by component state
 ///
 /// @param {String} $component-state - The state of a component ('component-name:component-size')
@@ -35,7 +51,7 @@
 
 @function Herow-get-component-by-component-state($component-state) {
     $component-name: Herow-get-component-name-by-component-state($component-state);
-    $component: map_get($Herow-component-map, $component-name);
+    $component: Herow-get-component-by-component-name($component-name);
     @return $component;
 }
 
@@ -51,7 +67,7 @@
         @return Herow-number(str-slice($component-state, $index + 1));
     }
     $component-name: $component-state;
-    $component: map_get($Herow-component-map, $component-name);
+    $component: Herow-get-component-by-component-name($component-name);
     $column-count: map-get($component, column-count);
     @return map-get($column-count, 0);
 }
@@ -69,7 +85,7 @@
         $column-count: Herow-get-column-count-by-component-state($component-state);
         $current-component-name: Herow-get-component-name-by-component-state($component-state);
         @if ($component-name != $current-component-name) {
-            @warn "Try to get column count from several component in the same time: #{$component-name} & #{$current-component-name}";
+            @warn 'Try to merge column count from several component in the same time: "#{$component-name}" & "#{$current-component-name}"';
         } @else if (not index($column-count-list, $component-state)) {
             $column-count-list: append($column-count-list, $column-count);
         }
@@ -87,7 +103,7 @@
     $component-name: $Herow-default-component-name
 ) {
     $component-state-list: ();
-    $component: map_get($Herow-component-map, $component-name);
+    $component: Herow-get-component-by-component-name($component-name);
     @each $breakpoint, $size in map_get($component, column-count) {
         $component-state: $component-name+':'+$size;
         @if (not index($component-state-list, $component-state)) {
