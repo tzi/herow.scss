@@ -89,7 +89,6 @@ $Herow-component-map: Herow-add-component(sidebar, 4, 20px, false, (
         @include Herow-component-column(1, sidebar, true);
         & > *:after {
             margin-left: 0.31em;
-            // TODO: Bug!
             @include Herow-on('sidebar:4') {
                 content: '4';
             }
