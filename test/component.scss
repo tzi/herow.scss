@@ -78,7 +78,7 @@ $Herow-component-map: Herow-add-component(sidebar, 4, 20px, false, (
     @include Herow-component-column(0, layout, 'layout:6');
     @include Herow-component-column-width(3, layout, 'layout:8');
     @include Herow-component-column-width(4, layout, 'layout:12');
-    @include Herow-component-column-flow('left', layout, 'layout:8');
+    @include Herow-component-column-flow('left', layout, 'layout:8' 'layout:12');
     &__container {
         border: 1px black solid;
     }
@@ -89,6 +89,7 @@ $Herow-component-map: Herow-add-component(sidebar, 4, 20px, false, (
         @include Herow-component-column(1, sidebar, true);
         & > *:after {
             margin-left: 0.31em;
+            // TODO: Bug!
             @include Herow-on('sidebar:4') {
                 content: '4';
             }

@@ -111,7 +111,7 @@
         width: 12.5%; } }
     @media (min-width: 60em) {
       .content__col {
-        width: 25%; } }
+        width: 16.66667%; } }
 
 .sidebar {
   display: inline-block;
@@ -132,7 +132,7 @@
   @media (min-width: 60em) {
     .sidebar {
       width: 33.33333%; } }
-  @media (min-width: 40em) and (max-width: 59.99em) {
+  @media (min-width: 40em) {
     .sidebar {
       float: left;
       margin-right: 0; } }
@@ -156,7 +156,7 @@
     padding-top: 20px;
     padding-left: 20px;
     margin-left: 0%; }
-    @media (max-width: 29.99em) {
+    @media (max-width: 29.99em), (min-width: 60em) {
       .sidebar__col {
         width: 25%; } }
     @media (min-width: 30em) and (max-width: 39.99em) {
@@ -167,7 +167,7 @@
         width: 33.33333%; } }
     .sidebar__col > *:after {
       margin-left: 0.31em; }
-      @media (max-width: 29.99em) {
+      @media (max-width: 29.99em), (min-width: 60em) {
         .sidebar__col > *:after {
           content: '4'; } }
 

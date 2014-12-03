@@ -4,7 +4,7 @@
 
 /// Get breakpoint length by component state
 ///
-/// @param {String} $column-state - The state of a component ('component-name:component-size')
+/// @param {String} $component-state - The state of a component ('component-name:component-size')
 /// @param {Boolean} $next (false) - Set if you target the next component state
 ///
 /// @access private
@@ -32,30 +32,46 @@
     @return 0;
 }
 
-/// Get breakpoint length by component state
+/// Get breakpoint couple by component state
 ///
-/// @param {String} $column-state - The state of a component ('component-name:component-size')
-/// @param {Boolean} $next (false) - Set if you target the next component state
+/// @param {List<String>} $component-state-list - A list of component state ('component-name:component-size')
 ///
 /// @access private
 
-@function Herow-get-component-state-from-another-component($component-state, $component-name) {
-    $breakpoint: Herow-get-breakpoint-length-by-component-state($component-state);
-    $component: map_get($Herow-component-map, $component-name);
-    $column-count: map-get($component, column-count);
-    $size: map-get($column-count, $breakpoint);
-    @return $component-name+':'+$size;
+@function Herow-get-breakpoint-list-by-component-state-list($component-state-list) {
+    $breakpoint-list: ();
+    $breakpoint-couple: ();
+    $is-next: false;
+    $size-list: Herow-get-column-count-list-by-component-state-list($component-state-list);
+    $component: Herow-get-component-by-component-state(nth($component-state-list, 1));
+    @each $breakpoint, $size in map_get($component, column-count) {
+        @if (index($size-list, $size)) {
+            @if (not $is-next) {
+                $breakpoint-couple: append($breakpoint-couple, $breakpoint);
+                $is-next: true;
+            }
+        } @else if ($is-next) {
+            $breakpoint-couple: append($breakpoint-couple, $breakpoint);
+            $breakpoint-list: append($breakpoint-list, $breakpoint-couple);
+            $breakpoint-couple: ();
+            $is-next: false;
+        }
+    }
+    @if (length($breakpoint-couple) > 0) {
+        $breakpoint-couple: append($breakpoint-couple, 0);
+        $breakpoint-list: append($breakpoint-list, $breakpoint-couple);
+    }
+    @return $breakpoint-list;
 }
 
-/// Get breakpoint by component state
+/// Get media-query by breakpoint
 ///
-/// @param {String} $column-state - The state of a component ('component-name:component-size')
+/// @param {Length} $breakpoint
 /// @param {Boolean} $is-max-width (false) - Set if you target the next component state
 ///
 /// @access private
 
-@function Herow-get-breakpoint-by-component-state($component-state, $is-max-width: false) {
-    $breakpoint: Herow-get-breakpoint-length-by-component-state($component-state, $is-max-width);
+@function Herow-get-media-query-by-breakpoint($breakpoint, $is-max-width: false) {
     @if ($breakpoint == 0) {
         @return '';
     }
@@ -67,20 +83,19 @@
     @return '(min-width: #{$breakpoint})';
 }
 
-/// Get media query by component state
+/// Get media query by breakpoint couple
 ///
-/// @param {String} $column-state - The state of a component ('component-name:component-size')
-/// @param {Boolean} $is-max-width (false) - Set if you target the next component state
+/// @param {List<Length>} $breakpoint-couple
 ///
 /// @access private
 
-@function Herow-get-media-query-by-component-state($component-state) {
+@function Herow-get-media-query-by-breakpoint-couple($breakpoint-couple) {
     $media-query: '';
-    $min-width: Herow-get-breakpoint-by-component-state($component-state);
+    $min-width: Herow-get-media-query-by-breakpoint(nth($breakpoint-couple, 1));
     @if $min-width != '' {
         $media-query: $min-width;
     }
-    $max-width: Herow-get-breakpoint-by-component-state($component-state, true);
+    $max-width: Herow-get-media-query-by-breakpoint(nth($breakpoint-couple, 2), true);
     @if $max-width != '' {
         @if ($media-query != '') {
             $media-query: '#{$media-query} and ';
@@ -93,19 +108,19 @@
 
 /// Get media-query by component state list
 ///
-/// @param {List<String>} $component-state-list - A list of component state ('component-name:component-size')
+/// @param {List<List>} breakpoint-list
 ///
 /// @access private
 
-@function Herow-get-media-query-by-component-state-list($component-state-list) {
+@function Herow-get-media-query-by-breakpoint-list($breakpoint-list) {
     $media-query: '';
-    @for $i from 1 through length($component-state-list) {
-        $component-state: nth($component-state-list, $i);
-        @if (Herow-is-component-state($component-state)) {
+    @if length($breakpoint-list) {
+        @for $i from 1 through length($breakpoint-list) {
+            $breakpoint-couple: nth($breakpoint-list, $i);
             @if ($media-query != '') {
                 $media-query: '#{$media-query}, ';
             }
-            $media-query-item: Herow-get-media-query-by-component-state($component-state);
+            $media-query-item: Herow-get-media-query-by-breakpoint-couple($breakpoint-couple);
             $media-query: '#{$media-query}#{$media-query-item}'
         }
     }
@@ -118,7 +133,8 @@
 /// @param {List<String>} $component-state-list - A list of component state ('component-name:component-size')
 
 @mixin Herow-on($component-state-list) {
-    $media-query: Herow-get-media-query-by-component-state-list($component-state-list);
+    $breakpoint-list: Herow-get-breakpoint-list-by-component-state-list($component-state-list);
+    $media-query: Herow-get-media-query-by-breakpoint-list($breakpoint-list);
     @if ($media-query != '') {
         @media #{$media-query} {
             @content;
