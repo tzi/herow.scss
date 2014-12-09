@@ -1,0 +1,17 @@
+////
+/// @group configuration
+/// @author Thomas ZILLIOX
+
+/// Defines the default generated class names.
+///
+/// @type Map
+
+$Herow-generator-class-map: (
+    row: 'row',
+    col: 'col',
+    col-span: 'col-',
+    col-flow-left: 'col-left',
+    col-flow-right: 'col-right',
+    col-flow-inline: 'col-inline',
+    col-offset-left: 'col-offset-'
+) !default;

@@ -32,16 +32,3 @@ $Herow-default-gutter-width: 20px !default;
 
 $Herow-default-external-gutter: false !default;
 
-/// Defines the default generated class names.
-///
-/// @type Map
-
-$Herow-generator-class-map: (
-    row: 'row',
-    col: 'col',
-    col-span: 'col-',
-    col-flow-left: 'col-left',
-    col-flow-right: 'col-right',
-    col-flow-inline: 'col-inline',
-    col-offset-left: 'col-offset-'
-) !default;

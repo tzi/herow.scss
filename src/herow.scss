@@ -3,17 +3,18 @@
 ///
 /// @group api
 /// @author Thomas ZILLIOX
-///
 
 @import "helpers";
 
 @import "core/config";
 @import "core/row";
 @import "core/column";
-@import "core/generator";
 
 @import "component/config";
 @import "component/state";
 @import "component/media-query";
 @import "component/row";
 @import "component/column";
+
+@import "generator/config";
+@import "generator/generator";
