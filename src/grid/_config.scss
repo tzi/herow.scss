@@ -1,0 +1,48 @@
+////
+/// @group configuration
+/// @author Thomas ZILLIOX
+
+/// Defines the grid properties.
+///
+/// @type Map
+
+$Herow-grid-map: () !default;
+
+/// Defines the default grid name.
+///
+/// @type String
+
+$Herow-default-grid-name: layout !default;
+
+/// Add a grid
+///
+/// @param {String} $grid-name (layout) - The name of the grid
+/// @param {Integer} $column-count (12) - The default number of columns of the grid
+/// @param {Length} $gutter-width (1em) - The size of the grid gutter
+/// @param {Boolean} $external-gutter (false) - Set if an external padding is displayed on the grid
+/// @param {Map} $column-count-map (()) - The number of columns of the grid at different breakpoints
+
+@function Herow-add-grid(
+    $grid-name: $Herow-default-grid-name,
+    $column-count: $Herow-default-column-count,
+    $gutter-width: $Herow-default-gutter-width,
+    $external-gutter: $Herow-default-external-gutter,
+    $column-count-map: ()
+) {
+    $default-column-count: $column-count;
+    $column-count: ();
+    $column-count: map_merge($column-count, (0: $default-column-count));
+    @each $grid-state, $size in $column-count-map {
+        $breakpoint: $grid-state;
+        @if (type_of($grid-state) == 'string') {
+            $breakpoint: Herow-get-breakpoint-length-by-grid-state($grid-state);
+        }
+        $column-count: map_merge($column-count, ($breakpoint: $size));
+    }
+    $new-grid: ($grid-name: (
+        gutter-width: $gutter-width,
+        external-gutter: $external-gutter,
+        column-count: $column-count
+    ));
+    @return map-merge($Herow-grid-map, $new-grid);
+}

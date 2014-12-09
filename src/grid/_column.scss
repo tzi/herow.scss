@@ -1,0 +1,102 @@
+////
+/// @group api
+/// @author Thomas ZILLIOX
+
+/// Include the styles of a grid column
+///
+/// @param {Integer} $column-span (1) - The span length of the column
+/// @param {String} $grid-name (layout) - The name of the grid
+/// @param {List<String>} $grid-state-list (false) - A list of grid state ('grid-name:grid-size')
+///
+/// @access public
+/// @group api
+
+@mixin Herow-grid-column-width(
+    $column-span: 1,
+    $grid-name: $Herow-default-grid-name,
+    $grid-state-list: false
+) {
+    $grid-state-list: Herow-get-formatted-grid-state-list($grid-state-list, $grid-name);
+    @for $i from 1 through length($grid-state-list) {
+        $grid-state: nth($grid-state-list, $i);
+        $column-count: Herow-get-column-count-by-grid-state($grid-state);
+        @include Herow-on($grid-state) {
+            @include Herow-column-width(
+                $column-span,
+                $column-count
+            );
+        }
+    }
+}
+
+/// Change the flow of the grid column
+///
+/// @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
+/// @param {String} $grid-name (layout) - The name of the grid
+/// @param {List<String>} $grid-state-list (false) - A list of grid state ('grid-name:grid-size')
+///
+/// @access public
+/// @group atomic-api
+
+@mixin Herow-grid-column-flow(
+    $column-flow: $Herow-default-column-flow,
+    $grid-name: $Herow-default-grid-name,
+    $grid-state-list: false
+) {
+    $grid-state-list: Herow-get-formatted-grid-state-list($grid-state-list, $grid-name);
+    @include Herow-on($grid-state-list) {
+        @include Herow-column-flow($column-flow);
+    }
+}
+
+/// Change the left offset of the grid column
+///
+/// @param {Integer} $column-offset (1) - The span length for the left offset of the column
+/// @param {String} $grid-name (layout) - The name of the grid
+/// @param {List<String>} $grid-state-list (false) - A list of grid state ('grid-name:grid-size')
+///
+/// @access public
+/// @group atomic-api
+
+@mixin Herow-grid-column-offset(
+    $column-offset: 1,
+    $grid-name: $Herow-default-grid-name,
+    $grid-state-list: false
+) {
+    $grid-state-list: Herow-get-formatted-grid-state-list($grid-state-list, $grid-name);
+    @for $i from 1 through length($grid-state-list) {
+        $grid-state: nth($grid-state-list, $i);
+        $column-count: Herow-get-column-count-by-grid-state($grid-state);
+        @include Herow-on($grid-state) {
+            @include Herow-column-offset(
+                $column-offset,
+                $column-count
+            );
+        }
+    }
+}
+
+/// Include the styles of a grid column
+///
+/// @param {Integer} $column-span (1) - The span length of the column
+/// @param {String} $grid-name (layout) - The name of the grid
+/// @param {Map} $grid-state-list (false) - A list of grid state ('grid-name:grid-size')
+///
+/// @access public
+/// @group api
+
+@mixin Herow-grid-column(
+    $column-span: 1,
+    $grid-name: $Herow-default-grid-name,
+    $grid-state-list: false
+) {
+    $grid: Herow-get-grid-by-grid-name($grid-name);
+    $column-count: Herow-get-column-count-by-grid-state($grid-name);
+    @include Herow-column-core();
+    @include Herow-column-flow();
+    @include Herow-column-width($column-span, $column-count);
+    @include Herow-column-gutter(map_get($grid, gutter-width));
+    @if ($grid-state-list) {
+        @include Herow-grid-column-width($column-span, $grid-name, $grid-state-list);
+    }
+}

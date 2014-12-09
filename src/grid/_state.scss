@@ -1,0 +1,143 @@
+////
+/// @group configuration
+/// @author Thomas ZILLIOX
+
+/// Get if a grid state is with a specific size
+///
+/// @param {String} $grid-state - The state of a grid ('grid-name:grid-size')
+///
+/// @access private
+
+@function Herow-is-grid-state($grid-state) {
+    @return str-index($grid-state, ':');
+}
+
+/// Get grid name by grid state
+///
+/// @param {String} $grid-state - The state of a grid ('grid-name:grid-size')
+///
+/// @access private
+
+@function Herow-get-grid-name-by-grid-state($grid-state) {
+    $grid-name: $grid-state;
+    @if (Herow-is-grid-state($grid-state)) {
+        $index: str-index($grid-state, ':');
+        $grid-name: str-slice($grid-state, 1, $index - 1);
+    }
+    @return $grid-name;
+}
+
+/// Get grid by grid name
+///
+/// @param {String} $grid-name - The name of the grid
+///
+/// @access private
+
+@function Herow-get-grid-by-grid-name($grid-name) {
+    @if (type-of($grid-name) == 'map') {
+        @return $grid-name;
+    }
+    $grid: null;
+    @if map_has_key($Herow-grid-map, $grid-name) {
+        $grid: map_get($Herow-grid-map, $grid-name);
+    } @else {
+        @warn 'Unexisting map with the name: "#{$grid-name}"';
+    }
+    @return $grid;
+}
+
+/// Get a grid by grid state
+///
+/// @param {String} $grid-state - The state of a grid ('grid-name:grid-size')
+///
+/// @access private
+
+@function Herow-get-grid-by-grid-state($grid-state) {
+    $grid-name: Herow-get-grid-name-by-grid-state($grid-state);
+    $grid: Herow-get-grid-by-grid-name($grid-name);
+    @return $grid;
+}
+
+/// Get column count by grid state
+///
+/// @param {String} $grid-state - The state of a grid ('grid-name:grid-size')
+///
+/// @access private
+
+@function Herow-get-column-count-by-grid-state($grid-state) {
+    $grid: $grid-state;
+    @if (type-of($grid-state) == 'string') {
+        @if (Herow-is-grid-state($grid-state)) {
+            $index: str-index($grid-state, ':');
+            @return Herow-number(str-slice($grid-state, $index + 1));
+        } @else {
+            $grid-name: $grid-state;
+            $grid: Herow-get-grid-by-grid-name($grid-name);
+        }
+    }
+    $column-count: map-get($grid, column-count);
+    @if (type-of($column-count) == 'map') {
+        @return map-get($column-count, 0);
+    }
+    @return $column-count;
+}
+
+/// Get column count by grid state
+///
+/// @param {List<String>} $grid-state-list - A list of grid state ('grid-name:grid-size')
+///
+/// @access private
+
+@function Herow-get-column-count-list-by-grid-state-list($grid-state-list) {
+    $column-count-list: ();
+    $grid-name: Herow-get-grid-name-by-grid-state(nth($grid-state-list, 1));
+    @each $grid-state in $grid-state-list {
+        $column-count: Herow-get-column-count-by-grid-state($grid-state);
+        $current-grid-name: Herow-get-grid-name-by-grid-state($grid-state);
+        @if ($grid-name != $current-grid-name) {
+            @warn 'Try to merge column count from several grid in the same time: "#{$grid-name}" & "#{$current-grid-name}"';
+        } @else if (not index($column-count-list, $grid-state)) {
+            $column-count-list: append($column-count-list, $column-count);
+        }
+    }
+    @return $column-count-list;
+}
+
+/// Get a grid by grid state
+///
+/// @param {String} $grid-name (layout) - The name of the grid
+///
+/// @access private
+
+@function Herow-get-all-grid-state-list-by-grid-name(
+    $grid-name: $Herow-default-grid-name
+) {
+    $grid-state-list: ();
+    $grid: Herow-get-grid-by-grid-name($grid-name);
+    @each $breakpoint, $size in map_get($grid, column-count) {
+        $grid-state: $grid-name+':'+$size;
+        @if (not index($grid-state-list, $grid-state)) {
+            $grid-state-list: append($grid-state-list, $grid-state);
+        }
+    }
+    @return $grid-state-list;
+}
+
+/// Get a formatted grid-state-list from possible boolean
+///
+/// @param {Map} $grid-state-list (false) - A list of grid state ('grid-name:grid-size')
+/// @param {String} $grid-name (layout) - The name of the grid
+///
+/// @access private
+
+@function Herow-get-formatted-grid-state-list(
+    $grid-state-list: false,
+    $grid-name: $Herow-default-grid-name
+) {
+    @if ($grid-state-list == true) {
+        $grid-state-list: Herow-get-all-grid-state-list-by-grid-name($grid-name);
+    } @else if ($grid-state-list == false) {
+        $grid-state-list: $grid-name;
+    }
+    @return $grid-state-list;
+}

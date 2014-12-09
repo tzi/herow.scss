@@ -2,18 +2,18 @@
 /// @group responsive
 /// @author Thomas ZILLIOX
 
-/// Get breakpoint length by component state
+/// Get breakpoint length by grid state
 ///
-/// @param {String} $component-state - The state of a component ('component-name:component-size')
-/// @param {Boolean} $next (false) - Set if you target the next component state
+/// @param {String} $grid-state - The state of a grid ('grid-name:grid-size')
+/// @param {Boolean} $next (false) - Set if you target the next grid state
 ///
 /// @access private
 
-@function Herow-get-breakpoint-length-by-component-state($component-state, $next: false) {
+@function Herow-get-breakpoint-length-by-grid-state($grid-state, $next: false) {
     $is-next: false;
-    $state-size: Herow-get-column-count-by-component-state($component-state);
-    $component: Herow-get-component-by-component-state($component-state);
-    @each $breakpoint, $size in map_get($component, column-count) {
+    $state-size: Herow-get-column-count-by-grid-state($grid-state);
+    $grid: Herow-get-grid-by-grid-state($grid-state);
+    @each $breakpoint, $size in map_get($grid, column-count) {
         @if $is-next {
             @return $breakpoint;
         }
@@ -28,23 +28,23 @@
     @if ($is-next) {
         @return 0;
     }
-    @warn "The component state '#{$component-state}' is undefined";
+    @warn "The grid state '#{$grid-state}' is undefined";
     @return 0;
 }
 
-/// Get breakpoint couple by component state
+/// Get breakpoint couple by grid state
 ///
-/// @param {List<String>} $component-state-list - A list of component state ('component-name:component-size')
+/// @param {List<String>} $grid-state-list - A list of grid state ('grid-name:grid-size')
 ///
 /// @access private
 
-@function Herow-get-breakpoint-list-by-component-state-list($component-state-list) {
+@function Herow-get-breakpoint-list-by-grid-state-list($grid-state-list) {
     $breakpoint-list: ();
     $breakpoint-couple: ();
     $is-next: false;
-    $size-list: Herow-get-column-count-list-by-component-state-list($component-state-list);
-    $component: Herow-get-component-by-component-state(nth($component-state-list, 1));
-    @each $breakpoint, $size in map_get($component, column-count) {
+    $size-list: Herow-get-column-count-list-by-grid-state-list($grid-state-list);
+    $grid: Herow-get-grid-by-grid-state(nth($grid-state-list, 1));
+    @each $breakpoint, $size in map_get($grid, column-count) {
         @if (index($size-list, $size)) {
             @if (not $is-next) {
                 $breakpoint-couple: append($breakpoint-couple, $breakpoint);
@@ -67,7 +67,7 @@
 /// Get media-query by breakpoint
 ///
 /// @param {Length} $breakpoint
-/// @param {Boolean} $is-max-width (false) - Set if you target the next component state
+/// @param {Boolean} $is-max-width (false) - Set if you target the next grid state
 ///
 /// @access private
 
@@ -106,7 +106,7 @@
     @return $media-query;
 }
 
-/// Get media-query by component state list
+/// Get media-query by grid state list
 ///
 /// @param {List<List>} breakpoint-list
 ///
@@ -128,12 +128,12 @@
     @return $media-query;
 }
 
-/// Create a media-query by component state list
+/// Create a media-query by grid state list
 ///
-/// @param {List<String>} $component-state-list - A list of component state ('component-name:component-size')
+/// @param {List<String>} $grid-state-list - A list of grid state ('grid-name:grid-size')
 
-@mixin Herow-on($component-state-list) {
-    $breakpoint-list: Herow-get-breakpoint-list-by-component-state-list($component-state-list);
+@mixin Herow-on($grid-state-list) {
+    $breakpoint-list: Herow-get-breakpoint-list-by-grid-state-list($grid-state-list);
     @if ($Herow-debug) {
         -herow-breakpoint-list: $breakpoint-list;
     }

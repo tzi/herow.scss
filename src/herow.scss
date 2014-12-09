@@ -10,11 +10,11 @@
 @import "core/row";
 @import "core/column";
 
-@import "component/config";
-@import "component/state";
-@import "component/media-query";
-@import "component/row";
-@import "component/column";
+@import "grid/config";
+@import "grid/state";
+@import "grid/media-query";
+@import "grid/row";
+@import "grid/column";
 
 @import "generator/config";
 @import "generator/generator";

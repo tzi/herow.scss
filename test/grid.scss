@@ -5,17 +5,17 @@
     margin: 0 auto;
 }
 
-$Herow-component-map: Herow-add-component(layout, 4, 0, false, (
+$Herow-grid-map: Herow-add-grid(layout, 4, 0, false, (
     480px: 6,
     640px: 8,
     960px: 12
 ));
-$Herow-component-map: Herow-add-component(content, 4, 0, false, (
+$Herow-grid-map: Herow-add-grid(content, 4, 0, false, (
     'layout:6': 6,
     'layout:8': 5,
     'layout:12': 8
 ));
-$Herow-component-map: Herow-add-component(sidebar, 4, 0, false, (
+$Herow-grid-map: Herow-add-grid(sidebar, 4, 0, false, (
     'layout:6': 6,
     'layout:8': 3,
     'layout:12': 4
@@ -26,10 +26,10 @@ $Herow-component-map: Herow-add-component(sidebar, 4, 0, false, (
         @extend %container;
         border: 1px black solid;
 
-        @include Herow-component-row(layout);
+        @include Herow-grid-row(layout);
     }
     & .demo {
-        @include Herow-component-column(1, layout, true);
+        @include Herow-grid-column(1, layout, true);
         &:after {
             margin-left: 0.31em;
             @include Herow-on('layout:4') {
@@ -51,37 +51,37 @@ $Herow-component-map: Herow-add-component(sidebar, 4, 0, false, (
 .main {
     &__container {
         @extend %container;
-        @include Herow-component-row(layout);
+        @include Herow-grid-row(layout);
     }
 }
 
 .content {
     border: 1px black solid;
 
-    @include Herow-component-column(0, layout, 'layout:8');
-    @include Herow-component-column-width(-3, layout, 'layout:8');
-    @include Herow-component-column-width(-4, layout, 'layout:12');
+    @include Herow-grid-column(0, layout, 'layout:8');
+    @include Herow-grid-column-width(-3, layout, 'layout:8');
+    @include Herow-grid-column-width(-4, layout, 'layout:12');
 
-    @include Herow-component-row(content);
+    @include Herow-grid-row(content);
 
     & .demo {
-        @include Herow-component-column(1, content, true);
-        @include Herow-component-column-width(2, content, 'layout:12');
+        @include Herow-grid-column(1, content, true);
+        @include Herow-grid-column-width(2, content, 'layout:12');
     }
 }
 
 .sidebar {
     border: 1px black solid;
 
-    @include Herow-component-column(0, layout, 'layout:6');
-    @include Herow-component-column-width(3, layout, 'layout:8');
-    @include Herow-component-column-width(4, layout, 'layout:12');
-    @include Herow-component-column-flow('left', layout, 'layout:8' 'layout:12');
+    @include Herow-grid-column(0, layout, 'layout:6');
+    @include Herow-grid-column-width(3, layout, 'layout:8');
+    @include Herow-grid-column-width(4, layout, 'layout:12');
+    @include Herow-grid-column-flow('left', layout, 'layout:8' 'layout:12');
 
-    @include Herow-component-row(sidebar);
+    @include Herow-grid-row(sidebar);
 
     & .demo {
-        @include Herow-component-column(1, sidebar, true);
+        @include Herow-grid-column(1, sidebar, true);
         &:after {
             margin-left: 0.31em;
             @include Herow-on('sidebar:4') {
@@ -95,9 +95,9 @@ $Herow-component-map: Herow-add-component(sidebar, 4, 0, false, (
     &__container {
         @extend %container;
         border: 1px black solid;
-        @include Herow-component-row(layout);
+        @include Herow-grid-row(layout);
     }
     & .demo {
-        @include Herow-component-column(1, layout, true);
+        @include Herow-grid-column(1, layout, true);
     }
 }
