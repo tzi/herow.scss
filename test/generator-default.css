@@ -1,7 +1,6 @@
 .row {
-  display: block;
-  margin-top: -20px;
-  margin-left: -20px; }
+  margin-top: -1em;
+  margin-left: -1em; }
   .row:after {
     content: "";
     display: table;
@@ -14,8 +13,8 @@
   float: none;
   margin-right: -0.31em;
   width: 8.33333%;
-  padding-top: 20px;
-  padding-left: 20px;
+  padding-top: 1em;
+  padding-left: 1em;
   margin-left: 0%; }
 
 .col-1 {

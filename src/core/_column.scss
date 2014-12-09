@@ -26,7 +26,7 @@
 
 /// Change the gutter of the column
 ///
-/// @param {Length} $gutter-width (20px) - The gutter size of the grid
+/// @param {Length} $gutter-width (1em) - The gutter size of the grid
 ///
 /// @access public
 /// @group atomic-api
@@ -90,7 +90,7 @@
 ///
 /// @param {Integer} $column-span (1) - The span length of the column
 /// @param {Integer} $column-count (12) - The number of columns of the grid
-/// @param {Length} $gutter-width (20px) - The gutter size of the grid
+/// @param {Length} $gutter-width (1em) - The gutter size of the grid
 /// @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
 /// @param {Integer} $column-offset (0) - The span length for the left offset of the column
 ///

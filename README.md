@@ -13,7 +13,7 @@ Simple to use
 
 ```scss
 .main {
-  // A row, with a 20px gutter
+  // A row, with a 1em gutter
   @include Herow-row();
 }
 .content {

@@ -4,13 +4,19 @@
 
 .header__container {
   border: 1px black solid; }
+  .header__container:after {
+    content: "";
+    display: table;
+    clear: both; }
 .header .demo {
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
   float: none;
   margin-right: -0.31em;
-  width: 25%; }
+  width: 25%;
+  padding-top: 0;
+  padding-left: 0; }
   @media (max-width: 29.99em) {
     .header .demo {
       width: 25%; } }
@@ -38,6 +44,11 @@
       .header .demo:after {
         content: '12'; } }
 
+.main__container:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .content {
   border: 1px black solid;
   display: inline-block;
@@ -45,7 +56,9 @@
   box-sizing: border-box;
   float: none;
   margin-right: -0.31em;
-  width: 100%; }
+  width: 100%;
+  padding-top: 0;
+  padding-left: 0; }
   @media (min-width: 40em) and (max-width: 59.99em) {
     .content {
       width: 100%; } }
@@ -55,13 +68,19 @@
   @media (min-width: 60em) {
     .content {
       width: 66.66667%; } }
+  .content:after {
+    content: "";
+    display: table;
+    clear: both; }
   .content .demo {
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
     float: none;
     margin-right: -0.31em;
-    width: 25%; }
+    width: 25%;
+    padding-top: 0;
+    padding-left: 0; }
     @media (max-width: 29.99em) {
       .content .demo {
         width: 25%; } }
@@ -85,7 +104,9 @@
   box-sizing: border-box;
   float: none;
   margin-right: -0.31em;
-  width: 100%; }
+  width: 100%;
+  padding-top: 0;
+  padding-left: 0; }
   @media (min-width: 30em) and (max-width: 39.99em) {
     .sidebar {
       width: 100%; } }
@@ -99,13 +120,19 @@
     .sidebar {
       float: left;
       margin-right: 0; } }
+  .sidebar:after {
+    content: "";
+    display: table;
+    clear: both; }
   .sidebar .demo {
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
     float: none;
     margin-right: -0.31em;
-    width: 25%; }
+    width: 25%;
+    padding-top: 0;
+    padding-left: 0; }
     @media (max-width: 29.99em), (min-width: 60em) {
       .sidebar .demo {
         width: 25%; } }
@@ -123,13 +150,19 @@
 
 .footer__container {
   border: 1px black solid; }
+  .footer__container:after {
+    content: "";
+    display: table;
+    clear: both; }
 .footer .demo {
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
   float: none;
   margin-right: -0.31em;
-  width: 25%; }
+  width: 25%;
+  padding-top: 0;
+  padding-left: 0; }
   @media (max-width: 29.99em) {
     .footer .demo {
       width: 25%; } }

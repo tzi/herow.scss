@@ -4,7 +4,7 @@
 
 /// Change the gutter size of the row
 ///
-/// @param {Length} $gutter-width (20px) - The size of the grid gutter
+/// @param {Length} $gutter-width (1em) - The size of the grid gutter
 /// @param {Boolean} $external-gutter (false) - Set if an external padding is displayed on the grid
 ///
 /// @access public
@@ -14,18 +14,20 @@
     $gutter-width: $Herow-default-gutter-width,
     $external-gutter: $Herow-default-external-gutter
 ) {
-    @if $external-gutter {
-        padding-bottom: $gutter-width;
-        padding-right: $gutter-width;
-    } @else {
-        margin-top: - $gutter-width;
-        margin-left: - $gutter-width;
+    @if ($gutter-width > 0) {
+        @if $external-gutter {
+            padding-bottom: $gutter-width;
+            padding-right: $gutter-width;
+        } @else {
+            margin-top: - $gutter-width;
+            margin-left: - $gutter-width;
+        }
     }
 }
 
 /// Include the styles of a row
 ///
-/// @param {Length} $gutter-width (20px) - The size of the grid gutter
+/// @param {Length} $gutter-width (1em) - The size of the grid gutter
 /// @param {Boolean} $external-gutter (false) - Set if an external padding is displayed on the grid
 ///
 /// @access public
@@ -35,7 +37,6 @@
     $gutter-width: $Herow-default-gutter-width,
     $external-gutter: $Herow-default-external-gutter
 ) {
-    display: block;
     @include Herow-row-gutter($gutter-width, $external-gutter);
     @include Herow-clearfix();
 }
