@@ -26,6 +26,7 @@
 ///
 /// @param {Integer} $column-count (12) - The number of columns of the grid
 /// @param {Length} $gutter-width (1em) - The gutter size of the grid
+/// @param {Boolean} $external-gutter (false) - Set if an external padding is displayed on the grid
 /// @param {String} $class-prefix ('') - The prefix of the generated class names
 /// @param {String} $class-suffix ('') - The suffix of the generated class names
 ///
@@ -35,14 +36,20 @@
 @mixin Herow-class-generator(
     $column-count: $Herow-default-column-count,
     $gutter-width: $Herow-default-gutter-width,
+    $external-gutter: $Herow-default-external-gutter,
     $class-prefix: "",
     $class-suffix: ""
 ) {
+    $grid: (
+        column-count: $column-count,
+        gutter-width: $gutter-width,
+        external-gutter: $external-gutter
+    );
     @include Herow-class-selector(row, $class-prefix, $class-suffix) {
-        @include Herow-row($gutter-width);
+        @include Herow-component-row($grid);
     }
     @include Herow-class-selector(col, $class-prefix, $class-suffix) {
-        @include Herow-column(1, $column-count, $gutter-width);
+        @include Herow-component-column(1, $grid);
     }
     @for $counter from 1 through $column-count {
         @include Herow-class-selector(col-span, $class-prefix, $class-suffix, $counter) {

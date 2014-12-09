@@ -34,6 +34,9 @@
 /// @access private
 
 @function Herow-get-component-by-component-name($component-name) {
+    @if (type-of($component-name) == 'map') {
+        @return $component-name;
+    }
     $component: null;
     @if map_has_key($Herow-component-map, $component-name) {
         $component: map_get($Herow-component-map, $component-name);
@@ -62,14 +65,21 @@
 /// @access private
 
 @function Herow-get-column-count-by-component-state($component-state) {
-    @if (Herow-is-component-state($component-state)) {
-        $index: str-index($component-state, ':');
-        @return Herow-number(str-slice($component-state, $index + 1));
+    $component: $component-state;
+    @if (type-of($component-state) == 'string') {
+        @if (Herow-is-component-state($component-state)) {
+            $index: str-index($component-state, ':');
+            @return Herow-number(str-slice($component-state, $index + 1));
+        } @else {
+            $component-name: $component-state;
+            $component: Herow-get-component-by-component-name($component-name);
+        }
     }
-    $component-name: $component-state;
-    $component: Herow-get-component-by-component-name($component-name);
     $column-count: map-get($component, column-count);
-    @return map-get($column-count, 0);
+    @if (type-of($column-count) == 'map') {
+        @return map-get($column-count, 0);
+    }
+    @return $column-count;
 }
 
 /// Get column count by component state
