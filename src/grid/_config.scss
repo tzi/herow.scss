@@ -23,26 +23,18 @@ $Herow-default-grid-name: layout !default;
 /// @param {Map} $column-count-map (()) - The number of columns of the grid at different breakpoints
 
 @function Herow-add-grid(
-    $grid-name: $Herow-default-grid-name,
-    $column-count: $Herow-default-column-count,
-    $gutter-width: $Herow-default-gutter-width,
-    $external-gutter: $Herow-default-external-gutter,
-    $column-count-map: ()
+$grid-name: $Herow-default-grid-name,
+$column-count: $Herow-default-column-count,
+$gutter-width: $Herow-default-gutter-width,
+$external-gutter: $Herow-default-external-gutter
 ) {
-    $default-column-count: $column-count;
-    $column-count: ();
-    $column-count: map_merge($column-count, (0: $default-column-count));
-    @each $grid-state, $size in $column-count-map {
-        $breakpoint: $grid-state;
-        @if (type_of($grid-state) == 'string') {
-            $breakpoint: Herow-get-breakpoint-length-by-grid-state($grid-state);
-        }
-        $column-count: map_merge($column-count, ($breakpoint: $size));
+    @if (map_has_key($Herow-grid-map, $grid-name)) {
+        @warn "A grid with the name #{$grid-name} already exists";
     }
     $new-grid: ($grid-name: (
         gutter-width: $gutter-width,
         external-gutter: $external-gutter,
-        column-count: $column-count
+        column-count: $column-count,
     ));
     @return map-merge($Herow-grid-map, $new-grid);
 }

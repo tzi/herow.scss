@@ -5,21 +5,9 @@
     margin: 0 auto;
 }
 
-$Herow-grid-map: Herow-add-grid(layout, 4, 0, false, (
-    480px: 6,
-    640px: 8,
-    960px: 12
-));
-$Herow-grid-map: Herow-add-grid(content, 4, 0, false, (
-    'layout:6': 6,
-    'layout:8': 5,
-    'layout:12': 8
-));
-$Herow-grid-map: Herow-add-grid(sidebar, 4, 0, false, (
-    'layout:6': 6,
-    'layout:8': 3,
-    'layout:12': 4
-));
+$Herow-grid-map: Herow-add-grid(layout, 12, 0, false);
+$Herow-grid-map: Herow-add-grid(content, 8, 0, false);
+$Herow-grid-map: Herow-add-grid(sidebar, 4, 0, false);
 
 .header {
     &__container {
@@ -29,22 +17,7 @@ $Herow-grid-map: Herow-add-grid(sidebar, 4, 0, false, (
         @include Herow-grid-row(layout);
     }
     & .demo {
-        @include Herow-grid-column(1, layout, true);
-        &:after {
-            margin-left: 0.31em;
-            @include Herow-on('layout:4') {
-                content: '4';
-            }
-            @include Herow-on('layout:6') {
-                content: '6';
-            }
-            @include Herow-on('layout:8') {
-                content: '8';
-            }
-            @include Herow-on('layout:12') {
-                content: '12';
-            }
-        }
+        @include Herow-grid-column(1, layout);
     }
 }
 
@@ -58,35 +31,25 @@ $Herow-grid-map: Herow-add-grid(sidebar, 4, 0, false, (
 .content {
     border: 1px black solid;
 
-    @include Herow-grid-column(0, layout, 'layout:8');
-    @include Herow-grid-column-width(-3, layout, 'layout:8');
-    @include Herow-grid-column-width(-4, layout, 'layout:12');
-
+    @include Herow-grid-column(-4, layout);
     @include Herow-grid-row(content);
 
     & .demo {
-        @include Herow-grid-column(1, content, true);
-        @include Herow-grid-column-width(2, content, 'layout:12');
+        @include Herow-grid-column(1, content);
     }
 }
 
 .sidebar {
     border: 1px black solid;
 
-    @include Herow-grid-column(0, layout, 'layout:6');
-    @include Herow-grid-column-width(3, layout, 'layout:8');
-    @include Herow-grid-column-width(4, layout, 'layout:12');
-    @include Herow-grid-column-flow('left', layout, 'layout:8' 'layout:12');
-
+    @include Herow-grid-column(4, layout);
+    @include Herow-grid-column-flow('left');
     @include Herow-grid-row(sidebar);
 
     & .demo {
-        @include Herow-grid-column(1, sidebar, true);
+        @include Herow-grid-column(1, sidebar);
         &:after {
             margin-left: 0.31em;
-            @include Herow-on('sidebar:4') {
-                content: '4';
-            }
         }
     }
 }
@@ -98,6 +61,6 @@ $Herow-grid-map: Herow-add-grid(sidebar, 4, 0, false, (
         @include Herow-grid-row(layout);
     }
     & .demo {
-        @include Herow-grid-column(1, layout, true);
+        @include Herow-grid-column(1, layout);
     }
 }

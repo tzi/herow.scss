@@ -4,16 +4,15 @@
 
 /// Include the styles of a grid row
 ///
-/// @param {String} $grid-name (layout) - The name of the grid
+/// @param {Map|String} $grid (layout) - A grid map or the name of a defined grid
 ///
 /// @access public
 
 @mixin Herow-grid-row(
-    $grid-name: $Herow-default-grid-name
+    $grid: $Herow-default-grid-name
 ) {
-    $grid: Herow-get-grid-by-grid-name($grid-name);
-    @include Herow-row(
-        map_get($grid, gutter-width),
-        map_get($grid, external-gutter)
-    );
+    $grid: Herow-get-grid($grid);
+    $gutter-width: map-get($grid, gutter-width);
+    $external-gutter: map-get($grid, external-gutter);
+    @include Herow-row($gutter-width, $external-gutter);
 }

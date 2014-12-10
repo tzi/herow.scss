@@ -2,6 +2,10 @@ body {
     margin: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .demo {
     background: #ff4136;
     color: white;

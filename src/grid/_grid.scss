@@ -1,0 +1,19 @@
+////
+/// @author Thomas ZILLIOX
+///
+
+/// Get grid by map or by name
+///
+/// @param {Map|String} $grid (layout) - A grid map or the name of a defined grid
+///
+/// @access private
+
+@function Herow-get-grid($grid) {
+    @if (type-of($grid) == 'map') {
+        @return $grid;
+    }
+    @if map_has_key($Herow-grid-map, $grid) {
+        @return map_get($Herow-grid-map, $grid);
+    }
+    @warn 'Unexisting map with the name: "#{$grid}"';
+}

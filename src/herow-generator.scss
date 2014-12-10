@@ -4,6 +4,5 @@
 /// @group api
 /// @author Thomas ZILLIOX
 
-@import "herow-core";
-@import "herow-grid";
-@import "herow-generator";
+@import "generator/config";
+@import "generator/generator";
