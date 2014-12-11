@@ -1,0 +1,65 @@
+@import '../../src/herow';
+
+// Mixin to generate test output
+@mixin dump-grid-breakpoints($grid-name) {
+    $breakpoint-map: Herow-get-grid-breakpoint-map($grid-name);
+    .grid {
+        @each $index, $info in $breakpoint-map {
+            $type: map_get($info, type);
+            $size: map_get($info, size);
+            @if ($type == default) {
+                grid-size: $size;
+            } @else {
+                $breakpoint-length: map_get($info, $type);
+                grid-size: $size at $type $breakpoint-length;
+            }
+        }
+    }
+}
+
+
+/* Test: Add breakpoint with mobile-first approach */
+$Herow-grid-map: Herow-add-grid(test1, 4, 0, false);
+$Herow-grid-map: Herow-add-grid-breakpoint(test1, (
+    0: default,
+    480px: 6,
+    640px: 8,
+    960px: 12,
+    1280px: 16
+));
+@include dump-grid-breakpoints(test1);
+
+
+/* Test: Add breakpoint with desktop-first approach */
+$Herow-grid-map: Herow-add-grid(test2, 16, 0, false);
+$Herow-grid-map: Herow-add-grid-breakpoint(test2, (
+    0: 4,
+    480px: 6,
+    640px: 8,
+    960px: 12,
+    1280px: default
+));
+@include dump-grid-breakpoints(test2);
+
+
+/* Test: Add breakpoint with middle-first approach */
+$Herow-grid-map: Herow-add-grid(test3, 8, 0, false);
+$Herow-grid-map: Herow-add-grid-breakpoint(test3, (
+    0: 4,
+    480px: 6,
+    640px: default,
+    960px: 12,
+    1280px: 16
+));
+@include dump-grid-breakpoints(test3);
+
+
+/* Test: Add breakpoint with another grid state */
+$Herow-grid-map: Herow-add-grid(test4, 4, 0, false);
+$Herow-grid-map: Herow-add-grid-breakpoint(test4, (
+    'test1:4': default,
+    'test1:6': 6,
+    'test1:8': 5,
+    'test1:12': 8
+));
+@include dump-grid-breakpoints(test4);

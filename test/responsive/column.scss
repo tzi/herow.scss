@@ -1,0 +1,34 @@
+@import '../../src/herow';
+
+// Grid
+$Herow-grid-map: Herow-add-grid(test1, 4, 0, false);
+$Herow-grid-map: Herow-add-grid-breakpoint(test1, (
+    0: default,
+    480px: 6,
+    640px: 8,
+    960px: 12,
+    1280px: 16
+));
+
+/* Test: A responsive column over every grid states */
+.column {
+    @include Herow-grid-responsive-column(1, test1);
+}
+
+/* Test: Set column width over one grid state */
+.column {
+    @include Herow-grid-column(1, test1);
+    @include Herow-grid-column-width-breakpoint(1, 'test1:12');
+}
+
+/* Test: Set column flow over one grid state */
+.column {
+    @include Herow-grid-column(1, test1);
+    @include Herow-grid-column-flow-breakpoint('left', 'test1:12');
+}
+
+/* Test: Set column offset over one grid state */
+.column {
+    @include Herow-grid-column(1, test1);
+    @include Herow-grid-column-offset-breakpoint(1, 'test1:12');
+}

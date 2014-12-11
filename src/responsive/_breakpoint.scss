@@ -135,7 +135,6 @@
 /// @access private
 
 @function Herow-group-breakpoint-list($breakpoint-list) {
-    @warn length($breakpoint-list);
     $current: 1;
     @each $current-breakpoint in $breakpoint-list {
         $comparison: 1;
@@ -149,7 +148,6 @@
                     $breakpoint-list: Herow-remove-nth($breakpoint-list, $current);
                     $current-breakpoint: false;
                     $current: $current - 1;
-
                 }
             }
             $comparison: $comparison + 1;

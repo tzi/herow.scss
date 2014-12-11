@@ -1,0 +1,32 @@
+@import '../../src/herow';
+
+
+/* Test: Default row */
+.row {
+    @include Herow-row();
+}
+
+
+/* Test: Row without gutter */
+.row {
+    @include Herow-row(0);
+}
+
+
+/* Test: Row with custom gutter width (20px) */
+.row {
+    @include Herow-row(20px);
+}
+
+
+/* Test: Row with external gutter */
+.row {
+    @include Herow-row($external-gutter: true);
+}
+
+
+/* Test: Row with overridden default gutter width (30px) */
+$Herow-default-gutter-width: 30px;
+.row {
+    @include Herow-row();
+}

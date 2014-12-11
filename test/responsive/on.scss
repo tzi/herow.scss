@@ -1,0 +1,68 @@
+@import '../../src/herow';
+
+// Grid
+$Herow-grid-map: Herow-add-grid(test1, 4, 0, false);
+$Herow-grid-map: Herow-add-grid-breakpoint(test1, (
+    0: default,
+    480px: 6,
+    640px: 8,
+    960px: 12,
+    1280px: 16
+));
+$Herow-grid-map: Herow-add-grid(test2, 4, 0, false);
+$Herow-grid-map: Herow-add-grid-breakpoint(test2, (
+    0: default,
+    480px: 6,
+    640px: 4,
+    960px: 4,
+    1280px: 6
+));
+
+/* Test: one grid state */
+@include Herow-on('test1:6') {
+    .column {
+        background: blue;
+    }
+}
+
+/* Test: one grid state with min-width: 0 */
+@include Herow-on('test1:default') {
+    .column {
+        background: blue;
+    }
+}
+
+/* Test: one grid state with max-width: infinite */
+@include Herow-on('test1:16') {
+    .column {
+        background: blue;
+    }
+}
+
+/* Test: one grid state that appear 2 times */
+@include Herow-on('test2:6') {
+    .column {
+        background: blue;
+    }
+}
+
+/* Test: one grid state that appear 3 times with 2 that could be merged */
+@include Herow-on('test2:4') {
+    .column {
+        background: blue;
+    }
+}
+
+/* Test: 3 grid state */
+@include Herow-on('test1:4' 'test1:8' 'test1:16') {
+    .column {
+        background: blue;
+    }
+}
+
+/* Test: 3 grid state that could be merged */
+@include Herow-on('test1:4' 'test1:6' 'test1:8') {
+    .column {
+        background: blue;
+    }
+}
