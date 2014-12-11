@@ -1,0 +1,66 @@
+@import '../../src/herow';
+
+%container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+$Herow-grid-map: Herow-add-grid(layout, 12, 0, false);
+$Herow-grid-map: Herow-add-grid(content, 8, 0, false);
+$Herow-grid-map: Herow-add-grid(sidebar, 4, 0, false);
+
+.header {
+    &__container {
+        @extend %container;
+        border: 1px black solid;
+
+        @include Herow-grid-row(layout);
+    }
+    & .demo {
+        @include Herow-grid-column(1, layout);
+    }
+}
+
+.main {
+    &__container {
+        @extend %container;
+        @include Herow-grid-row(layout);
+    }
+}
+
+.content {
+    border: 1px black solid;
+
+    @include Herow-grid-column(-4, layout);
+    @include Herow-grid-row(content);
+
+    & .demo {
+        @include Herow-grid-column(1, content);
+    }
+}
+
+.sidebar {
+    border: 1px black solid;
+
+    @include Herow-grid-column(4, layout);
+    @include Herow-grid-column-flow('left');
+    @include Herow-grid-row(sidebar);
+
+    & .demo {
+        @include Herow-grid-column(1, sidebar);
+        &:after {
+            margin-left: 0.31em;
+        }
+    }
+}
+
+.footer {
+    &__container {
+        @extend %container;
+        border: 1px black solid;
+        @include Herow-grid-row(layout);
+    }
+    & .demo {
+        @include Herow-grid-column(1, layout);
+    }
+}

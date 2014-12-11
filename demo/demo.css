@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.demo {
+    background: #ff4136;
+    color: white;
+    line-height: 50px;
+    text-transform: capitalize;
+}
+
+.demo--a {
+    background: #0074d9;
+}
+
+.demo--b {
+    background: #ff851b;
+}
+
+.demo-c {
+    background: #001f3f;
+}
+
+* {
+    box-sizing: border-box;
+}
