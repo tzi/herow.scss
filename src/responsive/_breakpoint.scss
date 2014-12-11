@@ -65,6 +65,10 @@
     }
 
     $default: map_get($grid-breakpoint-map, default);
+    @if (not $default) {
+        $grid-name: map_get($grid, name);
+        @warn "The grid '#{$grid-name}' should have at least one breakpoint with the default size";
+    }
     $grid-breakpoint-map: map_merge((default: $default), $grid-breakpoint-map);
     @return $grid-breakpoint-map;
 }

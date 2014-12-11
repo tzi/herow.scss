@@ -32,6 +32,7 @@ $Herow-default-grid-name: layout !default;
         @warn "A grid with the name #{$grid-name} already exists";
     }
     $new-grid: ($grid-name: (
+        name: $grid-name,
         gutter-width: $gutter-width,
         external-gutter: $external-gutter,
         column-count: $column-count,
