@@ -8,7 +8,7 @@
   
   <meta charset="utf-8" />
 
-<title>Herow - v1.2.0</title>
+<title>Herow - v3.0.0</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width">
@@ -26,7 +26,7 @@
   <div class="sidebar__header">
   <h1 class="sidebar__title">
     
-      <a href="https://github.com/tzi/Herow">Herow - v1.2.0</a>
+      <a href="https://github.com/tzi/Herow">Herow - v3.0.0</a>
     
   </h1>
 </div>
@@ -49,13 +49,22 @@
 
         
         
+        
+      
+        
+
+        
+        
+
+        
+        
           <p class="sidebar__item  sidebar__item--sub-heading" data-slug="api-mixin"><a href="#api-mixin">mixins</a></p>
 
           
           
             <ul class="list-unstyled">
-            <li class="sidebar__item  sassdoc__item" data-name="Herow-row" data-type="mixin">
-              <a href="#mixin-Herow-row">Herow-row
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-column" data-type="mixin">
+              <a href="#mixin-Herow-column">Herow-column
               
               
               </a>
@@ -63,8 +72,8 @@
             
           
             
-            <li class="sidebar__item  sassdoc__item" data-name="Herow-column" data-type="mixin">
-              <a href="#mixin-Herow-column">Herow-column
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-row" data-type="mixin">
+              <a href="#mixin-Herow-row">Herow-row
               
               
               </a>
@@ -78,6 +87,24 @@
               
               </a>
             </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-grid-column" data-type="mixin">
+              <a href="#mixin-Herow-grid-column">Herow-grid-column
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-grid-row" data-type="mixin">
+              <a href="#mixin-Herow-grid-row">Herow-grid-row
+              
+              
+              </a>
+            </li>
             </ul>
           
         
@@ -85,7 +112,7 @@
       
 
     
-      <p class="sidebar__item  sidebar__item--heading" data-slug="atomic-api"><a href="#atomic-api">Atomic API</a></p>
+      <p class="sidebar__item  sidebar__item--heading" data-slug="configuration"><a href="#configuration">Configuration</a></p>
 
       
       
@@ -96,13 +123,13 @@
 
         
         
-          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="atomic-api-mixin"><a href="#atomic-api-mixin">mixins</a></p>
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="configuration-function"><a href="#configuration-function">functions</a></p>
 
           
           
             <ul class="list-unstyled">
-            <li class="sidebar__item  sassdoc__item" data-name="Herow-row-gutter" data-type="mixin">
-              <a href="#mixin-Herow-row-gutter">Herow-row-gutter
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-add-grid" data-type="function">
+              <a href="#function-Herow-add-grid">Herow-add-grid
               
               
               </a>
@@ -110,6 +137,130 @@
             
           
             
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-add-grid-breakpoint" data-type="function">
+              <a href="#function-Herow-add-grid-breakpoint">Herow-add-grid-breakpoint
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="configuration-variable"><a href="#configuration-variable">variables</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-debug" data-type="variable">
+              <a href="#variable-Herow-debug">Herow-debug
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-default-column-count" data-type="variable">
+              <a href="#variable-Herow-default-column-count">Herow-default-column-count
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-default-column-flow" data-type="variable">
+              <a href="#variable-Herow-default-column-flow">Herow-default-column-flow
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-default-gutter-width" data-type="variable">
+              <a href="#variable-Herow-default-gutter-width">Herow-default-gutter-width
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-default-external-gutter" data-type="variable">
+              <a href="#variable-Herow-default-external-gutter">Herow-default-external-gutter
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-generator-class-map" data-type="variable">
+              <a href="#variable-Herow-generator-class-map">Herow-generator-class-map
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-grid-map" data-type="variable">
+              <a href="#variable-Herow-grid-map">Herow-grid-map
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-default-grid-name" data-type="variable">
+              <a href="#variable-Herow-default-grid-name">Herow-default-grid-name
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-default-grid-state" data-type="variable">
+              <a href="#variable-Herow-default-grid-state">Herow-default-grid-state
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="core-api"><a href="#core-api">Atomic API</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="core-api-mixin"><a href="#core-api-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
             <li class="sidebar__item  sassdoc__item" data-name="Herow-column-width" data-type="mixin">
               <a href="#mixin-Herow-column-width">Herow-column-width
               
@@ -143,6 +294,24 @@
               
               </a>
             </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-column-core" data-type="mixin">
+              <a href="#mixin-Herow-column-core">Herow-column-core
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-row-gutter" data-type="mixin">
+              <a href="#mixin-Herow-row-gutter">Herow-row-gutter
+              
+              
+              </a>
+            </li>
             </ul>
           
         
@@ -150,7 +319,7 @@
       
 
     
-      <p class="sidebar__item  sidebar__item--heading" data-slug="configuration"><a href="#configuration">Configuration</a></p>
+      <p class="sidebar__item  sidebar__item--heading" data-slug="grid-api"><a href="#grid-api">Atomic Grid API</a></p>
 
       
       
@@ -161,13 +330,13 @@
 
         
         
-          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="configuration-variable"><a href="#configuration-variable">variables</a></p>
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="grid-api-mixin"><a href="#grid-api-mixin">mixins</a></p>
 
           
           
             <ul class="list-unstyled">
-            <li class="sidebar__item  sassdoc__item" data-name="Herow-default-column-count" data-type="variable">
-              <a href="#variable-Herow-default-column-count">Herow-default-column-count
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-grid-column-width" data-type="mixin">
+              <a href="#mixin-Herow-grid-column-width">Herow-grid-column-width
               
               
               </a>
@@ -175,8 +344,8 @@
             
           
             
-            <li class="sidebar__item  sassdoc__item" data-name="Herow-default-column-flow" data-type="variable">
-              <a href="#variable-Herow-default-column-flow">Herow-default-column-flow
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-grid-column-gutter" data-type="mixin">
+              <a href="#mixin-Herow-grid-column-gutter">Herow-grid-column-gutter
               
               
               </a>
@@ -184,8 +353,8 @@
             
           
             
-            <li class="sidebar__item  sassdoc__item" data-name="Herow-default-gutter-width" data-type="variable">
-              <a href="#variable-Herow-default-gutter-width">Herow-default-gutter-width
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-grid-column-flow" data-type="mixin">
+              <a href="#mixin-Herow-grid-column-flow">Herow-grid-column-flow
               
               
               </a>
@@ -193,8 +362,82 @@
             
           
             
-            <li class="sidebar__item  sassdoc__item" data-name="Herow-generator-class-map" data-type="variable">
-              <a href="#variable-Herow-generator-class-map">Herow-generator-class-map
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-grid-column-offset" data-type="mixin">
+              <a href="#mixin-Herow-grid-column-offset">Herow-grid-column-offset
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="responsive-api"><a href="#responsive-api">Responsive Grid API</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="responsive-api-mixin"><a href="#responsive-api-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-grid-responsive-column" data-type="mixin">
+              <a href="#mixin-Herow-grid-responsive-column">Herow-grid-responsive-column
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-grid-column-width-breakpoint" data-type="mixin">
+              <a href="#mixin-Herow-grid-column-width-breakpoint">Herow-grid-column-width-breakpoint
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-grid-column-flow-breakpoint" data-type="mixin">
+              <a href="#mixin-Herow-grid-column-flow-breakpoint">Herow-grid-column-flow-breakpoint
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-grid-column-offset-breakpoint" data-type="mixin">
+              <a href="#mixin-Herow-grid-column-offset-breakpoint">Herow-grid-column-offset-breakpoint
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-on" data-type="mixin">
+              <a href="#mixin-Herow-on">Herow-on
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="Herow-grid-responsive-row" data-type="mixin">
+              <a href="#mixin-Herow-grid-responsive-row">Herow-grid-responsive-row
               
               
               </a>
@@ -255,242 +498,17 @@
 
           
           
+        
+
+          
+          
+
+          
+          
             <section class="main__sub-section" id="api-mixin">
               <h2 class="main__heading--secondary">mixins</h2>
 
               
-              
-                <section class="main__item  item" id="mixin-Herow-row">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-Herow-row">Herow-row</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@mixin Herow-row($gutter-width: 20px, $external-pad: false) { 
-  display: block;
-  @include Herow-row-gutter($gutter-width, $external-pad);
-  @include Herow-clearfix();
- }"
-    data-collapsed="@mixin Herow-row($gutter-width: 20px, $external-pad: false) { ... }"><code>@mixin Herow-row($gutter-width: 20px, $external-pad: false) { ... }</code></pre>
-
-  
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L101-L108" class="item__source-link" target="_blank">View source</a>
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Include the styles of a row</p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$gutter-width</code></th>
-          <td data-label="desc"><p>The size of the grid gutter</p>
-</td>
-          <td data-label="type">
-          
-            Length
-          
-          </td>
-          <td data-label="default">
-          
-            <code>20px</code>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$external-pad</code></th>
-          <td data-label="desc"><p>Set if an external padding is displayed on the grid</p>
-</td>
-          <td data-label="type">
-          
-            Boolean
-          
-          </td>
-          <td data-label="default">
-          
-            <code>false</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
-
-
-  
-    
-      
-      <h3 class="item__sub-heading">Requires</h3>
-      <ul class="list-unstyled">
-    
-
-    
-      <li>
-        <a href="#mixin-Herow-row-gutter"><code>Herow-row-gutter</code></a>
-        
-      </li>
-    
-  
-
-
-
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-
-
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-  <h3 class="item__sub-heading">Author</h3>
-
-  <ul class="list-unstyled">
-    
-      <li><p>Thomas ZILLIOX</p>
-</li>
-    
-  </ul>
-
-
-  
-
-
-
-</section>
               
                 <section class="main__item  item" id="mixin-Herow-column">
 
@@ -578,17 +596,17 @@
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset: 0) { 
-  box-sizing: border-box;
-  @include Herow-column-flow($column-flow);
-  @include Herow-column-width($column-span, $column-count);
-  @include Herow-column-gutter($gutter-width);
-  @include Herow-column-offset($column-offset, $column-count);
+    data-expanded="@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 1em, $column-flow: &#39;inline&#39;, $column-offset: 0) { 
+    @include Herow-column-core();
+    @include Herow-column-flow($column-flow);
+    @include Herow-column-width($column-span, $column-count);
+    @include Herow-column-gutter($gutter-width);
+    @include Herow-column-offset($column-offset, $column-count);
  }"
-    data-collapsed="@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset: 0) { ... }"><code>@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 20px, $column-flow: &#39;inline&#39;, $column-offset: 0) { ... }</code></pre>
+    data-collapsed="@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 1em, $column-flow: &#39;inline&#39;, $column-offset: 0) { ... }"><code>@mixin Herow-column($column-span: 1, $column-count: 12, $gutter-width: 1em, $column-flow: &#39;inline&#39;, $column-offset: 0) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L193-L205" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/core/_column.scss#L105-L117" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -666,7 +684,7 @@
           </td>
           <td data-label="default">
           
-            <code>20px</code>
+            <code>1em</code>
           
           </td>
         </tr>
@@ -734,6 +752,19 @@
 
     
       <li>
+        <a href="#mixin-Herow-column-core"><code>Herow-column-core</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
         <a href="#mixin-Herow-column-flow"><code>Herow-column-flow</code></a>
         
       </li>
@@ -791,6 +822,222 @@
 
 
 
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-row">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-row">Herow-row</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-row($gutter-width: 1em, $external-gutter: false) { 
+    @include Herow-row-gutter($gutter-width, $external-gutter);
+    @include Herow-clearfix();
+ }"
+    data-collapsed="@mixin Herow-row($gutter-width: 1em, $external-gutter: false) { ... }"><code>@mixin Herow-row($gutter-width: 1em, $external-gutter: false) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/core/_row.scss#L35-L41" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Include the styles of a row</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$gutter-width</code></th>
+          <td data-label="desc"><p>The size of the grid gutter</p>
+</td>
+          <td data-label="type">
+          
+            Length
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1em</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$external-gutter</code></th>
+          <td data-label="desc"><p>Set if an external padding is displayed on the grid</p>
+</td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-row-gutter"><code>Herow-row-gutter</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
   
 
     
@@ -799,7 +1046,7 @@
       <ul class="list-unstyled  list-inline">
     
 
-    <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
+    <li><a href="#mixin-Herow-grid-row"><code>Herow-grid-row</code></a></li>
   
 
 
@@ -915,41 +1162,58 @@
     
   
 
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@mixin Herow-class-generator($column-count: 12, $gutter-width: 20px, $class-prefix: &#39;&#39;, $class-suffix: &#39;&#39;) { 
-  @include Herow-class-selector(row, $class-prefix, $class-suffix) {
-    @include Herow-row($gutter-width);
-  }
-  @include Herow-class-selector(col, $class-prefix, $class-suffix) {
-    @include Herow-column(1, $column-count, $gutter-width);
-  }
-  @for $counter from 1 through $column-count {
-    @include Herow-class-selector(col-span, $class-prefix, $class-suffix, $counter) {
-      @include Herow-column-width($counter, $column-count);
+    data-expanded="@mixin Herow-class-generator($column-count: 12, $gutter-width: 1em, $external-gutter: false, $class-prefix: &#39;&#39;, $class-suffix: &#39;&#39;) { 
+    $grid: (
+        column-count: $column-count,
+        gutter-width: $gutter-width,
+        external-gutter: $external-gutter
+    );
+    @include Herow-class-selector(row, $class-prefix, $class-suffix) {
+        @include Herow-grid-row($grid);
     }
-  }
-  @include Herow-class-selector(col-flow-left, $class-prefix, $class-suffix) {
-    @include Herow-column-flow(&#39;left&#39;);
-  }
-  @include Herow-class-selector(col-flow-right, $class-prefix, $class-suffix) {
-    @include Herow-column-flow(&#39;right&#39;);
-  }
-  @include Herow-class-selector(col-flow-inline, $class-prefix, $class-suffix) {
-    @include Herow-column-flow(&#39;inline&#39;);
-  }
-  @for $counter from 1 through $column-count {
-    @include Herow-class-selector(col-offset-left, $class-prefix, $class-suffix, $counter - 1) {
-      @include Herow-column-offset($counter - 1, $column-count);
+    @include Herow-class-selector(col, $class-prefix, $class-suffix) {
+        @include Herow-grid-column(1, $grid);
     }
-  }
+    @for $counter from 1 through $column-count {
+        @include Herow-class-selector(col-span, $class-prefix, $class-suffix, $counter) {
+            @include Herow-column-width($counter, $column-count);
+        }
+    }
+    @include Herow-class-selector(col-flow-left, $class-prefix, $class-suffix) {
+        @include Herow-column-flow(&#39;left&#39;);
+    }
+    @include Herow-class-selector(col-flow-right, $class-prefix, $class-suffix) {
+        @include Herow-column-flow(&#39;right&#39;);
+    }
+    @include Herow-class-selector(col-flow-inline, $class-prefix, $class-suffix) {
+        @include Herow-column-flow(&#39;inline&#39;);
+    }
+    @for $counter from 1 through $column-count {
+        @include Herow-class-selector(col-offset-left, $class-prefix, $class-suffix, $counter - 1) {
+            @include Herow-column-offset($counter - 1, $column-count);
+        }
+    }
  }"
-    data-collapsed="@mixin Herow-class-generator($column-count: 12, $gutter-width: 20px, $class-prefix: &#39;&#39;, $class-suffix: &#39;&#39;) { ... }"><code>@mixin Herow-class-generator($column-count: 12, $gutter-width: 20px, $class-prefix: &#39;&#39;, $class-suffix: &#39;&#39;) { ... }</code></pre>
+    data-collapsed="@mixin Herow-class-generator($column-count: 12, $gutter-width: 1em, $external-gutter: false, $class-prefix: &#39;&#39;, $class-suffix: &#39;&#39;) { ... }"><code>@mixin Herow-class-generator($column-count: 12, $gutter-width: 1em, $external-gutter: false, $class-prefix: &#39;&#39;, $class-suffix: &#39;&#39;) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L242-L273" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/generator/_generator.scss#L36-L73" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1011,7 +1275,23 @@
           </td>
           <td data-label="default">
           
-            <code>20px</code>
+            <code>1em</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$external-gutter</code></th>
+          <td data-label="desc"><p>Set if an external padding is displayed on the grid</p>
+</td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
           
           </td>
         </tr>
@@ -1083,7 +1363,7 @@
 
     
       <li>
-        <a href="#mixin-Herow-row"><code>Herow-row</code></a>
+        <a href="#mixin-Herow-grid-row"><code>Herow-grid-row</code></a>
         
       </li>
     
@@ -1100,7 +1380,7 @@
 
     
       <li>
-        <a href="#mixin-Herow-column"><code>Herow-column</code></a>
+        <a href="#mixin-Herow-grid-column"><code>Herow-grid-column</code></a>
         
       </li>
     
@@ -1242,34 +1522,12 @@
 
 </section>
               
-            </section>
-          
-        
-
-      </section>
-    
-      <section class="main__section">
-        <h1 class="main__heading" id="atomic-api">Atomic API</h1>
-
-        
-        
-
-          
-          
-
-          
-          
-            <section class="main__sub-section" id="atomic-api-mixin">
-              <h2 class="main__heading--secondary">mixins</h2>
-
-              
-              
-                <section class="main__item  item" id="mixin-Herow-row-gutter">
+                <section class="main__item  item" id="mixin-Herow-grid-column">
 
 <h3 class="item__heading">
   
 
-  <a class="item__name" href="#mixin-Herow-row-gutter">Herow-row-gutter</a>
+  <a class="item__name" href="#mixin-Herow-grid-column">Herow-grid-column</a>
 
   
 
@@ -1314,19 +1572,17 @@
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@mixin Herow-row-gutter($gutter-width: 20px, $external-pad: false) { 
-  @if $external-pad {
-    padding-bottom: $gutter-width;
-    padding-right: $gutter-width;
-  } @else {
-    margin-top: - $gutter-width;
-    margin-left: - $gutter-width;
-  }
+    data-expanded="@mixin Herow-grid-column($column-span: 1, $grid: layout) { 
+    $grid: Herow-get-grid($grid);
+    @include Herow-column-core();
+    @include Herow-column-flow();
+    @include Herow-grid-column-width($column-span, $grid);
+    @include Herow-grid-column-gutter($grid);
  }"
-    data-collapsed="@mixin Herow-row-gutter($gutter-width: 20px, $external-pad: false) { ... }"><code>@mixin Herow-row-gutter($gutter-width: 20px, $external-pad: false) { ... }</code></pre>
+    data-collapsed="@mixin Herow-grid-column($column-span: 1, $grid: layout) { ... }"><code>@mixin Herow-grid-column($column-span: 1, $grid: layout) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L80-L91" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/grid/_column.scss#L76-L85" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1340,7 +1596,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Change the gutter size of the row</p>
+  <div class="item__description"><p>Include the styles of a grid column</p>
 </div>
 
 
@@ -1362,33 +1618,33 @@
     <tbody>
       
         <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$gutter-width</code></th>
-          <td data-label="desc"><p>The size of the grid gutter</p>
+          <th scope="row" data-label="name"><code>$column-span</code></th>
+          <td data-label="desc"><p>The span length of the column</p>
 </td>
           <td data-label="type">
           
-            Length
+            Integer
           
           </td>
           <td data-label="default">
           
-            <code>20px</code>
+            <code>1</code>
           
           </td>
         </tr>
       
         <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$external-pad</code></th>
-          <td data-label="desc"><p>Set if an external padding is displayed on the grid</p>
+          <th scope="row" data-label="name"><code>$grid</code></th>
+          <td data-label="desc"><p>A grid map or the name of a defined grid</p>
 </td>
           <td data-label="type">
           
-            Boolean
+            Map, String
           
           </td>
           <td data-label="default">
           
-            <code>false</code>
+            <code>layout</code>
           
           </td>
         </tr>
@@ -1415,6 +1671,68 @@
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-core"><code>Herow-column-core</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-flow"><code>Herow-column-flow</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-grid-column-width"><code>Herow-grid-column-width</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-grid-column-gutter"><code>Herow-grid-column-gutter</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+
+</ul>
 
 
   
@@ -1431,7 +1749,16 @@
       <ul class="list-unstyled  list-inline">
     
 
-    <li><a href="#mixin-Herow-row"><code>Herow-row</code></a></li>
+    <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-responsive-column"><code>Herow-grid-responsive-column</code></a></li>
   
 
 
@@ -1476,6 +1803,1897 @@
 
 
 </section>
+              
+                <section class="main__item  item" id="mixin-Herow-grid-row">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-grid-row">Herow-grid-row</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-grid-row($grid: layout) { 
+    $grid: Herow-get-grid($grid);
+    $gutter-width: map-get($grid, gutter-width);
+    $external-gutter: map-get($grid, external-gutter);
+    @include Herow-row($gutter-width, $external-gutter);
+ }"
+    data-collapsed="@mixin Herow-grid-row($grid: layout) { ... }"><code>@mixin Herow-grid-row($grid: layout) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/grid/_row.scss#L11-L18" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Include the styles of a grid row</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid</code></th>
+          <td data-label="desc"><p>A grid map or the name of a defined grid</p>
+</td>
+          <td data-label="type">
+          
+            Map, String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>layout</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-row"><code>Herow-row</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-responsive-row"><code>Herow-grid-responsive-row</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="configuration">Configuration</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="configuration-function">
+              <h2 class="main__heading--secondary">functions</h2>
+
+              
+              
+                <section class="main__item  item" id="function-Herow-add-grid">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-Herow-add-grid">Herow-add-grid</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function Herow-add-grid($grid-name: layout, $column-count: 12, $gutter-width: 1em, $external-gutter: false, $column-count-map: ()) { 
+    @if (map_has_key($Herow-grid-map, $grid-name)) {
+        @warn &quot;A grid with the name #{$grid-name} already exists&quot;;
+    }
+    $new-grid: ($grid-name: (
+        gutter-width: $gutter-width,
+        external-gutter: $external-gutter,
+        column-count: $column-count,
+    ));
+    @return map-merge($Herow-grid-map, $new-grid);
+ }"
+    data-collapsed="@function Herow-add-grid($grid-name: layout, $column-count: 12, $gutter-width: 1em, $external-gutter: false, $column-count-map: ()) { ... }"><code>@function Herow-add-grid($grid-name: layout, $column-count: 12, $gutter-width: 1em, $external-gutter: false, $column-count-map: ()) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/grid/_config.scss#L25-L40" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Add a grid</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid-name</code></th>
+          <td data-label="desc"><p>The name of the grid</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>layout</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-count</code></th>
+          <td data-label="desc"><p>The default number of columns of the grid</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>12</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$gutter-width</code></th>
+          <td data-label="desc"><p>The size of the grid gutter</p>
+</td>
+          <td data-label="type">
+          
+            Length
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1em</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$external-gutter</code></th>
+          <td data-label="desc"><p>Set if an external padding is displayed on the grid</p>
+</td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-count-map</code></th>
+          <td data-label="desc"><p>The number of columns of the grid at different breakpoints</p>
+</td>
+          <td data-label="type">
+          
+            Map
+          
+          </td>
+          <td data-label="default">
+          
+            <code>()</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-Herow-grid-map"><code>Herow-grid-map</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-Herow-add-grid-breakpoint">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-Herow-add-grid-breakpoint">Herow-add-grid-breakpoint</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function Herow-add-grid-breakpoint($grid-name: layout, $breakpoint-map: ()) { 
+    $grid: Herow-get-grid($grid-name);
+    @if (map_has_key($grid, breakpoint-map)) {
+        @warn &quot;The grid #{$grid-name} already has breakpoints&quot;;
+    }
+    $default-column-count: map_get($grid, column-count);
+    $size-map: ();
+    $size-map: map_merge($size-map, (0: $default-column-count));
+    @each $breakpoint, $size in $breakpoint-map {
+        @if (type_of($breakpoint) == &#39;string&#39;) {
+            $breakpoint: Herow-get-breakpoint-length-by-grid-state($breakpoint);
+        }
+        $size-map: map_merge($size-map, ($breakpoint: $size));
+    }
+    $new-grid: ($grid-name: map_merge($grid, (
+        breakpoint-map: $size-map
+    )));
+    @return map-merge($Herow-grid-map, $new-grid);
+ }"
+    data-collapsed="@function Herow-add-grid-breakpoint($grid-name: layout, $breakpoint-map: ()) { ... }"><code>@function Herow-add-grid-breakpoint($grid-name: layout, $breakpoint-map: ()) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/responsive/_config.scss#L16-L37" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Add a breakpoint to a predefined grid</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid-name</code></th>
+          <td data-label="desc"><p>The name of the grid</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>layout</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$breakpoint-map</code></th>
+          <td data-label="desc"><p>The number of columns of the grid at different breakpoints</p>
+</td>
+          <td data-label="type">
+          
+            Map
+          
+          </td>
+          <td data-label="default">
+          
+            <code>()</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+
+
+
+  
+
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-Herow-grid-map"><code>Herow-grid-map</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="configuration-variable">
+              <h2 class="main__heading--secondary">variables</h2>
+
+              
+              
+                <section class="main__item  item" id="variable-Herow-debug">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-Herow-debug">Herow-debug</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$Herow-debug: false !default;</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/core/_config.scss#L9-L9" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Set if the debug the output contains debug traces</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Boolean</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-column-width"><code>Herow-column-width</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-Herow-default-column-count">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-Herow-default-column-count">Herow-default-column-count</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$Herow-default-column-count: 12 !default;</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/core/_config.scss#L15-L15" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Defines the default number of column.</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Integer</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-Herow-default-column-flow">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-Herow-default-column-flow">Herow-default-column-flow</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$Herow-default-column-flow: &#39;inline&#39; !default;</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/core/_config.scss#L21-L21" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Defines the default column flow.</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>'inline'</code>, <code>'left'</code>, <code>'right'</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-Herow-default-gutter-width">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-Herow-default-gutter-width">Herow-default-gutter-width</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$Herow-default-gutter-width: 1em !default;</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/core/_config.scss#L27-L27" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Defines the default gutter.</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Length</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-Herow-default-external-gutter">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-Herow-default-external-gutter">Herow-default-external-gutter</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$Herow-default-external-gutter: false !default;</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/core/_config.scss#L33-L33" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Defines the default gutter.</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Length</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-Herow-generator-class-map">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-Herow-generator-class-map">Herow-generator-class-map</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$Herow-generator-class-map: (
+    row: &#39;row&#39;,
+    col: &#39;col&#39;,
+    col-span: &#39;col-&#39;,
+    col-flow-left: &#39;col-left&#39;,
+    col-flow-right: &#39;col-right&#39;,
+    col-flow-inline: &#39;col-inline&#39;,
+    col-offset-left: &#39;col-offset-&#39;
+) !default;</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/generator/_config.scss#L9-L17" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Defines the default generated class names.</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Map</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-Herow-grid-map">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-Herow-grid-map">Herow-grid-map</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$Herow-grid-map: () !default;</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/grid/_config.scss#L9-L9" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Defines the grid properties.</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Map</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-Herow-add-grid"><code>Herow-add-grid</code></a></li>
+  
+
+
+
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-Herow-add-grid-breakpoint"><code>Herow-add-grid-breakpoint</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-Herow-default-grid-name">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-Herow-default-grid-name">Herow-default-grid-name</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$Herow-default-grid-name: layout !default;</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/grid/_config.scss#L15-L15" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Defines the default grid name.</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-Herow-default-grid-state">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-Herow-default-grid-state">Herow-default-grid-state</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$Herow-default-grid-state: &#39;layout:default&#39; !default;</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/responsive/_config.scss#L9-L9" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Defines the default grid state.</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="core-api">Atomic API</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="core-api-mixin">
+              <h2 class="main__heading--secondary">mixins</h2>
+
+              
               
                 <section class="main__item  item" id="mixin-Herow-column-width">
 
@@ -1528,12 +3746,19 @@
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@mixin Herow-column-width($column-span: 1, $column-count: 12) { 
-  width: percentage($column-span / $column-count);
+    @if ($column-span &lt; 1) {
+        $column-span: ($column-count + $column-span);
+    }
+    @if ($Herow-debug) {
+        -herow-column-span: $column-span;
+        -herow-column-count: $column-count;
+    }
+    width: percentage(($column-span / $column-count));
  }"
     data-collapsed="@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }"><code>@mixin Herow-column-width($column-span: 1, $column-count: 12) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L123-L128" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/core/_column.scss#L12-L24" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1622,6 +3847,25 @@
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-Herow-debug"><code>Herow-debug</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -1648,6 +3892,33 @@
     
 
     <li><a href="#mixin-Herow-class-generator"><code>Herow-class-generator</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-column-width"><code>Herow-grid-column-width</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-responsive-column"><code>Herow-grid-responsive-column</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-column-width-breakpoint"><code>Herow-grid-column-width-breakpoint</code></a></li>
   
 
 
@@ -1731,14 +4002,16 @@
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@mixin Herow-column-gutter($gutter-width: 20px) { 
-  padding-top: $gutter-width;
-  padding-left: $gutter-width;
+    data-expanded="@mixin Herow-column-gutter($gutter-width: 1em) { 
+    @if ($gutter-width &gt; 0) {
+        padding-top: $gutter-width;
+        padding-left: $gutter-width;
+    }
  }"
-    data-collapsed="@mixin Herow-column-gutter($gutter-width: 20px) { ... }"><code>@mixin Herow-column-gutter($gutter-width: 20px) { ... }</code></pre>
+    data-collapsed="@mixin Herow-column-gutter($gutter-width: 1em) { ... }"><code>@mixin Herow-column-gutter($gutter-width: 1em) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L137-L142" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/core/_column.scss#L33-L40" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1784,7 +4057,7 @@
           </td>
           <td data-label="default">
           
-            <code>20px</code>
+            <code>1em</code>
           
           </td>
         </tr>
@@ -1828,6 +4101,15 @@
     
 
     <li><a href="#mixin-Herow-column"><code>Herow-column</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-column-gutter"><code>Herow-grid-column-gutter</code></a></li>
   
 
 
@@ -1912,22 +4194,26 @@
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { 
-  @if $column-flow == &#39;left&#39; {
-    float: left;
-    margin-right: 0;
-  } @else if $column-flow == &#39;right&#39; {
-    float: right;
-    margin-right: 0;
-  } @else {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: -0.31em;
-  }
+    @if $column-flow == &#39;left&#39; {
+        float: left;
+        margin-right: 0;
+    } @else if $column-flow == &#39;right&#39; {
+        float: right;
+        margin-right: 0;
+    } @else if $column-flow == &#39;block&#39; {
+        display: block;
+        float: none;
+        margin-right: 0;
+    } @else {
+        display: inline-block;
+        float: none;
+        margin-right: -0.31em;
+    }
  }"
     data-collapsed="@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }"><code>@mixin Herow-column-flow($column-flow: &#39;inline&#39;) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L151-L165" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/core/_column.scss#L49-L67" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2048,6 +4334,33 @@
 
 
 
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-column-flow"><code>Herow-grid-column-flow</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-column"><code>Herow-grid-column</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-column-flow-breakpoint"><code>Herow-grid-column-flow-breakpoint</code></a></li>
+  
+
+
+
 
 </ul>
 
@@ -2140,12 +4453,12 @@
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@mixin Herow-column-offset($column-offset: 1, $column-count: 12) { 
-  margin-left: percentage($column-offset / $column-count);
+    margin-left: percentage($column-offset / $column-count);
  }"
     data-collapsed="@mixin Herow-column-offset($column-offset: 1, $column-count: 12) { ... }"><code>@mixin Herow-column-offset($column-offset: 1, $column-count: 12) { ... }</code></pre>
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L175-L180" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/tzi/Herow/blob/master/core/_column.scss#L77-L82" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2264,6 +4577,388 @@
 
 
 
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-column-offset"><code>Herow-grid-column-offset</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-column-offset-breakpoint"><code>Herow-grid-column-offset-breakpoint</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-column-core">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-column-core">Herow-column-core</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-column-core() { 
+    vertical-align: top;
+    box-sizing: border-box;
+ }"
+    data-collapsed="@mixin Herow-column-core() { ... }"><code>@mixin Herow-column-core() { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/core/_column.scss#L89-L92" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Include the core styles of a column</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <p>None.</p>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-column"><code>Herow-column</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-column"><code>Herow-grid-column</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-row-gutter">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-row-gutter">Herow-row-gutter</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-row-gutter($gutter-width: 1em, $external-gutter: false) { 
+    @if ($gutter-width &gt; 0) {
+        @if $external-gutter {
+            padding-bottom: $gutter-width;
+            padding-right: $gutter-width;
+        } @else {
+            margin-top: - $gutter-width;
+            margin-left: - $gutter-width;
+        }
+    }
+ }"
+    data-collapsed="@mixin Herow-row-gutter($gutter-width: 1em, $external-gutter: false) { ... }"><code>@mixin Herow-row-gutter($gutter-width: 1em, $external-gutter: false) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/core/_row.scss#L12-L25" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Change the gutter size of the row</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$gutter-width</code></th>
+          <td data-label="desc"><p>The size of the grid gutter</p>
+</td>
+          <td data-label="type">
+          
+            Length
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1em</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$external-gutter</code></th>
+          <td data-label="desc"><p>Set if an external padding is displayed on the grid</p>
+</td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-row"><code>Herow-row</code></a></li>
+  
+
+
+
 
 </ul>
 
@@ -2312,7 +5007,7 @@
       </section>
     
       <section class="main__section">
-        <h1 class="main__heading" id="configuration">Configuration</h1>
+        <h1 class="main__heading" id="grid-api">Atomic Grid API</h1>
 
         
         
@@ -2322,17 +5017,17 @@
 
           
           
-            <section class="main__sub-section" id="configuration-variable">
-              <h2 class="main__heading--secondary">variables</h2>
+            <section class="main__sub-section" id="grid-api-mixin">
+              <h2 class="main__heading--secondary">mixins</h2>
 
               
               
-                <section class="main__item  item" id="variable-Herow-default-column-count">
+                <section class="main__item  item" id="mixin-Herow-grid-column-width">
 
 <h3 class="item__heading">
   
 
-  <a class="item__name" href="#variable-Herow-default-column-count">Herow-default-column-count</a>
+  <a class="item__name" href="#mixin-Herow-grid-column-width">Herow-grid-column-width</a>
 
   
 
@@ -2347,14 +5042,47 @@
 
 
 
-<div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$Herow-default-column-count: 12 !default;</code></pre>
+
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L18-L18" class="item__source-link" target="_blank">View source</a>
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-grid-column-width($column-span: 1, $grid: layout) { 
+    $grid: Herow-get-grid($grid);
+    $column-count: map-get($grid, column-count);
+    @include Herow-column-width($column-span, $column-count);
+ }"
+    data-collapsed="@mixin Herow-grid-column-width($column-span: 1, $grid: layout) { ... }"><code>@mixin Herow-grid-column-width($column-span: 1, $grid: layout) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/grid/_column.scss#L12-L19" class="item__source-link" target="_blank">View source</a>
   
 </div>
-
 
 
 
@@ -2366,22 +5094,65 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Defines the default number of column.</p>
+  <div class="item__description"><p>Change the width of the grid column</p>
 </div>
 
 
   
     
-    
-  <h3 class="item__sub-heading">Type</h3>
+    <h3 class="item__sub-heading">Parameters</h3>
 
-  <p>
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-span</code></th>
+          <td data-label="desc"><p>The span length of the column</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid</code></th>
+          <td data-label="desc"><p>A grid map or the name of a defined grid</p>
+</td>
+          <td data-label="type">
+          
+            Map, String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>layout</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
   
-    <code>Integer</code>
-  
-  </p>
-
-  
     
     
 
@@ -2389,12 +5160,469 @@
     
     
 
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-width"><code>Herow-column-width</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-grid-column"><code>Herow-grid-column</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
 
 
 
   
     
     
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-grid-column-gutter">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-grid-column-gutter">Herow-grid-column-gutter</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-grid-column-gutter($grid: layout) { 
+    $grid: Herow-get-grid($grid);
+    $gutter-width: map-get($grid, gutter-width);
+    @include Herow-column-gutter($gutter-width);
+ }"
+    data-collapsed="@mixin Herow-grid-column-gutter($grid: layout) { ... }"><code>@mixin Herow-grid-column-gutter($grid: layout) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/grid/_column.scss#L28-L34" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Change the gutter of the grid column</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid</code></th>
+          <td data-label="desc"><p>A grid map or the name of a defined grid</p>
+</td>
+          <td data-label="type">
+          
+            Map, String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>layout</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-gutter"><code>Herow-column-gutter</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-grid-column"><code>Herow-grid-column</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-grid-column-flow">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-grid-column-flow">Herow-grid-column-flow</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-grid-column-flow($column-flow: &#39;inline&#39;, $grid: layout) { 
+    @include Herow-column-flow($column-flow);
+ }"
+    data-collapsed="@mixin Herow-grid-column-flow($column-flow: &#39;inline&#39;, $grid: layout) { ... }"><code>@mixin Herow-grid-column-flow($column-flow: &#39;inline&#39;, $grid: layout) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/grid/_column.scss#L44-L49" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Change the flow of the grid column</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-flow</code></th>
+          <td data-label="desc"><p>The flow of the column</p>
+</td>
+          <td data-label="type">
+          
+            &#39;inline&#39;, &#39;left&#39;, &#39;right&#39;
+          
+          </td>
+          <td data-label="default">
+          
+            <code>&#39;inline&#39;</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid</code></th>
+          <td data-label="desc"><p>A grid map or the name of a defined grid</p>
+</td>
+          <td data-label="type">
+          
+            Map, String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>layout</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-flow"><code>Herow-column-flow</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
 
   
     
@@ -2441,12 +5669,12 @@
 
 </section>
               
-                <section class="main__item  item" id="variable-Herow-default-column-flow">
+                <section class="main__item  item" id="mixin-Herow-grid-column-offset">
 
 <h3 class="item__heading">
   
 
-  <a class="item__name" href="#variable-Herow-default-column-flow">Herow-default-column-flow</a>
+  <a class="item__name" href="#mixin-Herow-grid-column-offset">Herow-grid-column-offset</a>
 
   
 
@@ -2461,14 +5689,47 @@
 
 
 
-<div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$Herow-default-column-flow: &#39;inline&#39; !default;</code></pre>
+
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L25-L25" class="item__source-link" target="_blank">View source</a>
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-grid-column-offset($column-offset: 1, $grid: layout) { 
+    $grid: Herow-get-grid($grid);
+    $column-count: map-get($grid, column-count);
+    @include Herow-column-offset($column-offset, $column-count);
+ }"
+    data-collapsed="@mixin Herow-grid-column-offset($column-offset: 1, $grid: layout) { ... }"><code>@mixin Herow-grid-column-offset($column-offset: 1, $grid: layout) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/grid/_column.scss#L59-L66" class="item__source-link" target="_blank">View source</a>
   
 </div>
-
 
 
 
@@ -2480,22 +5741,65 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Defines the default column flow.</p>
+  <div class="item__description"><p>Change the left offset of the grid column</p>
 </div>
 
 
   
     
-    
-  <h3 class="item__sub-heading">Type</h3>
+    <h3 class="item__sub-heading">Parameters</h3>
 
-  <p>
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-offset</code></th>
+          <td data-label="desc"><p>The span length for the left offset of the column</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid</code></th>
+          <td data-label="desc"><p>A grid map or the name of a defined grid</p>
+</td>
+          <td data-label="type">
+          
+            Map, String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>layout</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
   
-    <code>'inline'</code>, <code>'left'</code>, <code>'right'</code>
-  
-  </p>
-
-  
     
     
 
@@ -2503,12 +5807,39 @@
     
     
 
-
-
+  
+    
+    
 
   
     
     
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-offset"><code>Herow-column-offset</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+
+</ul>
+
 
   
     
@@ -2555,12 +5886,34 @@
 
 </section>
               
-                <section class="main__item  item" id="variable-Herow-default-gutter-width">
+            </section>
+          
+        
+
+      </section>
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="responsive-api">Responsive Grid API</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="responsive-api-mixin">
+              <h2 class="main__heading--secondary">mixins</h2>
+
+              
+              
+                <section class="main__item  item" id="mixin-Herow-grid-responsive-column">
 
 <h3 class="item__heading">
   
 
-  <a class="item__name" href="#variable-Herow-default-gutter-width">Herow-default-gutter-width</a>
+  <a class="item__name" href="#mixin-Herow-grid-responsive-column">Herow-grid-responsive-column</a>
 
   
 
@@ -2575,14 +5928,58 @@
 
 
 
-<div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$Herow-default-gutter-width: 20px !default;</code></pre>
+
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L32-L32" class="item__source-link" target="_blank">View source</a>
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-grid-responsive-column($column-span: 1, $grid: layout) { 
+    $grid: Herow-get-grid($grid);
+    @include Herow-grid-column($column-span, $grid);
+    $breakpoint-map: Herow-get-grid-breakpoint-map($grid);
+    @each $index, $info in $breakpoint-map {
+        $type: map_get($info, type);
+        $size: map_get($info, size);
+        @if ($type != default) {
+            $breakpoint-length: map_get($info, $type);
+            $media-query: unquote(&quot;(#{$type}: #{$breakpoint-length})&quot;);
+            @media #{$media-query} {
+                @include Herow-column-width($column-span, $size);
+            }
+        }
+    }
+ }"
+    data-collapsed="@mixin Herow-grid-responsive-column($column-span: 1, $grid: layout) { ... }"><code>@mixin Herow-grid-responsive-column($column-span: 1, $grid: layout) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/responsive/_column.scss#L12-L30" class="item__source-link" target="_blank">View source</a>
   
 </div>
-
 
 
 
@@ -2594,22 +5991,65 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Defines the default gutter.</p>
+  <div class="item__description"><p>Include the styles of a grid column for all grid state</p>
 </div>
 
 
   
     
-    
-  <h3 class="item__sub-heading">Type</h3>
+    <h3 class="item__sub-heading">Parameters</h3>
 
-  <p>
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-span</code></th>
+          <td data-label="desc"><p>The span length of the column</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid</code></th>
+          <td data-label="desc"><p>The name of a defined grid</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>layout</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
   
-    <code>Length</code>
-  
-  </p>
-
-  
     
     
 
@@ -2617,12 +6057,56 @@
     
     
 
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-grid-column"><code>Herow-grid-column</code></a>
+        
+      </li>
+    
+  
 
 
 
   
     
+
     
+      <li>
+        <a href="#mixin-Herow-column-width"><code>Herow-column-width</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+</ul>
+
 
   
     
@@ -2669,12 +6153,12 @@
 
 </section>
               
-                <section class="main__item  item" id="variable-Herow-generator-class-map">
+                <section class="main__item  item" id="mixin-Herow-grid-column-width-breakpoint">
 
 <h3 class="item__heading">
   
 
-  <a class="item__name" href="#variable-Herow-generator-class-map">Herow-generator-class-map</a>
+  <a class="item__name" href="#mixin-Herow-grid-column-width-breakpoint">Herow-grid-column-width-breakpoint</a>
 
   
 
@@ -2689,22 +6173,50 @@
 
 
 
-<div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$Herow-generator-class-map: (
-  row: &#39;row&#39;,
-  col: &#39;col&#39;,
-  col-span: &#39;col-&#39;,
-  col-flow-left: &#39;col-left&#39;,
-  col-flow-right: &#39;col-right&#39;,
-  col-flow-inline: &#39;col-inline&#39;,
-  col-offset-left: &#39;col-offset-&#39;
-) !default;</code></pre>
+
 
   
-    <a href="https://github.com/tzi/Herow/blob/master/herow.scss#L40-L48" class="item__source-link" target="_blank">View source</a>
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-grid-column-width-breakpoint($column-span: 1, $grid-state-list: layout:default) { 
+    @each $grid-state in $grid-state-list {
+        $state-size: Herow-get-grid-size-by-grid-state($grid-state);
+        @include Herow-on($grid-state) {
+            @include Herow-column-width($column-span, $state-size);
+        }
+    }
+ }"
+    data-collapsed="@mixin Herow-grid-column-width-breakpoint($column-span: 1, $grid-state-list: layout:default) { ... }"><code>@mixin Herow-grid-column-width-breakpoint($column-span: 1, $grid-state-list: layout:default) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/responsive/_column.scss#L40-L50" class="item__source-link" target="_blank">View source</a>
   
 </div>
-
 
 
 
@@ -2716,31 +6228,71 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Defines the default generated class names.</p>
+  <div class="item__description"><p>Change the width of the grid column at specific breakpoint</p>
 </div>
 
 
   
     
-    
-  <h3 class="item__sub-heading">Type</h3>
+    <h3 class="item__sub-heading">Parameters</h3>
 
-  <p>
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-span</code></th>
+          <td data-label="desc"><p>The span length of the column</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid-state-list</code></th>
+          <td data-label="desc"><p>A state list of a defined grid</p>
+</td>
+          <td data-label="type">
+          
+            List&lt;string&gt;
+          
+          </td>
+          <td data-label="default">
+          
+            <code>layout:default</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
   
-    <code>Map</code>
-  
-  </p>
-
-  
     
     
 
   
     
     
-
-
-
 
   
     
@@ -2751,8 +6303,937 @@
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-on"><code>Herow-on</code></a>
+        
+      </li>
+    
+  
+
+
 
   
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-width"><code>Herow-column-width</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-grid-column-flow-breakpoint">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-grid-column-flow-breakpoint">Herow-grid-column-flow-breakpoint</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-grid-column-flow-breakpoint($column-flow: &#39;inline&#39;, $grid-state-list: layout:default) { 
+    @include Herow-on($grid-state-list) {
+        @include Herow-column-flow($column-flow);
+    }
+ }"
+    data-collapsed="@mixin Herow-grid-column-flow-breakpoint($column-flow: &#39;inline&#39;, $grid-state-list: layout:default) { ... }"><code>@mixin Herow-grid-column-flow-breakpoint($column-flow: &#39;inline&#39;, $grid-state-list: layout:default) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/responsive/_column.scss#L60-L67" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Change the flow of the grid column</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-flow</code></th>
+          <td data-label="desc"><p>The flow of the column</p>
+</td>
+          <td data-label="type">
+          
+            &#39;inline&#39;, &#39;left&#39;, &#39;right&#39;
+          
+          </td>
+          <td data-label="default">
+          
+            <code>&#39;inline&#39;</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid-state-list</code></th>
+          <td data-label="desc"><p>A state list of a defined grid</p>
+</td>
+          <td data-label="type">
+          
+            List&lt;string&gt;
+          
+          </td>
+          <td data-label="default">
+          
+            <code>layout:default</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-on"><code>Herow-on</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-flow"><code>Herow-column-flow</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-grid-column-offset-breakpoint">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-grid-column-offset-breakpoint">Herow-grid-column-offset-breakpoint</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-grid-column-offset-breakpoint($column-offset: 1, $grid-state-list: layout:default) { 
+    @each $grid-state in $grid-state-list {
+        $state-size: Herow-get-grid-size-by-grid-state($grid-state);
+        @include Herow-on($grid-state) {
+            @include Herow-column-offset($column-offset, $state-size);
+        }
+    }
+ }"
+    data-collapsed="@mixin Herow-grid-column-offset-breakpoint($column-offset: 1, $grid-state-list: layout:default) { ... }"><code>@mixin Herow-grid-column-offset-breakpoint($column-offset: 1, $grid-state-list: layout:default) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/responsive/_column.scss#L77-L87" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Change the left offset of the grid column</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-offset</code></th>
+          <td data-label="desc"><p>The span length for the left offset of the column</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid-state-list</code></th>
+          <td data-label="desc"><p>A state list of a defined grid</p>
+</td>
+          <td data-label="type">
+          
+            List&lt;string&gt;
+          
+          </td>
+          <td data-label="default">
+          
+            <code>layout:default</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-on"><code>Herow-on</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-column-offset"><code>Herow-column-offset</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-on">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-on">Herow-on</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-on($column-span: 1, $grid-state) { 
+    @each $grid-state in $grid-state-list {
+        @if (not Herow-is-grid-state($grid-state)) {
+            @warn &quot;Try to create a media-query from a grid without state: #{$grid-state}&quot;;
+        }
+    }
+    $state-breakpoint-list: Herow-get-grid-breakpoint-map-by-grid-state-list($grid-state-list);
+    $media-query: Herow-get-media-query-by-breakpoint-list($state-breakpoint-list);
+    @if ($media-query != &#39;&#39;) {
+        @media #{$media-query} {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+ }"
+    data-collapsed="@mixin Herow-on($column-span: 1, $grid-state) { ... }"><code>@mixin Herow-on($column-span: 1, $grid-state) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/responsive/_on.scss#L12-L29" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Create a media-query by grid state</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$column-span</code></th>
+          <td data-label="desc"><p>The span length of the column</p>
+</td>
+          <td data-label="type">
+          
+            Integer
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid-state</code></th>
+          <td data-label="desc"><p>A state list of a defined grid</p>
+</td>
+          <td data-label="type">
+          
+            List&lt;string&gt;
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-Herow-grid-column-width-breakpoint"><code>Herow-grid-column-width-breakpoint</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-column-flow-breakpoint"><code>Herow-grid-column-flow-breakpoint</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-Herow-grid-column-offset-breakpoint"><code>Herow-grid-column-offset-breakpoint</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Thomas ZILLIOX</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-Herow-grid-responsive-row">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-Herow-grid-responsive-row">Herow-grid-responsive-row</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin Herow-grid-responsive-row($grid: layout) { 
+    @include Herow-grid-row($grid);
+ }"
+    data-collapsed="@mixin Herow-grid-responsive-row($grid: layout) { ... }"><code>@mixin Herow-grid-responsive-row($grid: layout) { ... }</code></pre>
+
+  
+    <a href="https://github.com/tzi/Herow/blob/master/responsive/_row.scss#L11-L15" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Include the styles of a grid row</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$grid</code></th>
+          <td data-label="desc"><p>A grid map or the name of a defined grid</p>
+</td>
+          <td data-label="type">
+          
+            Map, String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>layout</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#mixin-Herow-grid-row"><code>Herow-grid-row</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
 
 
 
@@ -2819,7 +7300,7 @@
           
 
           <!-- Version -->
-          <span class="project-info__version"> - v1.2.0</span>
+          <span class="project-info__version"> - v3.0.0</span>
 
           <!-- License -->
           

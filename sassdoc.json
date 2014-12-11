@@ -7,7 +7,7 @@
   "package": {
     "title": "Herow",
     "name": "herow",
-    "version": "1.2.0",
+    "version": "3.0.0",
     "license": "MIT",
     "homepage": "https://github.com/tzi/Herow",
     "description": "Herow, the saving time grid in Sass"
@@ -15,7 +15,9 @@
   "groups": {
     "api": "API",
     "configuration": "Configuration",
-    "atomic-api": "Atomic API"
+    "core-api": "Atomic API",
+    "grid-api": "Atomic Grid API",
+    "responsive-api": "Responsive Grid API"
   },
   "theme": "default",
   "basePath": "https://github.com/tzi/Herow/blob/master"
