@@ -7,7 +7,7 @@
   "package": {
     "title": "Herow",
     "name": "herow",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "license": "MIT",
     "homepage": "https://github.com/tzi/Herow",
     "description": "Herow, the saving time grid in Sass"
