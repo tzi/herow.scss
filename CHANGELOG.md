@@ -1,6 +1,13 @@
 Changelog
 =======
 
+ * `v3.0.0`:
+     * Rename component layer to grid layer
+     * Add a responsive layer that handle grid size change and associate media-queries
+
+ * `v2.0.0`:
+     * Add a component layer to handle named grid
+
  * `v1.2.0`:
      * Change gutter distribution to prevent grid to grid margin collapsing  
 
