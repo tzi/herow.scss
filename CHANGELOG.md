@@ -1,6 +1,10 @@
 Changelog
 =======
 
+ * `v3.0.2`:
+     * Add warning when a grid have several breakpoints associate to the default size
+     * Add warning when a grid have no breakpoint associate to the default size
+
  * `v3.0.1`:
      * Bugfix on `class-generator()` mixin
 
