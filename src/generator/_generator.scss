@@ -46,10 +46,10 @@
         external-gutter: $external-gutter
     );
     @include Herow-class-selector(row, $class-prefix, $class-suffix) {
-        @include Herow-component-row($grid);
+        @include Herow-grid-row($grid);
     }
     @include Herow-class-selector(col, $class-prefix, $class-suffix) {
-        @include Herow-component-column(1, $grid);
+        @include Herow-grid-column(1, $grid);
     }
     @for $counter from 1 through $column-count {
         @include Herow-class-selector(col-span, $class-prefix, $class-suffix, $counter) {
