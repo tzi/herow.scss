@@ -1,0 +1,16 @@
+////
+/// @group api
+/// @author Thomas ZILLIOX
+
+/// Include the styles of a grid row
+///
+/// @param {Map|String} $grid (layout) - A grid map or the name of a defined grid
+///
+/// @access public
+
+@mixin Herow-grid-responsive-row(
+    $grid: $Herow-default-grid-name
+) {
+    @include Herow-grid-row($grid);
+}
+

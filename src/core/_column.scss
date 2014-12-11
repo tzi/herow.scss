@@ -34,8 +34,10 @@
 @mixin Herow-column-gutter(
     $gutter-width: $Herow-default-gutter-width
 ) {
-    padding-top: $gutter-width;
-    padding-left: $gutter-width;
+    @if ($gutter-width > 0) {
+        padding-top: $gutter-width;
+        padding-left: $gutter-width;
+    }
 }
 
 /// Change the flow of the column

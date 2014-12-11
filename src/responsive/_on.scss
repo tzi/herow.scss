@@ -1,0 +1,30 @@
+////
+/// @group api
+/// @author Thomas ZILLIOX
+
+/// Create a media-query by grid state
+///
+/// @param {Integer} $column-span (1) - The span length of the column
+/// @param {List<String>} $grid-state - A state list of a defined grid
+///
+/// @access public
+/// @group api
+
+@mixin Herow-on(
+    $grid-state-list
+) {
+    @each $grid-state in $grid-state-list {
+        @if (not Herow-is-grid-state($grid-state)) {
+            @warn "Try to create a media-query from a grid without state: #{$grid-state}";
+        }
+    }
+    $state-breakpoint-list: Herow-get-grid-breakpoint-map-by-grid-state-list($grid-state-list);
+    $media-query: Herow-get-media-query-by-breakpoint-list($state-breakpoint-list);
+    @if ($media-query != '') {
+        @media #{$media-query} {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}

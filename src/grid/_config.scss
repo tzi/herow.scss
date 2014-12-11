@@ -23,10 +23,10 @@ $Herow-default-grid-name: layout !default;
 /// @param {Map} $column-count-map (()) - The number of columns of the grid at different breakpoints
 
 @function Herow-add-grid(
-$grid-name: $Herow-default-grid-name,
-$column-count: $Herow-default-column-count,
-$gutter-width: $Herow-default-gutter-width,
-$external-gutter: $Herow-default-external-gutter
+    $grid-name: $Herow-default-grid-name,
+    $column-count: $Herow-default-column-count,
+    $gutter-width: $Herow-default-gutter-width,
+    $external-gutter: $Herow-default-external-gutter
 ) {
     @if (map_has_key($Herow-grid-map, $grid-name)) {
         @warn "A grid with the name #{$grid-name} already exists";

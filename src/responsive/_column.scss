@@ -1,0 +1,88 @@
+////
+/// @group api
+/// @author Thomas ZILLIOX
+
+/// Include the styles of a grid column for all grid state
+///
+/// @param {Integer} $column-span (1) - The span length of the column
+/// @param {String} $grid (layout) - The name of a defined grid
+///
+/// @access public
+/// @group api
+
+@mixin Herow-grid-responsive-column(
+    $column-span: 1,
+    $grid: $Herow-default-grid-name
+) {
+    $grid: Herow-get-grid($grid);
+    @include Herow-grid-column($column-span, $grid);
+    $breakpoint-map: Herow-get-grid-breakpoint-map($grid);
+    @each $index, $info in $breakpoint-map {
+        $type: map_get($info, type);
+        $size: map_get($info, size);
+        @if ($type != default) {
+            $breakpoint-length: map_get($info, $type);
+            $media-query: unquote("(#{$type}: #{$breakpoint-length})");
+            @media #{$media-query} {
+                @include Herow-column-width($column-span, $size);
+            }
+        }
+    }
+}
+
+/// Change the width of the grid column at specific breakpoint
+///
+/// @param {Integer} $column-span (1) - The span length of the column
+/// @param {List<String>} $grid-state-list (layout:default) - A state list of a defined grid
+///
+/// @access public
+/// @group api
+
+@mixin Herow-grid-column-width-breakpoint(
+    $column-span: 1,
+    $grid-state-list: $Herow-default-grid-state
+) {
+    @each $grid-state in $grid-state-list {
+        $state-size: Herow-get-grid-size-by-grid-state($grid-state);
+        @include Herow-on($grid-state) {
+            @include Herow-column-width($column-span, $state-size);
+        }
+    }
+}
+
+/// Change the flow of the grid column
+///
+/// @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
+/// @param {List<String>} $grid-state-list (layout:default) - A state list of a defined grid
+///
+/// @access public
+/// @group atomic-api
+
+@mixin Herow-grid-column-flow-breakpoint(
+    $column-flow: $Herow-default-column-flow,
+    $grid-state-list: $Herow-default-grid-state
+) {
+    @include Herow-on($grid-state-list) {
+        @include Herow-column-flow($column-flow);
+    }
+}
+
+/// Change the left offset of the grid column
+///
+/// @param {Integer} $column-offset (1) - The span length for the left offset of the column
+/// @param {List<String>} $grid-state-list (layout:default) - A state list of a defined grid
+///
+/// @access public
+/// @group atomic-api
+
+@mixin Herow-grid-column-offset-breakpoint(
+    $column-offset: 1,
+    $grid-state-list: $Herow-default-grid-state
+) {
+    @each $grid-state in $grid-state-list {
+        $state-size: Herow-get-grid-size-by-grid-state($grid-state);
+        @include Herow-on($grid-state) {
+            @include Herow-column-offset($column-offset, $state-size);
+        }
+    }
+}

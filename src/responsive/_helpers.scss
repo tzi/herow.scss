@@ -1,0 +1,94 @@
+////
+/// @author Thomas ZILLIOX
+///
+
+/// Convert px values to em
+///
+/// @access private
+
+@function Herow-px2em($px) {
+    $base-font-size: 16px;
+    @if (unit($px) == em) {
+        @return $px;
+    }
+    @return ($px / $base-font-size) * 1em;
+}
+
+/// Convert a string to a number
+/// cf: http://hugogiraudel.com/2014/01/15/sass-string-to-number/
+///
+/// @author Hugo Giraudel
+/// @access private
+
+@function Herow-number($string) {
+    $chars: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
+    $numbers:  0   1   2   3   4   5   6   7   8   9;
+    $result: 0;
+    @for $i from 1 through str-length($string) {
+        $character: str-slice($string, $i, $i);
+        $index: index($chars, $character);
+        @if not $index {
+            @warn "Unknown character `#{$character}`.";
+            @return false;
+        }
+        $number: nth($numbers, $index);
+        $result: $result * 10 + $number;
+    }
+    @return $result;
+}
+
+/// Remove an entry from a list
+/// cf: http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
+///
+/// @author Hugo Giraudel
+/// @access private
+
+@function Herow-remove-nth($list, $index) {
+    $result: null;
+    @if type-of($index) != number {
+        @warn "$index: #{quote($index)} is not a number for `remove-nth`.";
+    } @else if $index == 0 {
+        @warn "List index 0 must be a non-zero integer for `remove-nth`.";
+    } @else if abs($index) > length($list) {
+        @warn "List index is #{$index} but list is only #{length($list)} item long for `remove-nth`.";
+    } @else {
+        $result: ();
+        $index: if($index < 0, length($list) + $index + 1, $index);
+
+        @for $i from 1 through length($list) {
+            @if $i != $index {
+                $result: append($result, nth($list, $i));
+            }
+        }
+    }
+    @return $result;
+}
+
+/// Insert an entry in a list at a specific index
+/// cf: http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
+///
+/// @author Hugo Giraudel
+/// @access private
+
+@function Herow-set-nth($list, $index, $value) {
+    $result: null;
+    @if type-of($index) != number {
+        @warn "$index: #{quote($index)} is not a number for `insert-nth`.";
+    } @else if $index < 1 {
+        @warn "List index 0 must be a non-zero integer for `insert-nth`";
+    } @else if $index > length($list) {
+        @warn "List index is #{$index} but list is only #{length($list)} item long for `insert-nth'.";
+    } @else {
+        $result: ();
+        @for $i from 1 through length($list) {
+            @if $i == $index {
+                $result: append($result, $value);
+            } @else {
+                $result: append($result, nth($list, $i));
+            }
+        }
+    }
+    @return $result;
+}
+
+

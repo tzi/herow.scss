@@ -1,0 +1,60 @@
+////
+/// @author Thomas ZILLIOX
+///
+
+/// Get grid name by grid state
+///
+/// @param {String} $grid-state - The state of a grid ('grid-name:grid-size')
+///
+/// @access private
+
+@function Herow-get-grid-name-by-grid-state($grid-state) {
+    $index: str-index($grid-state, ':');
+    @return str-slice($grid-state, 1, $index - 1);
+}
+
+/// Get grid size by grid state
+///
+/// @param {String} $grid-state - The state of a grid ('grid-name:grid-size')
+///
+/// @access private
+
+@function Herow-get-grid-size-by-grid-state($grid-state) {
+    $index: str-index($grid-state, ':');
+    $size: str-slice($grid-state, $index + 1);
+    @if ($size == 'default') {
+        $grid-name: Herow-get-grid-name-by-grid-state($grid-state);
+        $grid: Herow-get-grid($grid-name);
+        @return map_get($grid, column-count);
+    }
+    @return Herow-number($size);
+}
+
+/// Get if a grid state is with a specific size
+///
+/// @param {Map|String} $grid (layout) - A grid map, the name of a defined grid, or the state of a defined grid
+///
+/// @access private
+
+@function Herow-is-grid-state($grid) {
+    @if (type-of($grid) != 'string') {
+        @return false;
+    }
+    @if (not str-index($grid, ':')) {
+        @return false;
+    }
+    @return true;
+}
+
+/// Get a grid by map, by name, or state name
+///
+/// @param {Map|String} $grid (layout) - A grid map, the name of a defined grid, or the state of a defined grid
+///
+/// @access private
+
+@function Herow-get-responsive-grid($grid) {
+    @if (Herow-is-grid-state($grid)) {
+        $grid: Herow-get-grid-name-by-grid-state($grid);
+    }
+    @return Herow-get-grid($grid);
+}

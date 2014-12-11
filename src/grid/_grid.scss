@@ -2,13 +2,15 @@
 /// @author Thomas ZILLIOX
 ///
 
-/// Get grid by map or by name
+/// Get a grid by map or by name
 ///
 /// @param {Map|String} $grid (layout) - A grid map or the name of a defined grid
 ///
 /// @access private
 
-@function Herow-get-grid($grid) {
+@function Herow-get-grid(
+    $grid: $Herow-default-grid-name
+) {
     @if (type-of($grid) == 'map') {
         @return $grid;
     }

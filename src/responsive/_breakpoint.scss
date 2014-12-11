@@ -1,0 +1,203 @@
+////
+/// @author Thomas ZILLIOX
+///
+
+/// Get breakpoint map
+///
+/// @param {Map|String} $grid (layout) - A grid map, the name of a defined grid, or the state of a defined grid
+///
+/// @access private
+
+@function Herow-get-grid-breakpoint-map(
+    $grid: $Herow-default-grid-name
+) {
+    $grid: Herow-get-responsive-grid($grid);
+    $breakpoint-map: map_get($grid, breakpoint-map);
+
+    $grid-breakpoint-map: ();
+    $is-min-width: false;
+    $breakpoint: false;
+    $breakpoint-length: false;
+    $index: false;
+    $min-index: 1;
+    $max-index: 100;
+    @each $breakpoint-length, $size in map_get($grid, breakpoint-map) {
+        $type: max-width;
+        @if ($is-min-width) {
+            $type: min-width;
+        }
+        @if ($size == default) {
+            $size: map_get($grid, column-count);
+            $type: default;
+            $is-min-width: true;
+        }
+        @if ($breakpoint) {
+            $breakpoint: map_merge($breakpoint, (max-width: $breakpoint-length));
+            $index: map_get($breakpoint, index);
+            @if ($index == default or $index > 50) {
+                $grid-breakpoint-map: map_merge(($index: $breakpoint), $grid-breakpoint-map);
+            } @else {
+                $grid-breakpoint-map: map_merge($grid-breakpoint-map, ($index: $breakpoint));
+            }
+        }
+        $index: default;
+        @if ($type == max-width) {
+            $index: $max-index;
+            $max-index: $max-index - 1;
+        }
+        @if ($type == min-width) {
+            $index: $min-index;
+            $min-index: $min-index + 1;
+        }
+        $breakpoint: (
+            index: $index,
+            size: $size,
+            type: $type,
+            min-width: $breakpoint-length
+        );
+    }
+    $breakpoint: map_merge($breakpoint, (max-width: infinite));
+    $index: map_get($breakpoint, index);
+    @if ($index == default or $index > 50) {
+        $grid-breakpoint-map: map_merge(($index: $breakpoint), $grid-breakpoint-map);
+    } @else {
+        $grid-breakpoint-map: map_merge($grid-breakpoint-map, ($index: $breakpoint));
+    }
+
+    $default: map_get($grid-breakpoint-map, default);
+    $grid-breakpoint-map: map_merge((default: $default), $grid-breakpoint-map);
+    @return $grid-breakpoint-map;
+}
+
+/// Get breakpoint map by grid state
+///
+/// @param {List<String>} $grid-state - A state list of a defined grid
+///
+/// @access private
+
+@function Herow-get-grid-breakpoint-map-by-grid-state-list($grid-state-list) {
+    $state-breakpoint-list: ();
+    $original-grid-state: nth($grid-state-list, 1);
+    $original-grid-name: Herow-get-grid-name-by-grid-state($original-grid-state);
+
+    @each $grid-state in $grid-state-list {
+        $grid-name: Herow-get-grid-name-by-grid-state($grid-state);
+        @if ($grid-name != $original-grid-name) {
+            @warn 'Try to merge grid state from several grid in the same time: "#{$grid-name}" and "#{$original-grid-name}"';
+        }
+        $state-size: Herow-get-grid-size-by-grid-state($grid-state);
+        $all-breakpoint-list: Herow-get-grid-breakpoint-map($grid-name);
+
+        @each $index, $info in $all-breakpoint-list {
+            $size: map_get($info, size);
+            @if ($state-size == $size) {
+                $breakpoint: (
+                    min-width: map_get($info, min-width),
+                    max-width: map_get($info, max-width),
+                );
+                $state-breakpoint-list: append($state-breakpoint-list, $breakpoint);
+            }
+        }
+    }
+
+    @return $state-breakpoint-list;
+}
+
+/// Get breakpoint length by grid state
+///
+/// @param {String} $grid-state - The state of a grid ('grid-name:grid-size')
+/// @param {Boolean} $is-max-width (false) - Set if you target the max-width breakpoint size
+///
+/// @access private
+
+@function Herow-get-breakpoint-length-by-grid-state($grid-state, $is-max-width: false) {
+    $is-next: false;
+    $state-size: Herow-get-grid-size-by-grid-state($grid-state);
+    $breakpoint-map: Herow-get-grid-breakpoint-map($grid-state);
+    @each $breakpoint, $info in $breakpoint-map {
+        $size: map_get($info, size);
+        @if ($size == $state-size) {
+            @if ($is-max-width) {
+                @return map_get($info, max-width);
+            } @else {
+                @return map_get($info, min-width);
+            }
+        }
+    }
+    @warn "The grid state '#{$grid-state}' is undefined";
+    @return 0;
+}
+
+/// Group continuous breakpoints from a breakpoint list
+///
+/// @param {List} $breakpoint-list - a list of breakpoint, maps containing a min-width & a max-width entry
+///
+/// @access private
+
+@function Herow-group-breakpoint-list($breakpoint-list) {
+    @warn length($breakpoint-list);
+    $current: 1;
+    @each $current-breakpoint in $breakpoint-list {
+        $comparison: 1;
+        @each $comparison-breakpoint in $breakpoint-list {
+            @if ($current-breakpoint and $comparison != $current) {
+                $comparison-max-width: map_get($comparison-breakpoint, max-width);
+                $current-min-width: map_get($current-breakpoint, min-width);
+                @if ($current-min-width == $comparison-max-width) {
+                    $comparison-breakpoint: map_merge($comparison-breakpoint, (max-width: map_get($current-breakpoint, max-width)));
+                    $breakpoint-list: Herow-set-nth($breakpoint-list, $comparison, $comparison-breakpoint);
+                    $breakpoint-list: Herow-remove-nth($breakpoint-list, $current);
+                    $current-breakpoint: false;
+                    $current: $current - 1;
+
+                }
+            }
+            $comparison: $comparison + 1;
+        }
+        $current: $current + 1;
+    }
+    @return $breakpoint-list;
+}
+
+/// Format a media-query for a breakpoint
+///
+/// @param {Map} $breakpoint - a map containing a min-width & a max-width entry
+///
+/// @access private
+
+@function Herow-get-media-query-by-breakpoint($breakpoint) {
+    $media-query: '';
+    $min-width: map_get($breakpoint, min-width);
+    @if ($min-width != 0) {
+        $min-width: Herow-px2em($min-width);
+        $media-query: '#{$media-query}(min-width: #{$min-width})';
+    }
+    $max-width: map_get($breakpoint, max-width);
+    @if ($max-width != infinite) {
+        @if ($min-width != 0) {
+            $media-query: '#{$media-query} and ';
+        }
+        $max-width: Herow-px2em($max-width);
+        $max-width: $max-width - 0.01em;
+        $media-query: '#{$media-query}(max-width: #{$max-width})';
+    }
+    @return unquote($media-query);
+}
+
+/// Format a media-query for a breakpoint
+///
+/// @param {List} $breakpoint-list - a list of breakpoint, maps containing a min-width & a max-width entry
+///
+/// @access private
+
+@function Herow-get-media-query-by-breakpoint-list($breakpoint-list) {
+    $breakpoint-list: Herow-group-breakpoint-list($breakpoint-list);
+    $media-query: '';
+    @each $breakpoint in $breakpoint-list {
+        @if ($media-query != '') {
+            $media-query: '#{$media-query}, ';
+        }
+        $media-query: '#{$media-query}#{Herow-get-media-query-by-breakpoint($breakpoint)}';
+    }
+    @return unquote($media-query);
+}
