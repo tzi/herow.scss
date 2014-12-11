@@ -13,8 +13,9 @@ do
   DIFF=$( sass ${SCSS_FILE} | diff ${CSS_FILE} - | wc -l);
   if [ $DIFF -gt 0 ];
   then
-    echo "CHANGED: ${CSS_FILE}";
-    sass ${SCSS_FILE} | diff ${CSS_FILE} -;
+    sass ${SCSS_FILE} | diff --side-by-side ${CSS_FILE} -;
+    echo;
+    echo ">>> TO VALID CHANGES, RUN: sass ${SCSS_FILE} ${CSS_FILE}";
     echo;
   fi;
 done;

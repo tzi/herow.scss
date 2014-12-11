@@ -1,8 +1,8 @@
 /* Test: A responsive column over every grid states */
 .column {
-  display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
+  display: inline-block;
   float: none;
   margin-right: -0.31em;
   width: 25%; }
@@ -21,9 +21,9 @@
 
 /* Test: Set column width over one grid state */
 .column {
-  display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
+  display: inline-block;
   float: none;
   margin-right: -0.31em;
   width: 25%; }
@@ -33,9 +33,9 @@
 
 /* Test: Set column flow over one grid state */
 .column {
-  display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
+  display: inline-block;
   float: none;
   margin-right: -0.31em;
   width: 25%; }
@@ -46,9 +46,9 @@
 
 /* Test: Set column offset over one grid state */
 .column {
-  display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
+  display: inline-block;
   float: none;
   margin-right: -0.31em;
   width: 25%; }

@@ -56,7 +56,12 @@
     } @else if $column-flow == 'right' {
         float: right;
         margin-right: 0;
+    } @else if $column-flow == 'block' {
+        display: block;
+        float: none;
+        margin-right: 0;
     } @else {
+        display: inline-block;
         float: none;
         margin-right: -0.31em;
     }
@@ -83,7 +88,6 @@
 /// @group api
 
 @mixin Herow-column-core() {
-    display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
 }
