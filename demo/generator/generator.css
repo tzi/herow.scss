@@ -7,9 +7,9 @@
     clear: both; }
 
 .col {
-  display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
+  display: inline-block;
   float: none;
   margin-right: -0.31em;
   width: 8.33333%;
@@ -61,6 +61,7 @@
   margin-right: 0; }
 
 .col-inline {
+  display: inline-block;
   float: none;
   margin-right: -0.31em; }
 

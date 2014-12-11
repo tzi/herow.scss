@@ -9,9 +9,9 @@
     display: table;
     clear: both; }
 .header .demo {
-  display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
+  display: inline-block;
   float: none;
   margin-right: -0.31em;
   width: 8.33333%; }
@@ -32,9 +32,9 @@
 
 .content {
   border: 1px black solid;
-  display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
+  display: inline-block;
   float: none;
   margin-right: -0.31em;
   width: 66.66667%; }
@@ -52,9 +52,9 @@
     display: table;
     clear: both; }
   .content .demo {
-    display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
+    display: inline-block;
     float: none;
     margin-right: -0.31em;
     width: 25%; }
@@ -70,9 +70,9 @@
 
 .sidebar {
   border: 1px black solid;
-  display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
+  display: inline-block;
   float: none;
   margin-right: -0.31em;
   width: 33.33333%; }
@@ -94,9 +94,9 @@
     display: table;
     clear: both; }
   .sidebar .demo {
-    display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
+    display: inline-block;
     float: none;
     margin-right: -0.31em;
     width: 25%; }
@@ -119,9 +119,9 @@
     display: table;
     clear: both; }
 .footer .demo {
-  display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
+  display: inline-block;
   float: none;
   margin-right: -0.31em;
   width: 8.33333%; }
