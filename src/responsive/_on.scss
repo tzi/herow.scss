@@ -1,5 +1,4 @@
 ////
-/// @group api
 /// @author Thomas ZILLIOX
 
 /// Create a media-query by grid state
@@ -8,7 +7,7 @@
 /// @param {List<String>} $grid-state - A state list of a defined grid
 ///
 /// @access public
-/// @group api
+/// @group responsive-api
 
 @mixin Herow-on(
     $grid-state-list

@@ -1,11 +1,11 @@
 ////
-/// @group api
 /// @author Thomas ZILLIOX
 
 /// Include the styles of a grid row
 ///
 /// @param {Map|String} $grid (layout) - A grid map or the name of a defined grid
 ///
+/// @group responsive-api
 /// @access public
 
 @mixin Herow-grid-responsive-row(

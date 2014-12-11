@@ -1,5 +1,4 @@
 ////
-/// @group api
 /// @author Thomas ZILLIOX
 
 /// Change the size of the column
@@ -8,7 +7,7 @@
 /// @param {Integer} $column-count (12) - The number of columns of the grid
 ///
 /// @access public
-/// @group atomic-api
+/// @group core-api
 
 @mixin Herow-column-width(
     $column-span: 1,
@@ -29,7 +28,7 @@
 /// @param {Length} $gutter-width (1em) - The gutter size of the grid
 ///
 /// @access public
-/// @group atomic-api
+/// @group core-api
 
 @mixin Herow-column-gutter(
     $gutter-width: $Herow-default-gutter-width
@@ -45,7 +44,7 @@
 /// @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
 ///
 /// @access public
-/// @group atomic-api
+/// @group core-api
 
 @mixin Herow-column-flow(
     $column-flow: $Herow-default-column-flow
@@ -73,7 +72,7 @@
 /// @param {Integer} $column-count (12) - The number of columns of the grid
 ///
 /// @access public
-/// @group atomic-api
+/// @group core-api
 
 @mixin Herow-column-offset(
     $column-offset: 1,
@@ -85,7 +84,7 @@
 /// Include the core styles of a column
 ///
 /// @access public
-/// @group api
+/// @group core-api
 
 @mixin Herow-column-core() {
     vertical-align: top;

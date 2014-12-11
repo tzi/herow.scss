@@ -1,5 +1,4 @@
 ////
-/// @group api
 /// @author Thomas ZILLIOX
 
 /// Change the gutter size of the row
@@ -8,7 +7,7 @@
 /// @param {Boolean} $external-gutter (false) - Set if an external padding is displayed on the grid
 ///
 /// @access public
-/// @group atomic-api
+/// @group core-api
 
 @mixin Herow-row-gutter(
     $gutter-width: $Herow-default-gutter-width,

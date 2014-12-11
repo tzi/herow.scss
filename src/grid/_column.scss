@@ -1,5 +1,4 @@
 ////
-/// @group api
 /// @author Thomas ZILLIOX
 
 /// Change the width of the grid column
@@ -8,7 +7,7 @@
 /// @param {Map|String} $grid (layout) - A grid map or the name of a defined grid
 ///
 /// @access public
-/// @group api
+/// @group grid-api
 
 @mixin Herow-grid-column-width(
     $column-span: 1,
@@ -24,7 +23,7 @@
 /// @param {Map|String} $grid (layout) - A grid map or the name of a defined grid
 ///
 /// @access public
-/// @group api
+/// @group grid-api
 
 @mixin Herow-grid-column-gutter(
     $grid: $Herow-default-grid-name
@@ -40,7 +39,7 @@
 /// @param {Map|String} $grid (layout) - A grid map or the name of a defined grid
 ///
 /// @access public
-/// @group atomic-api
+/// @group grid-api
 
 @mixin Herow-grid-column-flow(
     $column-flow: $Herow-default-column-flow,
@@ -55,7 +54,7 @@
 /// @param {Map|String} $grid (layout) - A grid map or the name of a defined grid
 ///
 /// @access public
-/// @group atomic-api
+/// @group grid-api
 
 @mixin Herow-grid-column-offset(
     $column-offset: 1,

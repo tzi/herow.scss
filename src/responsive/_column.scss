@@ -1,5 +1,4 @@
 ////
-/// @group api
 /// @author Thomas ZILLIOX
 
 /// Include the styles of a grid column for all grid state
@@ -8,7 +7,7 @@
 /// @param {String} $grid (layout) - The name of a defined grid
 ///
 /// @access public
-/// @group api
+/// @group responsive-api
 
 @mixin Herow-grid-responsive-column(
     $column-span: 1,
@@ -36,7 +35,7 @@
 /// @param {List<String>} $grid-state-list (layout:default) - A state list of a defined grid
 ///
 /// @access public
-/// @group api
+/// @group responsive-api
 
 @mixin Herow-grid-column-width-breakpoint(
     $column-span: 1,
@@ -56,7 +55,7 @@
 /// @param {List<String>} $grid-state-list (layout:default) - A state list of a defined grid
 ///
 /// @access public
-/// @group atomic-api
+/// @group responsive-api
 
 @mixin Herow-grid-column-flow-breakpoint(
     $column-flow: $Herow-default-column-flow,
@@ -73,7 +72,7 @@
 /// @param {List<String>} $grid-state-list (layout:default) - A state list of a defined grid
 ///
 /// @access public
-/// @group atomic-api
+/// @group responsive-api
 
 @mixin Herow-grid-column-offset-breakpoint(
     $column-offset: 1,
