@@ -1,6 +1,9 @@
 Changelog
 =======
 
+ * `v3.0.1`:
+     * Bugfix on `class-generator()` mixin
+
  * `v3.0.0`:
      * Rename component layer to grid layer
      * Add a responsive layer that handle grid size change and associate media-queries
