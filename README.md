@@ -1,4 +1,4 @@
-Herow
+herow.scss
 =======
 
 Herow, a time-saving Sass grid system.
@@ -76,7 +76,7 @@ $Herow-default-gutter-width: 1em;
 }
 ```
 
-See the [main API documentation](http://tzi.github.io/Herow/api/#api-mixin) and the [configuration documentation](http://tzi.github.io/Herow/api/#configuration-variable).
+See the [main API documentation](http://tzi.github.io/herow.scss/api/#api-mixin) and the [configuration documentation](http://tzi.github.io/herow.scss/api/#configuration-variable).
 
 
 Atomic mixins
@@ -99,7 +99,7 @@ When designing responsive grid, the atomic mixins allow you to update the grid b
 }
 ```
 
-See the [Atomic mixins API documentation](http://tzi.github.io/Herow/api/#atomic-api-mixin).
+See the [Atomic mixins API documentation](http://tzi.github.io/herow.scss/api/#atomic-api-mixin).
 
 
 Atomic classes
@@ -129,4 +129,4 @@ For example:
 }
 ```
 
-See the [Class generator API documentation](http://tzi.github.io/Herow/api/#mixin-Herow-class-generator).
+See the [Class generator API documentation](http://tzi.github.io/herow.scss/api/#mixin-Herow-class-generator).
