@@ -1,0 +1,31 @@
+{
+  "name": "herow.scss",
+  "version": "3.0.2",
+  "description": "A time-saving Sass grid system",
+  "main": "src/herow.scss",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzi/herow.scss.git"
+  },
+  "keywords": [
+    "sass",
+    "grid",
+    "layout",
+    "row",
+    "columns",
+    "modular",
+    "semantic"
+  ],
+  "author": "Thomas ZILLIOX",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tzi/Herow/issues"
+  },
+  "homepage": "https://github.com/tzi/Herow#readme"
+}
