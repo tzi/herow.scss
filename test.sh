@@ -1,21 +1,21 @@
 #!/bin/bash
 
 function confirm() {
-	read -p "  - Do you want to ${1} (Y/n)? " -n 1 -r;
-	echo '';
-	ANSWER=false;
-	if [ $REPLY = 'q' ];
-	then
-			exit 1
-	fi
-	if [[ $REPLY =~ ^[Yy]$ ]];
-	then
-		ANSWER=true;
-	fi
+  read -p "  - Do you want to ${1} (Y/n)? " -n 1 -r;
+  echo '';
+  ANSWER=false;
+  if [ $REPLY = 'q' ];
+  then
+          exit 1
+  fi
+  if [[ $REPLY =~ ^[Yy]$ ]];
+  then
+      ANSWER=true;
+  fi
 }
 
 function compile() {
-    sass $@ --style expanded
+  sass $1 --style expanded --sourcemap=none
 }
 
 if [ $# -eq 0 ];
