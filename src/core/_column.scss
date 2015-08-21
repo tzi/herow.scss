@@ -51,18 +51,15 @@
 ) {
     @if $column-flow == 'left' {
         float: left;
-        margin-right: 0;
     } @else if $column-flow == 'right' {
         float: right;
-        margin-right: 0;
     } @else if $column-flow == 'block' {
         display: block;
         float: none;
-        margin-right: 0;
     } @else {
         display: inline-block;
         float: none;
-        margin-right: -0.31em;
+        word-spacing: normal;
     }
 }
 
@@ -114,4 +111,26 @@
     @include Herow-column-width($column-span, $column-count);
     @include Herow-column-gutter($gutter-width);
     @include Herow-column-offset($column-offset, $column-count);
+}
+
+/// Set the column as a row
+///
+/// @param {Integer} $column-span (1) - The span length of the column
+/// @param {Integer} $column-count (12) - The number of columns of the grid
+/// @param {Length} $gutter-width (1em) - The gutter size of the grid
+/// @param {'inline' | 'left' | 'right'} $column-flow ('inline') - The flow of the column
+/// @param {Integer} $column-offset (0) - The span length for the left offset of the column
+///
+/// @access public
+/// @group core-api
+
+@mixin Herow-column-row(
+    $column-span: 1,
+    $column-count: $Herow-default-column-count,
+    $gutter-width: $Herow-default-gutter-width,
+    $column-flow: $Herow-default-column-flow,
+    $column-offset: 0
+) {
+    @include Herow-column($column-span, $column-count, $gutter-width, $column-flow, $column-offset);
+    @include Herow-row($gutter-width, false, true);
 }

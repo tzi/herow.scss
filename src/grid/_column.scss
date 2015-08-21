@@ -83,3 +83,21 @@
     @include Herow-grid-column-width($column-span, $grid);
     @include Herow-grid-column-gutter($grid);
 }
+
+/// Include the styles of a grid column row
+///
+/// @param {Integer} $column-span (1) - The span length of the column
+/// @param {Map|String} $grid-column (layout) - A grid map or the name of a defined grid
+/// @param {Map|String} $grid-row (layout) - A grid map or the name of a defined grid
+///
+/// @access public
+/// @group api
+
+@mixin Herow-grid-column-row(
+    $column-span: 1,
+    $grid-column: $Herow-default-grid-name,
+    $grid-row: $Herow-default-grid-name
+) {
+    @include Herow-grid-column($column-span, $grid-column);
+    @include Herow-grid-row($grid-row, true);
+}

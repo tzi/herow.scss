@@ -49,10 +49,10 @@ $Herow-grid-map: Herow-add-grid-breakpoint(sidebar, (
 .content {
     border: 1px black solid;
 
-    @include Herow-grid-column(-4, layout);
+    @include Herow-grid-column-row(-4, layout, content);
     @include Herow-grid-column-width-breakpoint(-3, 'layout:8');
     @include Herow-grid-column-width-breakpoint(0, 'layout:4' 'layout:6');
-    @include Herow-grid-row(content);
+    @include Herow-grid-column-flow-breakpoint('right', 'layout:8');
 
     & .demo {
         @include Herow-grid-responsive-column(1, content);
@@ -62,11 +62,9 @@ $Herow-grid-map: Herow-add-grid-breakpoint(sidebar, (
 .sidebar {
     border: 1px black solid;
 
-    @include Herow-grid-column(4, layout);
+    @include Herow-grid-column-row(4, layout, sidebar);
     @include Herow-grid-column-width-breakpoint(3, 'layout:8');
     @include Herow-grid-column-width-breakpoint(0, 'layout:4' 'layout:6');
-    @include Herow-grid-column-flow-breakpoint('left', 'layout:8');
-    @include Herow-grid-row(sidebar);
 
     & .demo {
         @include Herow-grid-responsive-column(1, sidebar);

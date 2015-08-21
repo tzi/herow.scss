@@ -28,14 +28,24 @@
 ///
 /// @param {Length} $gutter-width (1em) - The size of the grid gutter
 /// @param {Boolean} $external-gutter (false) - Set if an external padding is displayed on the grid
+/// @param {Boolean} $is-column (false) - Set if the grid is a column too
 ///
 /// @access public
 /// @group api
 
 @mixin Herow-row(
     $gutter-width: $Herow-default-gutter-width,
-    $external-gutter: $Herow-default-external-gutter
+    $external-gutter: $Herow-default-external-gutter,
+    $is-column: false
 ) {
+    @if ($is-column) {
+        display: inline-table;
+    } @else {
+        display: table;
+        width: 100%;
+    }
+    table-layout: fixed;
+    word-spacing: -2em;
     @include Herow-row-gutter($gutter-width, $external-gutter);
     @include Herow-clearfix();
 }

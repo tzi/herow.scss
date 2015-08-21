@@ -1,102 +1,134 @@
 .row {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  word-spacing: -2em;
   margin-top: -1em;
-  margin-left: -1em; }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both; }
+  margin-left: -1em;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 .col {
   vertical-align: top;
   box-sizing: border-box;
   display: inline-block;
   float: none;
-  margin-right: -0.31em;
+  word-spacing: normal;
   width: 8.33333%;
   padding-top: 1em;
-  padding-left: 1em; }
+  padding-left: 1em;
+}
 
 .col-1 {
-  width: 8.33333%; }
+  width: 8.33333%;
+}
 
 .col-2 {
-  width: 16.66667%; }
+  width: 16.66667%;
+}
 
 .col-3 {
-  width: 25%; }
+  width: 25%;
+}
 
 .col-4 {
-  width: 33.33333%; }
+  width: 33.33333%;
+}
 
 .col-5 {
-  width: 41.66667%; }
+  width: 41.66667%;
+}
 
 .col-6 {
-  width: 50%; }
+  width: 50%;
+}
 
 .col-7 {
-  width: 58.33333%; }
+  width: 58.33333%;
+}
 
 .col-8 {
-  width: 66.66667%; }
+  width: 66.66667%;
+}
 
 .col-9 {
-  width: 75%; }
+  width: 75%;
+}
 
 .col-10 {
-  width: 83.33333%; }
+  width: 83.33333%;
+}
 
 .col-11 {
-  width: 91.66667%; }
+  width: 91.66667%;
+}
 
 .col-12 {
-  width: 100%; }
+  width: 100%;
+}
 
 .col-left {
   float: left;
-  margin-right: 0; }
+}
 
 .col-right {
   float: right;
-  margin-right: 0; }
+}
 
 .col-inline {
   display: inline-block;
   float: none;
-  margin-right: -0.31em; }
+  word-spacing: normal;
+}
 
 .col-offset-0 {
-  margin-left: 0%; }
+  margin-left: 0%;
+}
 
 .col-offset-1 {
-  margin-left: 8.33333%; }
+  margin-left: 8.33333%;
+}
 
 .col-offset-2 {
-  margin-left: 16.66667%; }
+  margin-left: 16.66667%;
+}
 
 .col-offset-3 {
-  margin-left: 25%; }
+  margin-left: 25%;
+}
 
 .col-offset-4 {
-  margin-left: 33.33333%; }
+  margin-left: 33.33333%;
+}
 
 .col-offset-5 {
-  margin-left: 41.66667%; }
+  margin-left: 41.66667%;
+}
 
 .col-offset-6 {
-  margin-left: 50%; }
+  margin-left: 50%;
+}
 
 .col-offset-7 {
-  margin-left: 58.33333%; }
+  margin-left: 58.33333%;
+}
 
 .col-offset-8 {
-  margin-left: 66.66667%; }
+  margin-left: 66.66667%;
+}
 
 .col-offset-9 {
-  margin-left: 75%; }
+  margin-left: 75%;
+}
 
 .col-offset-10 {
-  margin-left: 83.33333%; }
+  margin-left: 83.33333%;
+}
 
 .col-offset-11 {
-  margin-left: 91.66667%; }
+  margin-left: 91.66667%;
+}

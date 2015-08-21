@@ -1,34 +1,55 @@
 .header__container, .main__container, .footer__container {
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .header__container {
-  border: 1px black solid; }
-  .header__container:after {
-    content: "";
-    display: table;
-    clear: both; }
+  border: 1px black solid;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  word-spacing: -2em;
+}
+.header__container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .header .demo {
   vertical-align: top;
   box-sizing: border-box;
   display: inline-block;
   float: none;
-  margin-right: -0.31em;
-  width: 8.33333%; }
-  @media (max-width: 960px) {
-    .header .demo {
-      width: 12.5%; } }
-  @media (max-width: 640px) {
-    .header .demo {
-      width: 16.66667%; } }
-  @media (max-width: 480px) {
-    .header .demo {
-      width: 25%; } }
+  word-spacing: normal;
+  width: 8.33333%;
+}
+@media (max-width: 960px) {
+  .header .demo {
+    width: 12.5%;
+  }
+}
+@media (max-width: 640px) {
+  .header .demo {
+    width: 16.66667%;
+  }
+}
+@media (max-width: 480px) {
+  .header .demo {
+    width: 25%;
+  }
+}
 
+.main__container {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  word-spacing: -2em;
+}
 .main__container:after {
   content: "";
   display: table;
-  clear: both; }
+  clear: both;
+}
 
 .content {
   border: 1px black solid;
@@ -36,37 +57,60 @@
   box-sizing: border-box;
   display: inline-block;
   float: none;
-  margin-right: -0.31em;
-  width: 66.66667%; }
-  @media (min-width: 40em) and (max-width: 59.99em) {
-    .content {
-      width: 62.5%; } }
-  @media (max-width: 29.99em) {
-    .content {
-      width: 100%; } }
-  @media (min-width: 30em) and (max-width: 39.99em) {
-    .content {
-      width: 100%; } }
-  .content:after {
-    content: "";
-    display: table;
-    clear: both; }
+  word-spacing: normal;
+  width: 66.66667%;
+  display: inline-table;
+  table-layout: fixed;
+  word-spacing: -2em;
+}
+.content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 40em) and (max-width: 59.99em) {
+  .content {
+    width: 62.5%;
+  }
+}
+@media (max-width: 29.99em) {
+  .content {
+    width: 100%;
+  }
+}
+@media (min-width: 30em) and (max-width: 39.99em) {
+  .content {
+    width: 100%;
+  }
+}
+@media (min-width: 40em) and (max-width: 59.99em) {
+  .content {
+    float: right;
+  }
+}
+.content .demo {
+  vertical-align: top;
+  box-sizing: border-box;
+  display: inline-block;
+  float: none;
+  word-spacing: normal;
+  width: 25%;
+}
+@media (min-width: 480px) {
   .content .demo {
-    vertical-align: top;
-    box-sizing: border-box;
-    display: inline-block;
-    float: none;
-    margin-right: -0.31em;
-    width: 25%; }
-    @media (min-width: 480px) {
-      .content .demo {
-        width: 16.66667%; } }
-    @media (min-width: 640px) {
-      .content .demo {
-        width: 20%; } }
-    @media (min-width: 960px) {
-      .content .demo {
-        width: 12.5%; } }
+    width: 16.66667%;
+  }
+}
+@media (min-width: 640px) {
+  .content .demo {
+    width: 20%;
+  }
+}
+@media (min-width: 960px) {
+  .content .demo {
+    width: 12.5%;
+  }
+}
 
 .sidebar {
   border: 1px black solid;
@@ -74,63 +118,91 @@
   box-sizing: border-box;
   display: inline-block;
   float: none;
-  margin-right: -0.31em;
-  width: 33.33333%; }
-  @media (min-width: 40em) and (max-width: 59.99em) {
-    .sidebar {
-      width: 37.5%; } }
-  @media (max-width: 29.99em) {
-    .sidebar {
-      width: 100%; } }
-  @media (min-width: 30em) and (max-width: 39.99em) {
-    .sidebar {
-      width: 100%; } }
-  @media (min-width: 40em) and (max-width: 59.99em) {
-    .sidebar {
-      float: left;
-      margin-right: 0; } }
-  .sidebar:after {
-    content: "";
-    display: table;
-    clear: both; }
+  word-spacing: normal;
+  width: 33.33333%;
+  display: inline-table;
+  table-layout: fixed;
+  word-spacing: -2em;
+}
+.sidebar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 40em) and (max-width: 59.99em) {
+  .sidebar {
+    width: 37.5%;
+  }
+}
+@media (max-width: 29.99em) {
+  .sidebar {
+    width: 100%;
+  }
+}
+@media (min-width: 30em) and (max-width: 39.99em) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.sidebar .demo {
+  vertical-align: top;
+  box-sizing: border-box;
+  display: inline-block;
+  float: none;
+  word-spacing: normal;
+  width: 25%;
+}
+@media (min-width: 480px) {
   .sidebar .demo {
-    vertical-align: top;
-    box-sizing: border-box;
-    display: inline-block;
-    float: none;
-    margin-right: -0.31em;
-    width: 25%; }
-    @media (min-width: 480px) {
-      .sidebar .demo {
-        width: 16.66667%; } }
-    @media (min-width: 640px) {
-      .sidebar .demo {
-        width: 33.33333%; } }
-    @media (min-width: 960px) {
-      .sidebar .demo {
-        width: 25%; } }
-    .sidebar .demo:after {
-      margin-left: 0.31em; }
+    width: 16.66667%;
+  }
+}
+@media (min-width: 640px) {
+  .sidebar .demo {
+    width: 33.33333%;
+  }
+}
+@media (min-width: 960px) {
+  .sidebar .demo {
+    width: 25%;
+  }
+}
+.sidebar .demo:after {
+  margin-left: 0.31em;
+}
 
 .footer__container {
-  border: 1px black solid; }
-  .footer__container:after {
-    content: "";
-    display: table;
-    clear: both; }
+  border: 1px black solid;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  word-spacing: -2em;
+}
+.footer__container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .footer .demo {
   vertical-align: top;
   box-sizing: border-box;
   display: inline-block;
   float: none;
-  margin-right: -0.31em;
-  width: 8.33333%; }
-  @media (max-width: 960px) {
-    .footer .demo {
-      width: 12.5%; } }
-  @media (max-width: 640px) {
-    .footer .demo {
-      width: 16.66667%; } }
-  @media (max-width: 480px) {
-    .footer .demo {
-      width: 25%; } }
+  word-spacing: normal;
+  width: 8.33333%;
+}
+@media (max-width: 960px) {
+  .footer .demo {
+    width: 12.5%;
+  }
+}
+@media (max-width: 640px) {
+  .footer .demo {
+    width: 16.66667%;
+  }
+}
+@media (max-width: 480px) {
+  .footer .demo {
+    width: 25%;
+  }
+}

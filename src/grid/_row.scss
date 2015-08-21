@@ -4,15 +4,17 @@
 /// Include the styles of a grid row
 ///
 /// @param {Map|String} $grid (layout) - A grid map or the name of a defined grid
+/// @param {Boolean} $is-column (false) - Set if the grid is a column too
 ///
 /// @group api
 /// @access public
 
 @mixin Herow-grid-row(
-    $grid: $Herow-default-grid-name
+    $grid: $Herow-default-grid-name,
+    $is-column: false
 ) {
     $grid: Herow-get-grid($grid);
     $gutter-width: map-get($grid, gutter-width);
     $external-gutter: map-get($grid, external-gutter);
-    @include Herow-row($gutter-width, $external-gutter);
+    @include Herow-row($gutter-width, $external-gutter, $is-column);
 }
