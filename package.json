@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "sass-test"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/tzi/Herow/issues"
   },
-  "homepage": "https://github.com/tzi/Herow#readme"
+  "homepage": "https://github.com/tzi/Herow#readme",
+  "dependencies": {
+    "sass-test.sh": "^1.0.0"
+  }
 }

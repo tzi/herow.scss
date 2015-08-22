@@ -1,28 +1,42 @@
 /* Test: one grid state */
 @media (min-width: 30em) and (max-width: 39.99em) {
   .column {
-    background: blue; } }
+    background: blue;
+  }
+}
 /* Test: one grid state with min-width: 0 */
 @media (max-width: 29.99em) {
   .column {
-    background: blue; } }
+    background: blue;
+  }
+}
 /* Test: one grid state with max-width: infinite */
 @media (min-width: 80em) {
   .column {
-    background: blue; } }
+    background: blue;
+  }
+}
 /* Test: one grid state that appear 2 times */
 @media (min-width: 30em) and (max-width: 39.99em), (min-width: 80em) {
   .column {
-    background: blue; } }
+    background: blue;
+  }
+}
 /* Test: one grid state that appear 3 times with 2 that could be merged */
 @media (max-width: 29.99em), (min-width: 40em) and (max-width: 79.99em) {
   .column {
-    background: blue; } }
+    background: blue;
+  }
+}
 /* Test: 3 grid state */
 @media (max-width: 29.99em), (min-width: 40em) and (max-width: 59.99em), (min-width: 80em) {
   .column {
-    background: blue; } }
+    background: blue;
+  }
+}
 /* Test: 3 grid state that could be merged */
 @media (max-width: 59.99em) {
   .column {
-    background: blue; } }
+    background: blue;
+  }
+}
