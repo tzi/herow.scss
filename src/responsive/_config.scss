@@ -18,19 +18,19 @@ $Herow-default-grid-state: 'layout:default' !default;
     $breakpoint-map: ()
 ) {
     $grid: Herow-get-grid($grid-name);
-    @if (map_has_key($grid, breakpoint-map)) {
+    @if (map-has-key($grid, breakpoint-map)) {
         @warn "The grid #{$grid-name} already has breakpoints";
     }
-    $default-column-count: map_get($grid, column-count);
+    $default-column-count: map-get($grid, column-count);
     $size-map: ();
-    $size-map: map_merge($size-map, (0: $default-column-count));
+    $size-map: map-merge($size-map, (0: $default-column-count));
     @each $breakpoint, $size in $breakpoint-map {
         @if (type_of($breakpoint) == 'string') {
             $breakpoint: Herow-get-breakpoint-length-by-grid-state($breakpoint);
         }
-        $size-map: map_merge($size-map, ($breakpoint: $size));
+        $size-map: map-merge($size-map, ($breakpoint: $size));
     }
-    $new-grid: ($grid-name: map_merge($grid, (
+    $new-grid: ($grid-name: map-merge($grid, (
         breakpoint-map: $size-map
     )));
     @return map-merge($Herow-grid-map, $new-grid);
