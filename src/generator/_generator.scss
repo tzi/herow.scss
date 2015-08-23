@@ -37,8 +37,8 @@
     $column-count: $Herow-default-column-count,
     $gutter-width: $Herow-default-gutter-width,
     $external-gutter: $Herow-default-external-gutter,
-    $class-prefix: "",
-    $class-suffix: ""
+    $class-prefix: '',
+    $class-suffix: ''
 ) {
     $grid: (
         column-count: $column-count,
