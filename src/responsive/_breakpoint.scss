@@ -12,7 +12,7 @@
     $grid: $Herow-default-grid-name
 ) {
     $grid: Herow-get-responsive-grid($grid);
-    $breakpoint-map: map_get($grid, breakpoint-map);
+    $breakpoint-map: map-get($grid, breakpoint-map);
 
     $grid-breakpoint-map: ();
     $is-min-width: false;
@@ -21,7 +21,7 @@
     $index: false;
     $min-index: 1;
     $max-index: 100;
-    @each $breakpoint-length, $size in map_get($grid, breakpoint-map) {
+    @each $breakpoint-length, $size in map-get($grid, breakpoint-map) {
         $type: max-width;
         @if ($is-min-width) {
             $type: min-width;
@@ -30,17 +30,17 @@
             @if ($is-min-width) {
                 @warn "The grid '#{$grid-name}' should have only one breakpoint with the default size";
             }
-            $size: map_get($grid, column-count);
+            $size: map-get($grid, column-count);
             $type: default;
             $is-min-width: true;
         }
         @if ($breakpoint) {
-            $breakpoint: map_merge($breakpoint, (max-width: $breakpoint-length));
-            $index: map_get($breakpoint, index);
+            $breakpoint: map-merge($breakpoint, (max-width: $breakpoint-length));
+            $index: map-get($breakpoint, index);
             @if ($index == default or $index > 50) {
-                $grid-breakpoint-map: map_merge(($index: $breakpoint), $grid-breakpoint-map);
+                $grid-breakpoint-map: map-merge(($index: $breakpoint), $grid-breakpoint-map);
             } @else {
-                $grid-breakpoint-map: map_merge($grid-breakpoint-map, ($index: $breakpoint));
+                $grid-breakpoint-map: map-merge($grid-breakpoint-map, ($index: $breakpoint));
             }
         }
         $index: default;
@@ -59,20 +59,20 @@
             min-width: $breakpoint-length
         );
     }
-    $breakpoint: map_merge($breakpoint, (max-width: infinite));
-    $index: map_get($breakpoint, index);
+    $breakpoint: map-merge($breakpoint, (max-width: infinite));
+    $index: map-get($breakpoint, index);
     @if ($index == default or $index > 50) {
-        $grid-breakpoint-map: map_merge(($index: $breakpoint), $grid-breakpoint-map);
+        $grid-breakpoint-map: map-merge(($index: $breakpoint), $grid-breakpoint-map);
     } @else {
-        $grid-breakpoint-map: map_merge($grid-breakpoint-map, ($index: $breakpoint));
+        $grid-breakpoint-map: map-merge($grid-breakpoint-map, ($index: $breakpoint));
     }
 
-    $default: map_get($grid-breakpoint-map, default);
+    $default: map-get($grid-breakpoint-map, default);
     @if (not $default) {
-        $grid-name: map_get($grid, name);
+        $grid-name: map-get($grid, name);
         @warn "The grid '#{$grid-name}' should have at one breakpoint with the default size";
     }
-    $grid-breakpoint-map: map_merge((default: $default), $grid-breakpoint-map);
+    $grid-breakpoint-map: map-merge((default: $default), $grid-breakpoint-map);
     @return $grid-breakpoint-map;
 }
 
@@ -96,11 +96,11 @@
         $all-breakpoint-list: Herow-get-grid-breakpoint-map($grid-name);
 
         @each $index, $info in $all-breakpoint-list {
-            $size: map_get($info, size);
+            $size: map-get($info, size);
             @if ($state-size == $size) {
                 $breakpoint: (
-                    min-width: map_get($info, min-width),
-                    max-width: map_get($info, max-width),
+                    min-width: map-get($info, min-width),
+                    max-width: map-get($info, max-width),
                 );
                 $state-breakpoint-list: append($state-breakpoint-list, $breakpoint);
             }
@@ -122,12 +122,12 @@
     $state-size: Herow-get-grid-size-by-grid-state($grid-state);
     $breakpoint-map: Herow-get-grid-breakpoint-map($grid-state);
     @each $breakpoint, $info in $breakpoint-map {
-        $size: map_get($info, size);
+        $size: map-get($info, size);
         @if ($size == $state-size) {
             @if ($is-max-width) {
-                @return map_get($info, max-width);
+                @return map-get($info, max-width);
             } @else {
-                @return map_get($info, min-width);
+                @return map-get($info, min-width);
             }
         }
     }
@@ -147,10 +147,10 @@
         $comparison: 1;
         @each $comparison-breakpoint in $breakpoint-list {
             @if ($current-breakpoint and $comparison != $current) {
-                $comparison-max-width: map_get($comparison-breakpoint, max-width);
-                $current-min-width: map_get($current-breakpoint, min-width);
+                $comparison-max-width: map-get($comparison-breakpoint, max-width);
+                $current-min-width: map-get($current-breakpoint, min-width);
                 @if ($current-min-width == $comparison-max-width) {
-                    $comparison-breakpoint: map_merge($comparison-breakpoint, (max-width: map_get($current-breakpoint, max-width)));
+                    $comparison-breakpoint: map-merge($comparison-breakpoint, (max-width: map-get($current-breakpoint, max-width)));
                     $breakpoint-list: Herow-set-nth($breakpoint-list, $comparison, $comparison-breakpoint);
                     $breakpoint-list: Herow-remove-nth($breakpoint-list, $current);
                     $current-breakpoint: false;
@@ -172,12 +172,12 @@
 
 @function Herow-get-media-query-by-breakpoint($breakpoint) {
     $media-query: '';
-    $min-width: map_get($breakpoint, min-width);
+    $min-width: map-get($breakpoint, min-width);
     @if ($min-width != 0) {
         $min-width: Herow-px2em($min-width);
         $media-query: '#{$media-query}(min-width: #{$min-width})';
     }
-    $max-width: map_get($breakpoint, max-width);
+    $max-width: map-get($breakpoint, max-width);
     @if ($max-width != infinite) {
         @if ($min-width != 0) {
             $media-query: '#{$media-query} and ';
