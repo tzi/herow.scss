@@ -4,8 +4,7 @@
   grid-size: 6 at min-width 480px;
   grid-size: 8 at min-width 640px;
   grid-size: 12 at min-width 960px;
-  grid-size: 16 at min-width 1280px;
-}
+  grid-size: 16 at min-width 1280px; }
 
 /* Test: Add breakpoint with desktop-first approach */
 .grid {
@@ -13,8 +12,7 @@
   grid-size: 12 at max-width 1280px;
   grid-size: 8 at max-width 960px;
   grid-size: 6 at max-width 640px;
-  grid-size: 4 at max-width 480px;
-}
+  grid-size: 4 at max-width 480px; }
 
 /* Test: Add breakpoint with middle-first approach */
 .grid {
@@ -22,13 +20,11 @@
   grid-size: 6 at max-width 640px;
   grid-size: 4 at max-width 480px;
   grid-size: 12 at min-width 960px;
-  grid-size: 16 at min-width 1280px;
-}
+  grid-size: 16 at min-width 1280px; }
 
 /* Test: Add breakpoint with another grid state */
 .grid {
   grid-size: 4;
   grid-size: 6 at min-width 480px;
   grid-size: 5 at min-width 640px;
-  grid-size: 8 at min-width 960px;
-}
+  grid-size: 8 at min-width 960px; }

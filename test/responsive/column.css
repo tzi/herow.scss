@@ -5,28 +5,19 @@
   display: inline-block;
   float: none;
   margin-right: -0.31em;
-  width: 25%;
-}
-@media (min-width: 480px) {
-  .column {
-    width: 16.66667%;
-  }
-}
-@media (min-width: 640px) {
-  .column {
-    width: 12.5%;
-  }
-}
-@media (min-width: 960px) {
-  .column {
-    width: 8.33333%;
-  }
-}
-@media (min-width: 1280px) {
-  .column {
-    width: 6.25%;
-  }
-}
+  width: 25%; }
+  @media (min-width: 480px) {
+    .column {
+      width: 16.66667%; } }
+  @media (min-width: 640px) {
+    .column {
+      width: 12.5%; } }
+  @media (min-width: 960px) {
+    .column {
+      width: 8.33333%; } }
+  @media (min-width: 1280px) {
+    .column {
+      width: 6.25%; } }
 
 /* Test: Set column width over one grid state */
 .column {
@@ -35,13 +26,10 @@
   display: inline-block;
   float: none;
   margin-right: -0.31em;
-  width: 25%;
-}
-@media (min-width: 60em) and (max-width: 79.99em) {
-  .column {
-    width: 8.33333%;
-  }
-}
+  width: 25%; }
+  @media (min-width: 60em) and (max-width: 79.99em) {
+    .column {
+      width: 8.33333%; } }
 
 /* Test: Set column flow over one grid state */
 .column {
@@ -50,14 +38,11 @@
   display: inline-block;
   float: none;
   margin-right: -0.31em;
-  width: 25%;
-}
-@media (min-width: 60em) and (max-width: 79.99em) {
-  .column {
-    float: left;
-    margin-right: 0;
-  }
-}
+  width: 25%; }
+  @media (min-width: 60em) and (max-width: 79.99em) {
+    .column {
+      float: left;
+      margin-right: 0; } }
 
 /* Test: Set column offset over one grid state */
 .column {
@@ -66,10 +51,7 @@
   display: inline-block;
   float: none;
   margin-right: -0.31em;
-  width: 25%;
-}
-@media (min-width: 60em) and (max-width: 79.99em) {
-  .column {
-    margin-left: 8.33333%;
-  }
-}
+  width: 25%; }
+  @media (min-width: 60em) and (max-width: 79.99em) {
+    .column {
+      margin-left: 8.33333%; } }

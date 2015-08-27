@@ -1,50 +1,41 @@
 /* Test: Default row */
 .row {
   margin-top: -1em;
-  margin-left: -1em;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+  margin-left: -1em; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 /* Test: Row without gutter */
 .row:after {
   content: "";
   display: table;
-  clear: both;
-}
+  clear: both; }
 
 /* Test: Row with custom gutter width (20px) */
 .row {
   margin-top: -20px;
-  margin-left: -20px;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+  margin-left: -20px; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 /* Test: Row with external gutter */
 .row {
   padding-bottom: 1em;
-  padding-right: 1em;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+  padding-right: 1em; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 /* Test: Row with overridden default gutter width (30px) */
 .row {
   margin-top: -30px;
-  margin-left: -30px;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+  margin-left: -30px; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
