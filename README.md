@@ -1,4 +1,4 @@
-herow.scss
+herow.scss [![Build Status](https://travis-ci.org/tzi/herow.scss.svg)](https://travis-ci.org/tzi/herow.scss)
 =======
 
 Herow, a time-saving Sass grid system.
